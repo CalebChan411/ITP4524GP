@@ -49,7 +49,7 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
         if any(not isinstance(game, str) or game not in GAMES for game in liked):
             raise ValueError('Unknown game.')
         ratings = {game: 5 for game in liked}
-        player_name = '新玩家'
+        player_name = 'New player'
     else:
         if profile_id not in PROFILES:
             raise ValueError('Unknown example player.')
@@ -85,23 +85,24 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
             seeds = sorted([key for key in liked_ids
                             if set(GAMES[key]['tags']) & set(game['tags'])], key=lambda key: (
                 -len(set(GAMES[key]['tags']) & set(game['tags'])), key))[:2]
-            reason = '与你喜欢的 ' + '、'.join(GAMES[key]['title'] for key in seeds) + ' 有共同标签。'
-            detail = '共同兴趣：' + '、'.join(shared_tags[:3]) + '。'
+            reason = 'Shares tags with ' + ' and '.join(GAMES[key]['title'] for key in seeds) + ', which you liked.'
+            detail = 'Shared interests: ' + ', '.join(shared_tags[:3]) + '.'
         elif method == 'collaborative':
             supporters = [(sim, peer) for sim, peer, vector in neighbours if game_id in vector]
             score = sum(sim for sim, _ in supporters) / total_similarity if total_similarity else 0
             if score <= 0:
                 continue
             supporters.sort(key=lambda pair: (-pair[0], pair[1]['id']))
-            reason = '与你有共同喜好的 ' + '、'.join(peer['name'] for _, peer in supporters[:2]) + ' 喜欢这款游戏。'
-            detail = '先按共同喜欢的游戏找相似玩家，再汇总他们对候选游戏的加权支持。'
+            reason = 'Liked by ' + ' and '.join(peer['name'] for _, peer in supporters[:2]) + ', who share some of your favourites.'
+            detail = 'Find similar players from shared favourites, then combine their weighted support for this game.'
         else:
             count = sum(peer['ratings'].get(game_id, 0) >= 4 for peer in DATA['profiles'])
             score = float(count)
             if not count:
                 continue
-            reason = f'{count} 位示例玩家给出了 4 分或以上。'
-            detail = '这是同一套数据的热门基线；排序不使用当前玩家的兴趣，仍会排除已交互游戏。'
+            player_label = 'player' if count == 1 else 'players'
+            reason = f'{count} example {player_label} rated this game 4 or above.'
+            detail = 'Popularity baseline: ranked by example likes, without using your interests. Previously rated games are still excluded.'
         candidates.append({**game, 'score': round(score, 6), 'reason': reason,
                            'detail': detail, 'shared_tags': shared_tags})
     candidates.sort(key=lambda row: (-row['score'], row['title']))
@@ -170,8 +171,8 @@ def main():
     args = parser.parse_args()
     server = ThreadingHTTPServer(('127.0.0.1', args.port), Handler)
     url = f'http://127.0.0.1:{server.server_port}'
-    print('\nGame recommendation demo / 游戏推荐演示', flush=True)
-    print('Open / 打开: ' + url, flush=True)
+    print('\nGame recommendation demo', flush=True)
+    print('Open: ' + url, flush=True)
     print('Demo data only. No third-party packages required.', flush=True)
     print('Press Ctrl+C or close this terminal to stop.\n', flush=True)
     if not args.no_browser:
