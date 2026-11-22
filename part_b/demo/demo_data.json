@@ -1,0 +1,390 @@
+{
+  "notice": "演示数据：游戏标签为人工示例，玩家评分为虚构。未连接 Steam，也没有真实数据上的评价结果。",
+  "games": [
+    {
+      "id": "stardew",
+      "title": "Stardew Valley",
+      "genre": "休闲",
+      "tags": [
+        "模拟",
+        "种田",
+        "建造",
+        "放松"
+      ],
+      "description": "把日子过成自己的节奏。",
+      "edition": "苔绿田园"
+    },
+    {
+      "id": "terraria",
+      "title": "Terraria",
+      "genre": "动作",
+      "tags": [
+        "探索",
+        "建造",
+        "合作",
+        "冒险"
+      ],
+      "description": "从一把镐开始，探索地下与天空。",
+      "edition": "地下远行"
+    },
+    {
+      "id": "dorfromantik",
+      "title": "Dorfromantik",
+      "genre": "休闲",
+      "tags": [
+        "建造",
+        "放松",
+        "策略",
+        "拼图"
+      ],
+      "description": "拼起一片属于你的安静风景。",
+      "edition": "六角乡野"
+    },
+    {
+      "id": "unpacking",
+      "title": "Unpacking",
+      "genre": "休闲",
+      "tags": [
+        "放松",
+        "解谜",
+        "叙事",
+        "整理"
+      ],
+      "description": "从一个个纸箱，读懂一段生活。",
+      "edition": "生活切片"
+    },
+    {
+      "id": "spiritfarer",
+      "title": "Spiritfarer",
+      "genre": "休闲",
+      "tags": [
+        "叙事",
+        "探索",
+        "模拟",
+        "放松"
+      ],
+      "description": "一段温柔的航行，一次认真的告别。",
+      "edition": "晚风航线"
+    },
+    {
+      "id": "factorio",
+      "title": "Factorio",
+      "genre": "策略",
+      "tags": [
+        "自动化",
+        "建造",
+        "管理",
+        "策略"
+      ],
+      "description": "把一个想法，变成运转不停的工厂。",
+      "edition": "机械秩序"
+    },
+    {
+      "id": "dyson",
+      "title": "Dyson Sphere Program",
+      "genre": "策略",
+      "tags": [
+        "自动化",
+        "建造",
+        "管理",
+        "探索"
+      ],
+      "description": "让生产线跨过星球，走向银河。",
+      "edition": "群星工厂"
+    },
+    {
+      "id": "cities",
+      "title": "Cities: Skylines",
+      "genre": "模拟",
+      "tags": [
+        "建造",
+        "管理",
+        "模拟",
+        "策略"
+      ],
+      "description": "让一张地图，长成一座城市。",
+      "edition": "城市脉络"
+    },
+    {
+      "id": "zoo",
+      "title": "Planet Zoo",
+      "genre": "模拟",
+      "tags": [
+        "建造",
+        "管理",
+        "模拟",
+        "放松"
+      ],
+      "description": "设计栖息地，也照顾每一种生命。",
+      "edition": "自然栖所"
+    },
+    {
+      "id": "civ",
+      "title": "Civilization VI",
+      "genre": "策略",
+      "tags": [
+        "回合制",
+        "策略",
+        "管理",
+        "探索"
+      ],
+      "description": "从第一座城，走到文明的新篇章。",
+      "edition": "文明远景"
+    },
+    {
+      "id": "breach",
+      "title": "Into the Breach",
+      "genre": "策略",
+      "tags": [
+        "回合制",
+        "策略",
+        "战术",
+        "解谜"
+      ],
+      "description": "在小小棋盘上，做出关键决定。",
+      "edition": "方寸战术"
+    },
+    {
+      "id": "xcom",
+      "title": "XCOM 2",
+      "genre": "策略",
+      "tags": [
+        "回合制",
+        "战术",
+        "策略",
+        "战斗"
+      ],
+      "description": "每次部署，都是一次新的选择。",
+      "edition": "未知前线"
+    },
+    {
+      "id": "spire",
+      "title": "Slay the Spire",
+      "genre": "策略",
+      "tags": [
+        "卡牌",
+        "策略",
+        "随机挑战",
+        "回合制"
+      ],
+      "description": "用每一张牌，走出自己的攀塔路线。",
+      "edition": "纸牌高塔"
+    },
+    {
+      "id": "ftl",
+      "title": "FTL: Faster Than Light",
+      "genre": "策略",
+      "tags": [
+        "策略",
+        "管理",
+        "随机挑战",
+        "探索"
+      ],
+      "description": "驾驶一艘小船，面对一整个宇宙。",
+      "edition": "深空抉择"
+    },
+    {
+      "id": "portal",
+      "title": "Portal 2",
+      "genre": "解谜",
+      "tags": [
+        "解谜",
+        "逻辑",
+        "合作",
+        "探索"
+      ],
+      "description": "换一个入口，重新理解眼前的空间。",
+      "edition": "空间回路"
+    },
+    {
+      "id": "witness",
+      "title": "The Witness",
+      "genre": "解谜",
+      "tags": [
+        "解谜",
+        "逻辑",
+        "探索",
+        "放松"
+      ],
+      "description": "观察一座岛，慢慢发现它的规律。",
+      "edition": "孤岛谜线"
+    },
+    {
+      "id": "baba",
+      "title": "Baba Is You",
+      "genre": "解谜",
+      "tags": [
+        "解谜",
+        "逻辑",
+        "拼图",
+        "策略"
+      ],
+      "description": "试着改写规则，而不只是寻找答案。",
+      "edition": "规则之间"
+    },
+    {
+      "id": "obra",
+      "title": "Return of the Obra Dinn",
+      "genre": "解谜",
+      "tags": [
+        "解谜",
+        "逻辑",
+        "叙事",
+        "探索"
+      ],
+      "description": "从残留的线索里，还原一段航程。",
+      "edition": "旧船回声"
+    },
+    {
+      "id": "hades",
+      "title": "Hades",
+      "genre": "动作",
+      "tags": [
+        "战斗",
+        "随机挑战",
+        "叙事",
+        "冒险"
+      ],
+      "description": "每次出发，离出口也离故事更近一步。",
+      "edition": "冥界火光"
+    },
+    {
+      "id": "hollow",
+      "title": "Hollow Knight",
+      "genre": "动作",
+      "tags": [
+        "探索",
+        "冒险",
+        "战斗",
+        "平台跳跃"
+      ],
+      "description": "向地下深处走去，听见失落王国的回响。",
+      "edition": "幽境回响"
+    },
+    {
+      "id": "dead",
+      "title": "Dead Cells",
+      "genre": "动作",
+      "tags": [
+        "战斗",
+        "随机挑战",
+        "平台跳跃",
+        "探索"
+      ],
+      "description": "在一次次尝试里，找到流畅的节奏。",
+      "edition": "疾行残影"
+    },
+    {
+      "id": "celeste",
+      "title": "Celeste",
+      "genre": "动作",
+      "tags": [
+        "平台跳跃",
+        "冒险",
+        "叙事",
+        "挑战"
+      ],
+      "description": "翻过一座山，也迈过心里的那道坎。",
+      "edition": "山巅来信"
+    },
+    {
+      "id": "risk",
+      "title": "Risk of Rain 2",
+      "genre": "动作",
+      "tags": [
+        "战斗",
+        "随机挑战",
+        "合作",
+        "探索"
+      ],
+      "description": "和伙伴一起，迎接逐渐失控的战场。",
+      "edition": "异星骤雨"
+    },
+    {
+      "id": "rock",
+      "title": "Deep Rock Galactic",
+      "genre": "动作",
+      "tags": [
+        "合作",
+        "探索",
+        "战斗",
+        "冒险"
+      ],
+      "description": "深入矿洞，和队友一起满载而归。",
+      "edition": "矿洞协奏"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "lin",
+      "name": "林同学",
+      "initial": "林",
+      "taste": "策略 · 解谜",
+      "note": "喜欢慢慢想清楚，再做下一步。",
+      "ratings": {
+        "civ": 5,
+        "breach": 5,
+        "portal": 4,
+        "xcom": 4,
+        "stardew": 2
+      }
+    },
+    {
+      "id": "chen",
+      "name": "陈同学",
+      "initial": "陈",
+      "taste": "动作 · 挑战",
+      "note": "偏爱有挑战的战斗和探索。",
+      "ratings": {
+        "hades": 5,
+        "hollow": 5,
+        "dead": 4,
+        "celeste": 4,
+        "portal": 2
+      }
+    },
+    {
+      "id": "zhou",
+      "name": "周同学",
+      "initial": "周",
+      "taste": "休闲 · 叙事",
+      "note": "想在游戏里度过一段轻松的时间。",
+      "ratings": {
+        "stardew": 5,
+        "dorfromantik": 5,
+        "unpacking": 4,
+        "spiritfarer": 4,
+        "hades": 2
+      }
+    },
+    {
+      "id": "wu",
+      "name": "吴同学",
+      "initial": "吴",
+      "taste": "探索 · 合作",
+      "note": "和朋友出发，发现地图之外的世界。",
+      "ratings": {
+        "terraria": 5,
+        "hollow": 4,
+        "rock": 5,
+        "stardew": 4,
+        "risk": 4
+      }
+    },
+    {
+      "id": "li",
+      "name": "李同学",
+      "initial": "李",
+      "taste": "建造 · 管理",
+      "note": "享受从零搭建、让系统运转的过程。",
+      "ratings": {
+        "factorio": 5,
+        "dyson": 5,
+        "cities": 4,
+        "civ": 4,
+        "dorfromantik": 4,
+        "portal": 4
+      }
+    }
+  ]
+}
