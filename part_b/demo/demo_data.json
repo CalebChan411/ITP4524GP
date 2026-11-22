@@ -1,317 +1,3695 @@
 {
-  "notice": "Demo data: game tags are manually curated examples and player ratings are fictional. Not connected to Steam; no real-data evaluation has been performed.",
+  "notice": "Game metadata, tags and artwork are sourced from Steam. Example player feedback is fictional; no real-data recommendation evaluation has been performed.",
   "games": [
     {
       "id": "stardew",
+      "steam_app_id": 413150,
       "title": "Stardew Valley",
-      "genre": "Casual",
-      "tags": [
-        "Simulation",
-        "Farming",
-        "Building",
-        "Relaxing"
+      "genre": "RPG",
+      "genres": [
+        "Indie",
+        "RPG",
+        "Simulation"
       ],
-      "description": "A little farm. A life at your own pace.",
-      "edition": "FIELD NOTES"
+      "tags": [
+        "Farming Sim",
+        "Pixel Graphics",
+        "Multiplayer",
+        "Life Sim",
+        "RPG",
+        "Relaxing",
+        "Simulation",
+        "Agriculture",
+        "Sandbox",
+        "Crafting",
+        "Indie",
+        "Building",
+        "Open World",
+        "Casual",
+        "Singleplayer",
+        "2D",
+        "Dating Sim",
+        "Cute",
+        "Great Soundtrack",
+        "Fishing"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "LAN Co-op",
+        "Shared/Split Screen Co-op",
+        "Shared/Split Screen",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play Together",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Casual",
+        "Simulation",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+      "developers": [
+        "ConcernedApe"
+      ],
+      "publishers": [
+        "ConcernedApe"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "26 Feb, 2016"
+      },
+      "cover_url": "/assets/steam/413150/cover.jpg",
+      "header_url": "/assets/steam/413150/header.jpg",
+      "store_url": "https://store.steampowered.com/app/413150/",
+      "chart_rank": 22,
+      "chart_peak": 85001,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=413150&l=english",
+        "tags_url": "https://store.steampowered.com/app/413150/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/library_600x900.jpg?t=1786554168",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1786554168",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "930b43387ec88141e1298a4d0e2cf648d20bab591d7947aff8a20907123f00f8",
+        "header_sha256": "6f173dfb051a350dffdc1668b466b30b884ee2d080725c995fdbc89bcfd4565b",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/library_hero.jpg?t=1786554168",
+        "hero_sha256": "a2fbe21c4563660f29db2120c3f96b13aaf84ecfa056af1f8812169b035be23e"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/413150/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "terraria",
+      "steam_app_id": 105600,
       "title": "Terraria",
       "genre": "Action",
-      "tags": [
-        "Exploration",
-        "Building",
-        "Co-op",
-        "Adventure"
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie",
+        "RPG"
       ],
-      "description": "Start with a pickaxe. Discover a whole world.",
-      "edition": "BELOW & BEYOND"
+      "tags": [
+        "Open World Survival Craft",
+        "Sandbox",
+        "Survival",
+        "Multiplayer",
+        "2D",
+        "Pixel Graphics",
+        "Adventure",
+        "Crafting",
+        "Building",
+        "Exploration",
+        "Co-op",
+        "Open World",
+        "Indie",
+        "Online Co-Op",
+        "Action",
+        "RPG",
+        "Singleplayer",
+        "Replay Value",
+        "Platformer",
+        "Atmospheric"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Action",
+        "Adventure",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+      "developers": [
+        "Re-Logic"
+      ],
+      "publishers": [
+        "Re-Logic"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "16 May, 2011"
+      },
+      "cover_url": "/assets/steam/105600/cover.jpg",
+      "header_url": "/assets/steam/105600/header.jpg",
+      "store_url": "https://store.steampowered.com/app/105600/",
+      "chart_rank": 31,
+      "chart_peak": 39528,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=105600&l=english",
+        "tags_url": "https://store.steampowered.com/app/105600/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/library_600x900.jpg?t=1792530636",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1792530636",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "479e05949954b697ef817508f68e83eaa026cd9b2ae9f645da47b0f25d2d3e4c",
+        "header_sha256": "866a45d030cf6af1fe06fd311a57cb472cb12411b2cdfe78391fd8b8ce4ab4bd",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/library_hero.jpg?t=1792530636",
+        "hero_sha256": "0714ca0d60efdbef47a2e9e79f7dc6ea0ef642906adb7d0adc322c95a15f5246"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/105600/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "dorfromantik",
+      "steam_app_id": 1455840,
       "title": "Dorfromantik",
       "genre": "Casual",
-      "tags": [
-        "Building",
-        "Relaxing",
-        "Strategy",
-        "Grid puzzles"
+      "genres": [
+        "Casual",
+        "Indie",
+        "Simulation",
+        "Strategy"
       ],
-      "description": "Build a quiet landscape, one tile at a time.",
-      "edition": "QUIET LANDSCAPES"
+      "tags": [
+        "Puzzle",
+        "Relaxing",
+        "City Builder",
+        "Casual",
+        "Turn-Based Strategy",
+        "Board Game",
+        "Strategy",
+        "Sandbox",
+        "Resource Management",
+        "Simulation",
+        "Family Friendly",
+        "Minimalist",
+        "Procedural Generation",
+        "Logic",
+        "Indie",
+        "Controller",
+        "3D",
+        "Turn-Based Tactics",
+        "Hand-drawn",
+        "Singleplayer"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Cloud",
+        "Steam Leaderboards",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Casual",
+        "Simulation",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles. Explore a variety of colorful biomes, discover and unlock new tiles and complete quests to fill your world with life!",
+      "developers": [
+        "Toukana Interactive"
+      ],
+      "publishers": [
+        "Toukana Interactive"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "28 Apr, 2022"
+      },
+      "cover_url": "/assets/steam/1455840/cover.jpg",
+      "header_url": "/assets/steam/1455840/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1455840/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1455840&l=english",
+        "tags_url": "https://store.steampowered.com/app/1455840/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1455840/library_600x900.jpg?t=1786951108",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1455840/header.jpg?t=1786951108",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "5d9584f5c1a6ebc8374158b48c74a10f03640fa5634852aa430526fe9053ead8",
+        "header_sha256": "37c77d2bf03bce56171a586cbf97c96376a1cbe31aa3eaa3efd7b981e7d8c78c",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1455840/1644d240987ad87fec194d1868fcc080c5a46c5e/library_hero.jpg?t=1786951108",
+        "hero_sha256": "3d8c206a8e28865c0a59fae9b407b98dcddfc894818b79134ae9272aae120f8f"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1455840/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "unpacking",
+      "steam_app_id": 1135690,
       "title": "Unpacking",
       "genre": "Casual",
+      "genres": [
+        "Casual",
+        "Indie",
+        "Simulation"
+      ],
       "tags": [
         "Relaxing",
-        "Puzzles",
-        "Story-rich",
-        "Organisation"
+        "Cute",
+        "Casual",
+        "Pixel Graphics",
+        "Organizing",
+        "Puzzle",
+        "Story Rich",
+        "Singleplayer",
+        "Simulation",
+        "Indie",
+        "Life Sim",
+        "LGBTQ+",
+        "Point & Click",
+        "Atmospheric",
+        "Female Protagonist",
+        "Isometric",
+        "Inventory Management",
+        "Colorful",
+        "Family Friendly",
+        "2D"
       ],
-      "description": "Discover a life through the things it holds.",
-      "edition": "LIFE IN BOXES"
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Mouse Only Option",
+        "Playable without Timed Input",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Save Anytime",
+        "Stereo Sound",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Casual",
+        "Simulation",
+        "Single-player"
+      ],
+      "description": "Unpacking is a zen puzzle game about the familiar experience of pulling possessions out of boxes and fitting them into a new home. Part block-fitting puzzle, part home decoration, you are invited to create a satisfying living space while learning clues about the life you’re unpacking.",
+      "developers": [
+        "Witch Beam"
+      ],
+      "publishers": [
+        "Balor Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "1 Nov, 2021"
+      },
+      "cover_url": "/assets/steam/1135690/cover.jpg",
+      "header_url": "/assets/steam/1135690/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1135690/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1135690&l=english",
+        "tags_url": "https://store.steampowered.com/app/1135690/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1135690/library_600x900.jpg?t=1789426289",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1135690/header.jpg?t=1789426289",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "a58ed6d1c31c86586f5b58eb92de4542604c66d12f402ed540a962487a1f82d9",
+        "header_sha256": "792b386e58502b9bf856ea9b85049f971b7b6f3868429723f9ab3459a9e65140",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1135690/library_hero.jpg?t=1789426289",
+        "hero_sha256": "172d83aed56ff6228e8882a2e55e577e52495bb7dcce2ce62e1424fe0545fdac"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1135690/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "spiritfarer",
-      "title": "Spiritfarer",
-      "genre": "Casual",
-      "tags": [
-        "Story-rich",
-        "Exploration",
-        "Simulation",
-        "Relaxing"
+      "steam_app_id": 972660,
+      "title": "Spiritfarer®: Farewell Edition",
+      "genre": "Adventure",
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Simulation"
       ],
-      "description": "Set sail, make friends, and learn to let go.",
-      "edition": "GENTLE VOYAGES"
+      "tags": [
+        "Emotional",
+        "Story Rich",
+        "Indie",
+        "Management",
+        "Relaxing",
+        "Building",
+        "Adventure",
+        "Exploration",
+        "Hand-drawn",
+        "Atmospheric",
+        "Local Co-Op",
+        "Female Protagonist",
+        "Platformer",
+        "Co-op",
+        "Crafting",
+        "Simulation",
+        "Funny",
+        "Cartoony",
+        "Farming Sim",
+        "Fishing"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Shared/Split Screen Co-op",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Remote Play Together",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Adventure",
+        "Simulation",
+        "Single-player"
+      ],
+      "description": "Spiritfarer® is a cozy management game about dying. As ferrymaster to the deceased, build a boat to explore the world, care for your spirit friends, and release them into the afterlife. The Spiritfarer Farewell Edition includes the heartwarming base game and three major content updates.",
+      "developers": [
+        "Thunder Lotus"
+      ],
+      "publishers": [
+        "Thunder Lotus"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "18 Aug, 2020"
+      },
+      "cover_url": "/assets/steam/972660/cover.jpg",
+      "header_url": "/assets/steam/972660/header.jpg",
+      "store_url": "https://store.steampowered.com/app/972660/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=972660&l=english",
+        "tags_url": "https://store.steampowered.com/app/972660/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/972660/662114ef0e4c75747f85000ff38f441dbf9f16e8/library_600x900.jpg?t=1752503178",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/972660/header.jpg?t=1752503178",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "6e374273335b5a4ff6c8d78287608a8f663d2d7c127ca8660687afa3f96964cb",
+        "header_sha256": "d17f2ff233db0322d3f1dcfff3b70b9f44843a8373f872ddcec1337977a1253d",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/972660/0a02163910003520ba1960251b954878fcc0c5c6/library_hero.jpg?t=1752503178",
+        "hero_sha256": "fbc6994335ebd2f6ed079aa532a7f42dd0728b88aac3b8fd198a6ca26b4ed9c5"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/972660/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "factorio",
+      "steam_app_id": 427520,
       "title": "Factorio",
-      "genre": "Strategy",
-      "tags": [
-        "Automation",
-        "Building",
-        "Management",
+      "genre": "Casual",
+      "genres": [
+        "Casual",
+        "Indie",
+        "Simulation",
         "Strategy"
       ],
-      "description": "Turn a small idea into a working factory.",
-      "edition": "SYSTEMS AT WORK"
+      "tags": [
+        "Automation",
+        "Base Building",
+        "Resource Management",
+        "Sandbox",
+        "Crafting",
+        "Strategy",
+        "Multiplayer",
+        "Survival",
+        "Management",
+        "Open World",
+        "Building",
+        "Co-op",
+        "2D",
+        "Moddable",
+        "Singleplayer",
+        "Trains",
+        "Simulation",
+        "Pixel Graphics",
+        "City Builder",
+        "Indie"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "LAN Co-op",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Playable without Timed Input",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Save Anytime",
+        "Subtitle Options",
+        "Partial Controller Support",
+        "Steam Cloud",
+        "Includes level editor",
+        "Remote Play on Tablet",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Casual",
+        "Simulation",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Factorio is a game about building and creating automated factories to produce items of increasing complexity, within an infinite 2D world. Use your imagination to design your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.",
+      "developers": [
+        "Wube Software LTD."
+      ],
+      "publishers": [
+        "Wube Software LTD."
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "14 Aug, 2020"
+      },
+      "cover_url": "/assets/steam/427520/cover.jpg",
+      "header_url": "/assets/steam/427520/header.jpg",
+      "store_url": "https://store.steampowered.com/app/427520/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=427520&l=english",
+        "tags_url": "https://store.steampowered.com/app/427520/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/library_600x900.jpg?t=1792752343",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/ab9a2df0a77caebde20dc45adc021de8cdcf7cc5/header.jpg?t=1792752343",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "230a9a69458bdb8b451738deb92e5de0f4f8f1ecd9b953eda5b60dd9bdee33c9",
+        "header_sha256": "c7427396114aeaba593593cb31167e750aaf86486664127688533ab38a74cdec",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/2fcd262bd4bad87bccc539ee1ba14f6e70e62983/library_hero.jpg?t=1792752343",
+        "hero_sha256": "4d388b1b80dcfbf1f22ab49b8056622a03f224a4ec54226c9e47be9883ec5519"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/427520/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "dyson",
+      "steam_app_id": 1366540,
       "title": "Dyson Sphere Program",
-      "genre": "Strategy",
+      "genre": "Simulation",
+      "genres": [
+        "Indie",
+        "Simulation",
+        "Strategy",
+        "Early Access"
+      ],
       "tags": [
         "Automation",
+        "Space",
+        "Base Building",
         "Building",
+        "Resource Management",
+        "Open World",
+        "Simulation",
+        "Sci-fi",
         "Management",
-        "Exploration"
+        "Sandbox",
+        "City Builder",
+        "Strategy",
+        "Singleplayer",
+        "Space Sim",
+        "3D",
+        "Third Person",
+        "Early Access",
+        "Indie",
+        "RTS",
+        "Casual"
       ],
-      "description": "Build a production line across the stars.",
-      "edition": "STELLAR INDUSTRY"
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Casual",
+        "Simulation",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Build the most efficient intergalactic factory in space simulation strategy game Dyson Sphere Program! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.",
+      "developers": [
+        "Youthcat Studio"
+      ],
+      "publishers": [
+        "Gamirror Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "20 Jan, 2021"
+      },
+      "cover_url": "/assets/steam/1366540/cover.jpg",
+      "header_url": "/assets/steam/1366540/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1366540/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1366540&l=english",
+        "tags_url": "https://store.steampowered.com/app/1366540/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/library_600x900.jpg?t=1776523171",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/2521472f3f71b6f179515fdcfa33d27c212ba3ce/header.jpg?t=1776523171",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "579c7bd1b7d3ba1c9bca9f0bb12aaa38a82a9c0cc2b69ac6c9acdfb91a49ae21",
+        "header_sha256": "017ce5eabc170b50c661b0da479c83c83c6ccc45368a23e4f6efeb9f990cb0df",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/0467874bc14dbfb65b8590750bab47e612c4276f/library_hero.jpg?t=1776523171",
+        "hero_sha256": "e5a3748d140d2af7a6bd1588d7990cae73c6b134ac73b85b2c2b10c4898fc07d"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1366540/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "cities",
+      "steam_app_id": 255710,
       "title": "Cities: Skylines",
       "genre": "Simulation",
-      "tags": [
-        "Building",
-        "Management",
+      "genres": [
         "Simulation",
         "Strategy"
       ],
-      "description": "Make a map into a city of your own.",
-      "edition": "CITY RHYTHMS"
+      "tags": [
+        "City Builder",
+        "Simulation",
+        "Building",
+        "Management",
+        "Strategy",
+        "Sandbox",
+        "Singleplayer",
+        "Economy",
+        "Moddable",
+        "Resource Management",
+        "Mod",
+        "Realistic",
+        "Replay Value",
+        "Casual",
+        "Modern",
+        "Real-Time with Pause",
+        "Family Friendly",
+        "Great Soundtrack",
+        "Funny",
+        "Action"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Steam Cloud",
+        "Includes level editor",
+        "Remote Play on Tablet",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "Casual",
+        "Simulation",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Cities: Skylines is a modern take on the classic city simulation. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a real city whilst expanding on some well-established tropes of the city building experience.",
+      "developers": [
+        "Colossal Order"
+      ],
+      "publishers": [
+        "Paradox Interactive"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "10 Mar, 2015"
+      },
+      "cover_url": "/assets/steam/255710/cover.jpg",
+      "header_url": "/assets/steam/255710/header.jpg",
+      "store_url": "https://store.steampowered.com/app/255710/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=255710&l=english",
+        "tags_url": "https://store.steampowered.com/app/255710/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/library_600x900.jpg?t=1794508006",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg?t=1794508006",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "96c18791c0ff1f83cd6c895aa1af56ef6172db06948da68e90a067fea9cae044",
+        "header_sha256": "1ca0807961f79eb80a24213446ce7b6230580b18dc9869469dcebd1e647c9a0e",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/library_hero.jpg?t=1794508006",
+        "hero_sha256": "03bcb66abdf804cf1ecffe8be383ad0551923f24ac3c0c5356d0991d9dab2a5a"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/255710/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "zoo",
+      "steam_app_id": 703080,
       "title": "Planet Zoo",
-      "genre": "Simulation",
-      "tags": [
-        "Building",
-        "Management",
+      "genre": "Casual",
+      "genres": [
+        "Casual",
         "Simulation",
-        "Relaxing"
+        "Strategy"
       ],
-      "description": "Design a home for a world of wildlife.",
-      "edition": "WILD BY DESIGN"
+      "tags": [
+        "Management",
+        "Zoo",
+        "Simulation",
+        "Building",
+        "Sandbox",
+        "Nature",
+        "City Builder",
+        "Economy",
+        "Singleplayer",
+        "Realistic",
+        "Multiplayer",
+        "Family Friendly",
+        "Cute",
+        "Resource Management",
+        "Strategy",
+        "Great Soundtrack",
+        "Relaxing",
+        "Open World",
+        "Animals",
+        "Casual"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Steam Cloud",
+        "HDR available",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Casual",
+        "Simulation",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim. Construct detailed habitats, manage your zoo, and meet authentic living animals who think, feel and explore the world you create around them.",
+      "developers": [
+        "Frontier Developments"
+      ],
+      "publishers": [
+        "Frontier Developments"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "5 Nov, 2019"
+      },
+      "cover_url": "/assets/steam/703080/cover.jpg",
+      "header_url": "/assets/steam/703080/header.jpg",
+      "store_url": "https://store.steampowered.com/app/703080/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=703080&l=english",
+        "tags_url": "https://store.steampowered.com/app/703080/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/703080/library_600x900.jpg?t=1765896213",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/703080/header.jpg?t=1765896213",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "3492b0ae7b63aa1c8dc579f87223a71500fe4b9e7478b39f9a50a9cdb2178549",
+        "header_sha256": "b040cf5b2143a84b4653cffa52e957aca3af7fdaefee87e511a29a07a00176f6",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/703080/library_hero.jpg?t=1765896213",
+        "hero_sha256": "d19df0e97dfdf1570dd62f12faca1b494f9f15547cc3f3b9a96f7f18891fd403"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/703080/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "civ",
-      "title": "Civilization VI",
+      "steam_app_id": 289070,
+      "title": "Sid Meier’s Civilization® VI",
       "genre": "Strategy",
-      "tags": [
-        "Turn-based",
-        "Strategy",
-        "Management",
-        "Exploration"
+      "genres": [
+        "Strategy"
       ],
-      "description": "From a first settlement to a new era.",
-      "edition": "ACROSS THE AGES"
+      "tags": [
+        "Strategy",
+        "Turn-Based Strategy",
+        "Multiplayer",
+        "Historical",
+        "Grand Strategy",
+        "Singleplayer",
+        "Turn-Based",
+        "4X",
+        "City Builder",
+        "War",
+        "Simulation",
+        "Tactical",
+        "Management",
+        "Building",
+        "Online Co-Op",
+        "Moddable",
+        "Great Soundtrack",
+        "Co-op",
+        "Hex Grid",
+        "Atmospheric"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "LAN PvP",
+        "Shared/Split Screen PvP",
+        "Shared/Split Screen",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "In-App Purchases",
+        "Steam Turn Notifications",
+        "Remote Play on Tablet",
+        "Remote Play Together",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Simulation",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Expand your empire, advance your culture and go head-to-head against history’s greatest leaders. Will your civilization stand the test of time?",
+      "developers": [
+        "Firaxis Games",
+        "Aspyr (Mac)",
+        "Aspyr (Linux)"
+      ],
+      "publishers": [
+        "2K",
+        "Aspyr (Mac)",
+        "Aspyr (Linux)"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "20 Oct, 2016"
+      },
+      "cover_url": "/assets/steam/289070/cover.jpg",
+      "header_url": "/assets/steam/289070/header.jpg",
+      "store_url": "https://store.steampowered.com/app/289070/",
+      "chart_rank": 63,
+      "chart_peak": 42488,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=289070&l=english",
+        "tags_url": "https://store.steampowered.com/app/289070/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/library_600x900.jpg?t=1792718069",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg?t=1792718069",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "c9a424481c71cf7a4992a404ca203b2a4da348336382493ce30482a042b4fa34",
+        "header_sha256": "fbebadfe4def4a064d339d075f05e4f7a9d598af3ad6df6dd5e4c0509c3a5b61",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/95dca23c23f718952bd30cc4a0687cc951a43468/library_hero.jpg?t=1792718069",
+        "hero_sha256": "ad1df566a1d55faa1efd6f5e84d91d99d911de605935bbeb766d812ae1c5a71a"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/289070/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "breach",
+      "steam_app_id": 590380,
       "title": "Into the Breach",
-      "genre": "Strategy",
-      "tags": [
-        "Turn-based",
-        "Strategy",
-        "Tactics",
-        "Puzzles"
+      "genre": "RPG",
+      "genres": [
+        "Indie",
+        "RPG",
+        "Simulation",
+        "Strategy"
       ],
-      "description": "A small grid. A decision that changes everything.",
-      "edition": "SMALL-SCALE TACTICS"
+      "tags": [
+        "Strategy",
+        "Turn-Based Strategy",
+        "Pixel Graphics",
+        "Indie",
+        "Turn-Based Tactics",
+        "Mechs",
+        "Roguelike",
+        "Puzzle",
+        "Turn-Based",
+        "Roguelite",
+        "Sci-fi",
+        "Singleplayer",
+        "Tactical",
+        "Turn-Based Combat",
+        "Isometric",
+        "RPG",
+        "Replay Value",
+        "Procedural Generation",
+        "Simulation",
+        "Great Soundtrack"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Simulation",
+        "Strategy",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "Control powerful mechs from the future to defeat an alien threat. Each attempt to save the world presents a new randomly generated challenge in this turn-based strategy game.",
+      "developers": [
+        "Subset Games"
+      ],
+      "publishers": [
+        "Subset Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "27 Feb, 2018"
+      },
+      "cover_url": "/assets/steam/590380/cover.jpg",
+      "header_url": "/assets/steam/590380/header.jpg",
+      "store_url": "https://store.steampowered.com/app/590380/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=590380&l=english",
+        "tags_url": "https://store.steampowered.com/app/590380/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/590380/library_600x900.jpg?t=1755610784",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/590380/header.jpg?t=1755610784",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "0177be0a7b192b08c01898f07849576e7acf20dd6cc5eec9bbedf9ad0347382a",
+        "header_sha256": "d9884da738eede10b7368aa5ebea91aa48233916419bf1e8b631f66a7e8dd403",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/590380/library_hero.jpg?t=1755610784",
+        "hero_sha256": "974cc115bd78003d5b46abc964e0989030ac157c25edd0320f1ad5cdbc501b17"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/590380/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "xcom",
-      "title": "XCOM 2",
+      "steam_app_id": 268500,
+      "title": "XCOM® 2",
       "genre": "Strategy",
-      "tags": [
-        "Turn-based",
-        "Tactics",
-        "Strategy",
-        "Combat"
+      "genres": [
+        "Strategy"
       ],
-      "description": "Every deployment is a new decision.",
-      "edition": "UNKNOWN FRONTIERS"
+      "tags": [
+        "Strategy",
+        "Turn-Based Combat",
+        "Tactical",
+        "Character Customization",
+        "RPG",
+        "Turn-Based Tactics",
+        "Singleplayer",
+        "Sci-fi",
+        "War",
+        "Military",
+        "PvE",
+        "Isometric",
+        "Perma Death",
+        "Post-apocalyptic",
+        "Turn-Based Strategy",
+        "Turn-Based",
+        "Alternate History",
+        "Grid-Based Movement",
+        "Top-Down",
+        "Logic"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Steam Cloud",
+        "Remote Play on Tablet",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Strategy",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "XCOM 2 is the sequel to XCOM: Enemy Unknown, the 2012 award-winning strategy game of the year. Earth has changed and is now under alien rule. Facing impossible odds you must rebuild XCOM, and ignite a global resistance to reclaim our world and save humanity.",
+      "developers": [
+        "Firaxis Games",
+        "Feral Interactive (Mac)",
+        "Feral Interactive (Linux)"
+      ],
+      "publishers": [
+        "2K",
+        "Feral Interactive (Mac)",
+        "Feral Interactive (Linux)"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "Feb 4, 2016"
+      },
+      "cover_url": "/assets/steam/268500/cover.jpg",
+      "header_url": "/assets/steam/268500/header.jpg",
+      "store_url": "https://store.steampowered.com/app/268500/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=268500&l=english",
+        "tags_url": "https://store.steampowered.com/app/268500/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/library_600x900.jpg?t=1772813016",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/header.jpg?t=1772813016",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "63f549c7ad19752cb30eee480ae26da1ffc7c088aded68c024acf980b2ce7a7a",
+        "header_sha256": "7b3bd64de4ed28af8c37145a3258c9d24f40436092df5491807db71eaa0054c3",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/library_hero.jpg?t=1772813016",
+        "hero_sha256": "d6234b994b3e048f1624baa9ea2c78b2aa7e257d9a7a5459c8ba025e5f20eeff"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/268500/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "spire",
+      "steam_app_id": 646570,
       "title": "Slay the Spire",
       "genre": "Strategy",
-      "tags": [
-        "Deckbuilding",
-        "Strategy",
-        "Roguelike",
-        "Turn-based"
+      "genres": [
+        "Indie",
+        "Strategy"
       ],
-      "description": "Find your way up, one card at a time.",
-      "edition": "CARDS & CLIMBS"
+      "tags": [
+        "Roguelike Deckbuilder",
+        "Card Game",
+        "Card Battler",
+        "Roguelike",
+        "Deckbuilding",
+        "Turn-Based",
+        "Strategy",
+        "Singleplayer",
+        "Roguelite",
+        "Replay Value",
+        "Indie",
+        "Difficult",
+        "Dungeon Crawler",
+        "Mouse Only",
+        "RPG",
+        "2D",
+        "Fantasy",
+        "Procedural Generation",
+        "Great Soundtrack",
+        "Casual"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Adjustable Text Size",
+        "Custom Volume Controls",
+        "Mouse Only Option",
+        "Playable without Timed Input",
+        "Save Anytime",
+        "Touch Only Option",
+        "Steam Cloud",
+        "Stats",
+        "Steam Leaderboards",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Casual",
+        "Strategy",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "We fused card games and roguelikes together to make the best single player deckbuilder we could. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and Slay the Spire!",
+      "developers": [
+        "Mega Crit"
+      ],
+      "publishers": [
+        "Mega Crit"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "23 Jan, 2019"
+      },
+      "cover_url": "/assets/steam/646570/cover.jpg",
+      "header_url": "/assets/steam/646570/header.jpg",
+      "store_url": "https://store.steampowered.com/app/646570/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=646570&l=english",
+        "tags_url": "https://store.steampowered.com/app/646570/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/library_600x900.jpg?t=1774015376",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/header.jpg?t=1774015376",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "ff50d553cfa131fa387e3bcc525a1f638d6c425152b7b981bee13b4ea988207e",
+        "header_sha256": "80257d5e69941643400646506e49eb555d8de28ec6f2c87e9774776c90d4e85a",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/library_hero.jpg?t=1774015376",
+        "hero_sha256": "643f2ab0b9a09e5f7d5cf69242cbd4ce3a1d9ba104ea4b73f68c27af3c799245"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/646570/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "ftl",
+      "steam_app_id": 212680,
       "title": "FTL: Faster Than Light",
-      "genre": "Strategy",
-      "tags": [
-        "Strategy",
-        "Management",
-        "Roguelike",
-        "Exploration"
+      "genre": "Simulation",
+      "genres": [
+        "Indie",
+        "Simulation",
+        "Strategy"
       ],
-      "description": "One small ship. A universe of decisions.",
-      "edition": "DEEP-SPACE CHOICES"
+      "tags": [
+        "Roguelike",
+        "Space",
+        "Strategy",
+        "Sci-fi",
+        "Indie",
+        "Singleplayer",
+        "Perma Death",
+        "Difficult",
+        "Replay Value",
+        "Real-Time with Pause",
+        "Procedural Generation",
+        "Tactical",
+        "Top-Down",
+        "Space Sim",
+        "Roguelite",
+        "2D",
+        "Survival",
+        "Choose Your Own Adventure",
+        "Adventure",
+        "Pixel Graphics"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Steam Trading Cards",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Adventure",
+        "Simulation",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "This \"spaceship simulation roguelike-like\" allows you to take your ship and crew on an adventure through a randomly generated galaxy filled with glory and bitter defeat.",
+      "developers": [
+        "Subset Games"
+      ],
+      "publishers": [
+        "Subset Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "14 Sep, 2012"
+      },
+      "cover_url": "/assets/steam/212680/cover.jpg",
+      "header_url": "/assets/steam/212680/header.jpg",
+      "store_url": "https://store.steampowered.com/app/212680/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=212680&l=english",
+        "tags_url": "https://store.steampowered.com/app/212680/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212680/1742d40ddc6518a14cd1aed35957f157c4f9c3f8/library_600x900.jpg?t=1748969356",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212680/f21426ac9ad51338fa33becce88984758e07c38b/header.jpg?t=1748969356",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "dc9b9169dae62559b0b918d3ea2dadabd7ae80c6d74f9d5694bcb06de1c2bca7",
+        "header_sha256": "5c35280f480a518f6e272e8194784b560cb6aade8fd2b72bbe1388c4a8627cc5",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212680/88e4d477c3616509d182065cd4ebfcfa2a5d486b/library_hero.jpg?t=1748969356",
+        "hero_sha256": "18df53ff824c62196a09ea0af87d423b548777d7ef7ff073f9506b3fb32d5fbb"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/212680/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "portal",
+      "steam_app_id": 620,
       "title": "Portal 2",
-      "genre": "Puzzle",
-      "tags": [
-        "Puzzles",
-        "Logic",
-        "Co-op",
-        "Exploration"
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Adventure"
       ],
-      "description": "A different doorway. A new way of thinking.",
-      "edition": "SPATIAL THINKING"
+      "tags": [
+        "Singleplayer",
+        "Platformer",
+        "Puzzle",
+        "First-Person",
+        "Dark Humor",
+        "Story Rich",
+        "Puzzle Platformer",
+        "Funny",
+        "Female Protagonist",
+        "3D Platformer",
+        "Co-op",
+        "Action-Adventure",
+        "Action",
+        "FPS",
+        "Physics",
+        "Sci-fi",
+        "Level Editor",
+        "Science",
+        "Comedy",
+        "Atmospheric"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Shared/Split Screen Co-op",
+        "Shared/Split Screen",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Captions available",
+        "Steam Workshop",
+        "Steam Workshop",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Playable without Timed Input",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Save Anytime",
+        "Steam Input API Support",
+        "Stereo Sound",
+        "Surround Sound",
+        "Steam Cloud",
+        "Stats",
+        "Includes level editor",
+        "Commentary available",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Remote Play Together",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "Adventure",
+        "Single-player"
+      ],
+      "description": "The \"Perpetual Testing Initiative\" has been expanded to allow you to design co-op puzzles for you and your friends!",
+      "developers": [
+        "Valve"
+      ],
+      "publishers": [
+        "Valve"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "18 Apr, 2011"
+      },
+      "cover_url": "/assets/steam/620/cover.jpg",
+      "header_url": "/assets/steam/620/header.jpg",
+      "store_url": "https://store.steampowered.com/app/620/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=620&l=english",
+        "tags_url": "https://store.steampowered.com/app/620/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/library_600x900.jpg?t=1790187113",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/faffc0f560786e2f05104a8d2fac837c6969bf13/header.jpg?t=1790187113",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "4e387956ce49985b1d9079047856270736125083de5a1e884af88e38c7edf653",
+        "header_sha256": "f8d3e67e30a6b1b96be98bc52d5759a1e027ea41bd62f5ba6c4008ff780de58f",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/a58588d857b8683f8065e55f97ab82ad8a945c51/library_hero.jpg?t=1790187113",
+        "hero_sha256": "9e3594114a200c713b55e96b640134412623714f5bc10d133f9904309ee8a1e1"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/620/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "witness",
+      "steam_app_id": 210970,
       "title": "The Witness",
-      "genre": "Puzzle",
-      "tags": [
-        "Puzzles",
-        "Logic",
-        "Exploration",
-        "Relaxing"
+      "genre": "Adventure",
+      "genres": [
+        "Adventure",
+        "Indie"
       ],
-      "description": "Explore an island. Learn to see its patterns.",
-      "edition": "ISLAND PATTERNS"
+      "tags": [
+        "Puzzle",
+        "Exploration",
+        "First-Person",
+        "Open World",
+        "Singleplayer",
+        "Colorful",
+        "Indie",
+        "Atmospheric",
+        "Difficult",
+        "Walking Simulator",
+        "Adventure",
+        "Mystery",
+        "Nonlinear",
+        "Philosophical",
+        "Relaxing",
+        "Surreal",
+        "Casual",
+        "Great Soundtrack",
+        "Beautiful",
+        "Story Rich"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Captions available",
+        "Partial Controller Support",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Adventure",
+        "Casual",
+        "Single-player"
+      ],
+      "description": "You wake up, alone, on a strange island full of puzzles that will challenge and surprise you.",
+      "developers": [
+        "Thekla, Inc."
+      ],
+      "publishers": [
+        "Thekla, Inc."
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "Jan 26, 2016"
+      },
+      "cover_url": "/assets/steam/210970/cover.jpg",
+      "header_url": "/assets/steam/210970/header.jpg",
+      "store_url": "https://store.steampowered.com/app/210970/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=210970&l=english",
+        "tags_url": "https://store.steampowered.com/app/210970/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/210970/library_600x900.jpg?t=1720810823",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/210970/header.jpg?t=1720810823",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "9b5296b169f33cce5248f94c1c3260ba4f790d55c63e2e622ab64249e8c118fd",
+        "header_sha256": "bbe8be3feb50cc39bd0e4edcfa46fe005305b29523ae130f48ebff8d3ad6c354",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/210970/library_hero.jpg?t=1720810823",
+        "hero_sha256": "6a9b63e27260ad81bbecde9669e2d0a54afba6ba6f3fa887feffcde1ae5af40e"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/210970/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "baba",
+      "steam_app_id": 736260,
       "title": "Baba Is You",
-      "genre": "Puzzle",
-      "tags": [
-        "Puzzles",
-        "Logic",
-        "Grid puzzles",
-        "Strategy"
+      "genre": "Indie",
+      "genres": [
+        "Indie"
       ],
-      "description": "Change the rules to find a new answer.",
-      "edition": "BETWEEN THE RULES"
+      "tags": [
+        "Puzzle",
+        "Indie",
+        "Difficult",
+        "Singleplayer",
+        "Logic",
+        "Pixel Graphics",
+        "Cute",
+        "Sokoban",
+        "2D",
+        "Programming",
+        "Great Soundtrack",
+        "Minimalist",
+        "Level Editor",
+        "Casual",
+        "Top-Down",
+        "Surreal",
+        "Strategy",
+        "Retro",
+        "Atmospheric",
+        "Funny"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Partial Controller Support",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Casual",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Baba Is You is a puzzle game where the rules you have to follow are present as blocks you can interact with. By manipulating them, you can change how the game works, repurpose things you find in the levels and cause surprising interactions!",
+      "developers": [
+        "Hempuli Oy"
+      ],
+      "publishers": [
+        "Hempuli Oy"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "13 Mar, 2019"
+      },
+      "cover_url": "/assets/steam/736260/cover.jpg",
+      "header_url": "/assets/steam/736260/header.jpg",
+      "store_url": "https://store.steampowered.com/app/736260/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=736260&l=english",
+        "tags_url": "https://store.steampowered.com/app/736260/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/736260/library_600x900.jpg?t=1760102539",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/736260/header.jpg?t=1760102539",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "dd95e299ef5e03bcbb9e2de8135a3ac657d845d0247d27e3f1e58da3783b7415",
+        "header_sha256": "a64bbb217078a076ccb237aa7e1cfbcec4c51eadfe346130b644e7bf00727948",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/736260/library_hero.jpg?t=1760102539",
+        "hero_sha256": "e34faf50d7f722f6f5de60af38353926293db55fa8b1f6a558a933dbcb7ac960"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/736260/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "obra",
+      "steam_app_id": 653530,
       "title": "Return of the Obra Dinn",
-      "genre": "Puzzle",
-      "tags": [
-        "Puzzles",
-        "Logic",
-        "Story-rich",
-        "Exploration"
+      "genre": "Adventure",
+      "genres": [
+        "Adventure",
+        "Indie"
       ],
-      "description": "Follow the clues. Reconstruct a lost voyage.",
-      "edition": "ECHOES AT SEA"
+      "tags": [
+        "Detective",
+        "Mystery",
+        "Puzzle",
+        "Story Rich",
+        "Atmospheric",
+        "Singleplayer",
+        "Indie",
+        "Great Soundtrack",
+        "First-Person",
+        "Historical",
+        "Naval",
+        "Adventure",
+        "Difficult",
+        "Retro",
+        "Multiple Endings",
+        "Violent",
+        "Pirates",
+        "Horror",
+        "Noir",
+        "Walking Simulator"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Cloud",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Adventure",
+        "Single-player"
+      ],
+      "description": "Lost at sea 1803 ~ The good ship Obra Dinn.",
+      "developers": [
+        "Lucas Pope"
+      ],
+      "publishers": [
+        "3909"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "18 Oct, 2018"
+      },
+      "cover_url": "/assets/steam/653530/cover.jpg",
+      "header_url": "/assets/steam/653530/header.jpg",
+      "store_url": "https://store.steampowered.com/app/653530/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=653530&l=english",
+        "tags_url": "https://store.steampowered.com/app/653530/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/library_600x900.jpg?t=1686697594",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/header.jpg?t=1686697594",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "2b6763ad1b07a00b51e48831adf6e4c9b756a5f52f11e41b336855aee9e90673",
+        "header_sha256": "6417f53183fe871017950c05737c40292c201bc4d9041e2bb38b878c5bd6d8b7",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/library_hero.jpg?t=1686697594",
+        "hero_sha256": "47045228306af8eb5df796b59723deb90970348f902f7e378087443adbcae3c7"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/653530/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "hades",
+      "steam_app_id": 1145360,
       "title": "Hades",
       "genre": "Action",
-      "tags": [
-        "Combat",
-        "Roguelike",
-        "Story-rich",
-        "Adventure"
+      "genres": [
+        "Action",
+        "Indie",
+        "RPG"
       ],
-      "description": "Another escape. Another chapter of the story.",
-      "edition": "UNDERWORLD SPARKS"
+      "tags": [
+        "Action Roguelike",
+        "Roguelite",
+        "Hack and Slash",
+        "Indie",
+        "Mythology",
+        "Action",
+        "Roguelike",
+        "Singleplayer",
+        "Great Soundtrack",
+        "Story Rich",
+        "Dungeon Crawler",
+        "RPG",
+        "Replay Value",
+        "Isometric",
+        "Difficult",
+        "Hand-drawn",
+        "Action RPG",
+        "Atmospheric",
+        "LGBTQ+",
+        "Perma Death"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Captions available",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Action",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.",
+      "developers": [
+        "Supergiant Games"
+      ],
+      "publishers": [
+        "Supergiant Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "17 Sep, 2020"
+      },
+      "cover_url": "/assets/steam/1145360/cover.jpg",
+      "header_url": "/assets/steam/1145360/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1145360/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1145360&l=english",
+        "tags_url": "https://store.steampowered.com/app/1145360/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/library_600x900.jpg?t=1758127023",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1758127023",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "276839b5b89186a26008136acb43f0f822226eebf98f1793f50638de7fc8cd3a",
+        "header_sha256": "5014ec1d84ae967cf4226826824628d44963655fa8ac5f6575ca53a759b5cb3f",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/library_hero.jpg?t=1758127023",
+        "hero_sha256": "17a9996dd0835f0e3fed220b002deb918b33efcea2addc69e193ffc3e8e5a36b"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1145360/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "hollow",
+      "steam_app_id": 367520,
       "title": "Hollow Knight",
       "genre": "Action",
-      "tags": [
-        "Exploration",
+      "genres": [
+        "Action",
         "Adventure",
-        "Combat",
-        "Platforming"
+        "Indie"
       ],
-      "description": "Find a lost kingdom beneath the surface.",
-      "edition": "HIDDEN KINGDOMS"
+      "tags": [
+        "Metroidvania",
+        "Platformer",
+        "Souls-like",
+        "Difficult",
+        "Great Soundtrack",
+        "2D",
+        "Indie",
+        "Singleplayer",
+        "Exploration",
+        "Atmospheric",
+        "Adventure",
+        "Story Rich",
+        "Hand-drawn",
+        "Multiple Endings",
+        "Action",
+        "Dark Fantasy",
+        "Open World",
+        "Cute",
+        "Controller",
+        "Side Scroller"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Action",
+        "Adventure",
+        "Single-player"
+      ],
+      "description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
+      "developers": [
+        "Team Cherry"
+      ],
+      "publishers": [
+        "Team Cherry"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "24 Feb, 2017"
+      },
+      "cover_url": "/assets/steam/367520/cover.jpg",
+      "header_url": "/assets/steam/367520/header.jpg",
+      "store_url": "https://store.steampowered.com/app/367520/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=367520&l=english",
+        "tags_url": "https://store.steampowered.com/app/367520/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/1eebc7e077ee345f126df35cd99c124273c4e4e3/library_capsule.jpg?t=1776125684",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/3c3489495136b26b34f8a9543c7f5645b99d388c/header.jpg?t=1776125684",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "81bf1df9c521e004611f1f3531402874b92d66774c60148ddad5a57e6f43d67d",
+        "header_sha256": "8886d642286de5411b216173b078d9d95f97cb5343e8d8042970ca4ba40d5d7d",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/0daf3933d392d7bb7c5a890917e20c917fcc458e/library_hero.jpg?t=1776125684",
+        "hero_sha256": "ae7d4d5977c9fa8a7f829fad0a03af725c6da42ae91df379bb214074061edd1f"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/367520/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "dead",
+      "steam_app_id": 588650,
       "title": "Dead Cells",
       "genre": "Action",
-      "tags": [
-        "Combat",
-        "Roguelike",
-        "Platforming",
-        "Exploration"
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie"
       ],
-      "description": "Find your rhythm in every new attempt.",
-      "edition": "MOTION & MOMENTUM"
+      "tags": [
+        "Adventure",
+        "Roguelike",
+        "Metroidvania",
+        "Action Roguelike",
+        "Pixel Graphics",
+        "2D",
+        "Roguelite",
+        "Souls-like",
+        "Hack and Slash",
+        "Replay Value",
+        "Platformer",
+        "Singleplayer",
+        "Action",
+        "Dark Fantasy",
+        "Atmospheric",
+        "Procedural Generation",
+        "Funny",
+        "Difficult",
+        "Indie",
+        "Great Soundtrack"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Action",
+        "Adventure",
+        "Single-player"
+      ],
+      "description": "Dead Cells is a roguelite, metroidvania inspired, action-platformer. You'll explore a sprawling, ever-changing castle... assuming you’re able to fight your way past its keepers in 2D souls-lite combat. No checkpoints. Kill, die, learn, repeat.",
+      "developers": [
+        "Motion Twin"
+      ],
+      "publishers": [
+        "Motion Twin"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "6 Aug, 2018"
+      },
+      "cover_url": "/assets/steam/588650/cover.jpg",
+      "header_url": "/assets/steam/588650/header.jpg",
+      "store_url": "https://store.steampowered.com/app/588650/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=588650&l=english",
+        "tags_url": "https://store.steampowered.com/app/588650/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/library_600x900.jpg?t=1779086887",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg?t=1779086887",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "8dca95e824178d0bce39a36a8bf2aa5b69a38190d953e410142a9655ed403903",
+        "header_sha256": "6a6f141f761ad88c31691c1ab5134fd9d69c5bb41fe4a6e6e90b2913bd1b4e02",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/library_hero.jpg?t=1779086887",
+        "hero_sha256": "0751ac88893d9d24ff961156f88cf9e55e8a7fe3134de821734c0cc7d4c5e6de"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/588650/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "celeste",
+      "steam_app_id": 504230,
       "title": "Celeste",
       "genre": "Action",
-      "tags": [
-        "Platforming",
+      "genres": [
+        "Action",
         "Adventure",
-        "Story-rich",
-        "Challenge"
+        "Indie"
       ],
-      "description": "Climb a mountain. Take the next small step.",
-      "edition": "LETTERS FROM THE SUMMIT"
+      "tags": [
+        "Precision Platformer",
+        "Difficult",
+        "Pixel Graphics",
+        "Great Soundtrack",
+        "Indie",
+        "Platformer",
+        "2D Platformer",
+        "Female Protagonist",
+        "Singleplayer",
+        "2D",
+        "Story Rich",
+        "Adventure",
+        "Cute",
+        "LGBTQ+",
+        "Puzzle Platformer",
+        "Atmospheric",
+        "Action",
+        "Retro",
+        "Side Scroller",
+        "Exploration"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Steam Cloud",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Action",
+        "Adventure",
+        "Single-player"
+      ],
+      "description": "Help Madeline survive her inner demons on her journey to the top of Celeste Mountain, in this super-tight platformer from the creators of TowerFall. Brave hundreds of hand-crafted challenges, uncover devious secrets, and piece together the mystery of the mountain.",
+      "developers": [
+        "Maddy Makes Games Inc.",
+        "Extremely OK Games, Ltd."
+      ],
+      "publishers": [
+        "Maddy Makes Games Inc."
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "25 Jan, 2018"
+      },
+      "cover_url": "/assets/steam/504230/cover.jpg",
+      "header_url": "/assets/steam/504230/header.jpg",
+      "store_url": "https://store.steampowered.com/app/504230/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=504230&l=english",
+        "tags_url": "https://store.steampowered.com/app/504230/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/library_600x900.jpg?t=1714089525",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1714089525",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "4106add10c3b02c1131ab1512221a255affbcf6c585be0f2629a4b32e72509d0",
+        "header_sha256": "a0469dca08cbdc24fc10bd27ce6fe95350cde85b8441e37175356e6021365a64",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/library_hero.jpg?t=1714089525",
+        "hero_sha256": "fe311399362063f82b157fc66b0ed1816b57b91c667fb05af5fa41b6bfa60da3"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/504230/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "risk",
+      "steam_app_id": 632360,
       "title": "Risk of Rain 2",
       "genre": "Action",
-      "tags": [
-        "Combat",
-        "Roguelike",
-        "Co-op",
-        "Exploration"
+      "genres": [
+        "Action",
+        "Indie"
       ],
-      "description": "Face an alien world with your friends.",
-      "edition": "AFTER THE STORM"
+      "tags": [
+        "Third-Person Shooter",
+        "Action Roguelike",
+        "Multiplayer",
+        "Co-op",
+        "Roguelike",
+        "Roguelite",
+        "Action",
+        "Looter Shooter",
+        "Loot",
+        "Online Co-Op",
+        "Shooter",
+        "Great Soundtrack",
+        "Difficult",
+        "Indie",
+        "Third Person",
+        "Survival",
+        "Singleplayer",
+        "Soundtrack",
+        "Early Access",
+        "Bullet Hell"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Stereo Sound",
+        "Surround Sound",
+        "Steam Cloud",
+        "Steam Leaderboards",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Action",
+        "Single-player"
+      ],
+      "description": "Escape a chaotic alien planet by fighting through hordes of frenzied monsters – with your friends, or on your own. Combine loot in surprising ways and master each character until you become the havoc you feared upon your first crash landing.",
+      "developers": [
+        "Hopoo Games"
+      ],
+      "publishers": [
+        "Gearbox Publishing",
+        "2K"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "11 Aug, 2020"
+      },
+      "cover_url": "/assets/steam/632360/cover.jpg",
+      "header_url": "/assets/steam/632360/header.jpg",
+      "store_url": "https://store.steampowered.com/app/632360/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=632360&l=english",
+        "tags_url": "https://store.steampowered.com/app/632360/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632360/library_600x900.jpg?t=1791475448",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632360/header.jpg?t=1791475448",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "c2f061f8ec4bba1de71e10c709d9e4128e78894bdab7a2fc4b2cef97ebcdc169",
+        "header_sha256": "7aa775c3a740ec1ac015b2199b1613b92650d45a952f37938bf8ffec9bcbd34e",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632360/library_hero.jpg?t=1791475448",
+        "hero_sha256": "befe57fd0f409863148aba4abdb749dafe16cdfc096b6a1752655fa25121caa1"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/632360/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     },
     {
       "id": "rock",
+      "steam_app_id": 548430,
       "title": "Deep Rock Galactic",
       "genre": "Action",
+      "genres": [
+        "Action"
+      ],
       "tags": [
+        "Dwarves",
         "Co-op",
+        "PvE",
+        "FPS",
+        "Procedural Generation",
+        "Class-Based",
+        "Shooter",
         "Exploration",
+        "First-Person",
+        "Loot",
+        "Sci-fi",
+        "Action",
+        "Space",
+        "Atmospheric",
+        "Looter Shooter",
         "Combat",
+        "Survival",
+        "Horror",
+        "Dark",
+        "Action Roguelike"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Captions available",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Playable without Timed Input",
+        "Stereo Sound",
+        "Subtitle Options",
+        "Steam Cloud",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "Single-player"
+      ],
+      "description": "Deep Rock Galactic is a 1-4 player co-op FPS featuring dwarven space miners, procedurally-generated destructible environments, and endless hordes of alien monsters. Explore cave systems, mine for minerals, and work together to survive!",
+      "developers": [
+        "Ghost Ship Games"
+      ],
+      "publishers": [
+        "Coffee Stain Publishing"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "13 May, 2020"
+      },
+      "cover_url": "/assets/steam/548430/cover.jpg",
+      "header_url": "/assets/steam/548430/header.jpg",
+      "store_url": "https://store.steampowered.com/app/548430/",
+      "chart_rank": null,
+      "chart_peak": null,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=548430&l=english",
+        "tags_url": "https://store.steampowered.com/app/548430/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548430/library_600x900.jpg?t=1794917410",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548430/37b58a6c4816ee60b0ca97cb6724d6e904c58c41/header.jpg?t=1794917410",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "3a207c90a691717c03fe6686a61d49b319e6bbaec3c601524c371dff3516ddeb",
+        "header_sha256": "9827c5c71bb8413d8f816fc0409c233d74309616fbae179116f801ec622b0376",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548430/35c4a38067592e934fbb389098eccb0d8a8de000/library_hero.jpg?t=1794917410",
+        "hero_sha256": "db2dd4c3df59de8cdff438dc75bf208a66cab32374280e27542eb913c1da00d5"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/548430/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_730",
+      "steam_app_id": 730,
+      "title": "Counter-Strike 2",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Free To Play"
+      ],
+      "tags": [
+        "FPS",
+        "Shooter",
+        "Multiplayer",
+        "Competitive",
+        "Action",
+        "Team-Based",
+        "eSports",
+        "Tactical",
+        "First-Person",
+        "PvP",
+        "Online Co-Op",
+        "Co-op",
+        "Strategy",
+        "Military",
+        "War",
+        "Trading",
+        "Difficult",
+        "Realistic",
+        "Fast-Paced",
+        "Moddable"
+      ],
+      "features": [
+        "Multi-player",
+        "Cross-Platform Multiplayer",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Steam Workshop",
+        "In-App Purchases",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Playable without Timed Input",
+        "Stereo Sound",
+        "Surround Sound",
+        "Valve Anti-Cheat enabled",
+        "Stats",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV",
+        "Steam Timeline"
+      ],
+      "filter_tags": [
+        "Action",
+        "Strategy"
+      ],
+      "description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
+      "developers": [
+        "Valve"
+      ],
+      "publishers": [
+        "Valve"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "21 Aug, 2012"
+      },
+      "cover_url": "/assets/steam/730/cover.jpg",
+      "header_url": "/assets/steam/730/header.jpg",
+      "store_url": "https://store.steampowered.com/app/730/",
+      "chart_rank": 1,
+      "chart_peak": 1259590,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=730&l=english",
+        "tags_url": "https://store.steampowered.com/app/730/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/library_600x900.jpg?t=1793054556",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1793054556",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "1bc18cc4a602923e6411d3515bd4f90b635ce8d064ce33ef4a65048834f377e4",
+        "header_sha256": "747527645619ecf6fbbec78aa543ab0c9a5be12f0bd7c17ccf559e1522678ded",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/library_hero.jpg?t=1793054556",
+        "hero_sha256": "b2dce00d292c217af9e207ad3622279a0affe47ac26ad053dfeaff5d4ad65425"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/730/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_578080",
+      "steam_app_id": 578080,
+      "title": "PUBG: BATTLEGROUNDS",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Massively Multiplayer",
+        "Free To Play"
+      ],
+      "tags": [
+        "Survival",
+        "Shooter",
+        "Battle Royale",
+        "Multiplayer",
+        "FPS",
+        "PvP",
+        "Third-Person Shooter",
+        "Action",
+        "Online Co-Op",
+        "Tactical",
+        "Co-op",
+        "First-Person",
+        "Strategy",
+        "Early Access",
+        "Competitive",
+        "Third Person",
+        "Team-Based",
+        "Difficult",
+        "Simulation",
+        "Stealth"
+      ],
+      "features": [
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Custom Volume Controls",
+        "Stereo Sound",
+        "Surround Sound",
+        "Partial Controller Support",
+        "Stats",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "Adventure",
+        "Simulation",
+        "Strategy"
+      ],
+      "description": "PUBG: BATTLEGROUNDS, the high-stakes winner-take-all shooter that started the Battle Royale craze, is free-to-play! Drop into diverse maps, loot unique weapons and supplies, and survive in an ever-shrinking zone where every turn could be your last.",
+      "developers": [
+        "PUBG Corporation"
+      ],
+      "publishers": [
+        "KRAFTON, Inc."
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "21 Dec, 2017"
+      },
+      "cover_url": "/assets/steam/578080/cover.jpg",
+      "header_url": "/assets/steam/578080/header.jpg",
+      "store_url": "https://store.steampowered.com/app/578080/",
+      "chart_rank": 2,
+      "chart_peak": 770200,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=578080&l=english",
+        "tags_url": "https://store.steampowered.com/app/578080/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/36a1a274b3a7870e475ea1e110e58db8a0803c41/library_600x900.jpg?t=1792718193",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1792718193",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "b104586bcd068e8d21ddaeadff8db3589536c1e858995aa2f24ff3b5fdb37f3a",
+        "header_sha256": "acd549290767b2fc76a7efb7d7881e73530ab5432061b14e6d1095b5c5bd0892",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/a14b88ee69f55d5354d3efc1f725eddf40650869/library_hero.jpg?t=1792718193",
+        "hero_sha256": "82d9e1748bd56001d7c807f91d36ee060355685bf5e9a6e8ad32e87385294977"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/578080/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_570",
+      "steam_app_id": 570,
+      "title": "Dota 2",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Strategy",
+        "Free To Play"
+      ],
+      "tags": [
+        "Free to Play",
+        "MOBA",
+        "Multiplayer",
+        "Strategy",
+        "eSports",
+        "Team-Based",
+        "Competitive",
+        "Action",
+        "Online Co-Op",
+        "PvP",
+        "Difficult",
+        "Co-op",
+        "RTS",
+        "RPG",
+        "Tower Defense",
+        "Fantasy",
+        "Character Customization",
+        "Replay Value",
+        "Action RPG",
+        "Simulation"
+      ],
+      "features": [
+        "Multi-player",
+        "Co-op",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "SteamVR Collectibles",
+        "In-App Purchases",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Valve Anti-Cheat enabled",
+        "Steam Timeline"
+      ],
+      "filter_tags": [
+        "Action",
+        "Simulation",
+        "Strategy",
+        "RPG"
+      ],
+      "description": "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own.",
+      "developers": [
+        "Valve"
+      ],
+      "publishers": [
+        "Valve"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "9 Jul, 2013"
+      },
+      "cover_url": "/assets/steam/570/cover.jpg",
+      "header_url": "/assets/steam/570/header.jpg",
+      "store_url": "https://store.steampowered.com/app/570/",
+      "chart_rank": 3,
+      "chart_peak": 861183,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=570&l=english",
+        "tags_url": "https://store.steampowered.com/app/570/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/6cddc26cb124bd87d3fbacd58cd83ba33e4cb0e7/library_capsule.jpg?t=1791407503",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1791407503",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "2f3024cbe9985458a6f7fa492385bffb3ddab2cc3b396716a4d21ea585cb26f1",
+        "header_sha256": "ade5aebca98e763ae1d930f1fcc55a5d89b48a90f738ffd67bf118fc50c8272a",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/0e4a18e7b53d1d4d68bba65969919e6a85920b04/library_hero.jpg?t=1791407503",
+        "hero_sha256": "bd0ead191f1c9b38742275fa39e41887a8cdf3b7fa872a716773c71deee9d6ae"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/570/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_4262460",
+      "steam_app_id": 4262460,
+      "title": "ROB RUN",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Massively Multiplayer",
+        "RPG",
+        "Simulation",
+        "Free To Play",
+        "Early Access"
+      ],
+      "tags": [
+        "Early Access",
+        "Multiplayer",
+        "Extraction Shooter",
+        "Crime",
+        "Sandbox",
+        "Survival",
+        "Open World",
+        "Looter Shooter",
+        "Heist",
+        "Online Co-Op",
+        "Action",
+        "Base Building",
+        "PvP",
+        "Shooter",
+        "Third-Person Shooter",
+        "Crafting",
+        "RPG",
+        "Building",
+        "Tactical",
+        "Automobile Sim"
+      ],
+      "features": [
+        "Multi-player",
+        "MMO",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "In-App Purchases",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "Simulation",
+        "RPG"
+      ],
+      "description": "ROB RUN is a brutal crime sandbox featuring thousands of players. Rise above everyone through the grit, the grime, and the struggle. Break free and take yourself from squalor by any means.",
+      "developers": [
+        "Kefir"
+      ],
+      "publishers": [
+        "Kefir"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "4 Nov, 2026"
+      },
+      "cover_url": "/assets/steam/4262460/cover.jpg",
+      "header_url": "/assets/steam/4262460/header.jpg",
+      "store_url": "https://store.steampowered.com/app/4262460/",
+      "chart_rank": 5,
+      "chart_peak": 495857,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=4262460&l=english",
+        "tags_url": "https://store.steampowered.com/app/4262460/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4262460/69a7d94807fcdea67f649ecfa3da0aab369bd767/library_capsule.jpg?t=1793811654",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4262460/db8e0cf43c9475b96fb9446b4908de79fcb9f619/header.jpg?t=1793811654",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "db371426eaab0f0e8b8a48dfcfe1d17fcb5621c2914bccd136f789da8a0400e9",
+        "header_sha256": "8ac95a0060f2777426cf61e66234d334c1cfdd745970c7a9349635a0bc9acd8b",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4262460/61dff3c7ebce05c75d9d60d69440b099d16cfd02/library_hero.jpg?t=1793811654",
+        "hero_sha256": "38e39224b624bf76d16fde60917bc14538328c605de2636157269e5ff08e6d28"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/4262460/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_1422450",
+      "steam_app_id": 1422450,
+      "title": "Deadlock",
+      "genre": "Action",
+      "genres": [
+        "Action"
+      ],
+      "tags": [
+        "MOBA",
+        "Third-Person Shooter",
+        "Multiplayer",
+        "Hero Shooter",
+        "Team-Based",
+        "Competitive",
+        "Shooter",
+        "Third Person",
+        "PvP",
+        "Action",
+        "Early Access",
+        "Free to Play",
+        "Strategy",
+        "Online Co-Op",
+        "Tactical",
+        "Co-op",
+        "Funny",
+        "Cute",
+        "Sexual Content",
+        "Horror"
+      ],
+      "features": [
+        "Multi-player"
+      ],
+      "filter_tags": [
+        "Action",
+        "Strategy"
+      ],
+      "description": "Deadlock is a multiplayer game in early development.",
+      "developers": [
+        "Valve"
+      ],
+      "publishers": [
+        "Valve"
+      ],
+      "release_date": {
+        "coming_soon": true,
+        "date": "To be announced"
+      },
+      "cover_url": "/assets/steam/1422450/cover.jpg",
+      "header_url": "/assets/steam/1422450/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1422450/",
+      "chart_rank": 6,
+      "chart_peak": 207378,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1422450&l=english",
+        "tags_url": "https://store.steampowered.com/app/1422450/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1422450/43ca731f79816ad94bfcd45287c2e0a22080dab7/library_capsule.jpg?t=1790716179",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1422450/aa249c5e8cc8f90941bd1dbdc311773cd1afe065/header.jpg?t=1790716179",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "a386b341a3f824c63588207bf0b7ecd870e57c491ff6f16f4486741c5558b7fb",
+        "header_sha256": "7dac270d8d8df770b94c0105edb4bacc039c7b3e4e1c03a471262ade3bfe64cb",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1422450/e38dad54f59519e592896c889bbfa7c90fd52270/library_hero.jpg?t=1790716179",
+        "hero_sha256": "8a47b96527388ee6be376169a6c86c718f55f281d920130bc5b43479854391ca"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1422450/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_1172470",
+      "steam_app_id": 1172470,
+      "title": "Apex Legends™",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Free To Play"
+      ],
+      "tags": [
+        "Free to Play",
+        "Multiplayer",
+        "Battle Royale",
+        "FPS",
+        "Shooter",
+        "First-Person",
+        "PvP",
+        "Action",
+        "Hero Shooter",
+        "Team-Based",
+        "Tactical",
+        "Sci-fi",
+        "Co-op",
+        "Loot",
+        "Survival",
+        "Character Customization",
+        "Funny",
+        "Cyberpunk",
+        "Lore-Rich",
+        "Cinematic"
+      ],
+      "features": [
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "In-App Purchases",
+        "Chat Speech-to-text",
+        "Playable without Timed Input",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support"
+      ],
+      "filter_tags": [
+        "Action",
         "Adventure"
       ],
-      "description": "Explore the depths. Bring your team home.",
-      "edition": "TOGETHER BELOW"
+      "description": "Apex Legends is the award-winning, free-to-play Hero Shooter from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities, and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.",
+      "developers": [
+        "Respawn"
+      ],
+      "publishers": [
+        "Electronic Arts"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "4 Nov, 2020"
+      },
+      "cover_url": "/assets/steam/1172470/cover.jpg",
+      "header_url": "/assets/steam/1172470/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1172470/",
+      "chart_rank": 7,
+      "chart_peak": 237886,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1172470&l=english",
+        "tags_url": "https://store.steampowered.com/app/1172470/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/b727d513ccbd272e35095089837d386176c59a97/library_capsule.jpg?t=1794958367",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/dc5c390e9a273a7248f75c1b2d59987f6179323c/header_alt_assets_7.jpg?t=1794958367",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "b7403814352b83ef3023d087b0598f17096702079045d9ae8e78ada4af86e2f0",
+        "header_sha256": "9d01ebb6fa37c8c50960faa168e288c9fcb4fa81317de4dca988e9f09be3152b",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/b9cb4783b9794eaa62020945f7caaf3cf822da20/library_hero.jpg?t=1794958367",
+        "hero_sha256": "f2c2cb4638f68f0fb058d7ca49b98a590385015e9aa787d36de22c8a23bce6b6"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1172470/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_2868840",
+      "steam_app_id": 2868840,
+      "title": "Slay the Spire 2",
+      "genre": "Strategy",
+      "genres": [
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ],
+      "tags": [
+        "Roguelike",
+        "Card Game",
+        "Deckbuilding",
+        "Co-op",
+        "Strategy",
+        "Roguelike Deckbuilder",
+        "Multiplayer",
+        "Turn-Based Combat",
+        "Card Battler",
+        "Indie",
+        "Difficult",
+        "Roguelite",
+        "Early Access",
+        "2D",
+        "Singleplayer",
+        "Replay Value",
+        "Dungeon Crawler",
+        "Fantasy",
+        "Procedural Generation",
+        "Mouse Only"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Full controller support",
+        "Custom Volume Controls",
+        "Mouse Only Option",
+        "#category_playable_at_your_own_pace",
+        "Playable without Timed Input",
+        "DualSense Controller Support",
+        "Save Anytime",
+        "Steam Input API Support",
+        "Steam Cloud",
+        "Stats",
+        "Steam Leaderboards",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "The iconic roguelike deckbuilder returns. Craft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2!",
+      "developers": [
+        "Mega Crit"
+      ],
+      "publishers": [
+        "Mega Crit"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "5 Mar, 2026"
+      },
+      "cover_url": "/assets/steam/2868840/cover.jpg",
+      "header_url": "/assets/steam/2868840/header.jpg",
+      "store_url": "https://store.steampowered.com/app/2868840/",
+      "chart_rank": 8,
+      "chart_peak": 158193,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=2868840&l=english",
+        "tags_url": "https://store.steampowered.com/app/2868840/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/4bf4dad2c9c82b1989eee4a664ca7ce7bf3cc4a7/library_600x900.jpg?t=1787169309",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg?t=1787169309",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "e48562ff471c48c21a2dc877001b25dd15c9eba463d73bac54b339e13c4604bc",
+        "header_sha256": "168223b1450462c8f270c6dc80c5f6d11329a7c7ebf8163da0a52f906febbc53",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/142685c713492a21940cf2c01e50f85aca5780c8/library_hero.jpg?t=1787169309",
+        "hero_sha256": "d8a11fad7aabfbd4abcebf96bae7416cedab85732bb0ea471fb6f4732d5bd156"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/2868840/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_4115450",
+      "steam_app_id": 4115450,
+      "title": "Phantom Blade Zero",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "tags": [
+        "Action RPG",
+        "Wuxia",
+        "Martial Arts",
+        "Action",
+        "Hack and Slash",
+        "Singleplayer",
+        "Souls-like",
+        "Dark Fantasy",
+        "Combat",
+        "Third Person",
+        "Cinematic",
+        "RPG",
+        "Fast-Paced",
+        "Story Rich",
+        "Violent",
+        "Multiple Endings",
+        "3D",
+        "Lore-Rich",
+        "Atmospheric",
+        "Dating Sim"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Adjustable Text Size",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Gamepad Recommended",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Steam Input API Support",
+        "Stereo Sound",
+        "Subtitle Options",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "S-GAME presents Phantom Blade Zero, a fusion of classic Wuxia storytelling and exhilarating action powered by Unreal Engine 5. You play as Soul, a warrior with only sixty-six days left to live. Fend off assassins, unravel world-ending conspiracies, and defend your values with your life.",
+      "developers": [
+        "S-GAME Studio"
+      ],
+      "publishers": [
+        "S-GAME Publishing"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "28 Oct, 2026"
+      },
+      "cover_url": "/assets/steam/4115450/cover.jpg",
+      "header_url": "/assets/steam/4115450/header.jpg",
+      "store_url": "https://store.steampowered.com/app/4115450/",
+      "chart_rank": 9,
+      "chart_peak": 216658,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=4115450&l=english",
+        "tags_url": "https://store.steampowered.com/app/4115450/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/471e77854910665c03eb9a53ad06f2ac12903acd/library_capsule.jpg?t=1793261976",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/7f882f889630270d3d3fb93825ac6f55b55e7a6c/header.jpg?t=1793261976",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "92f793f01f3ed0e8fd5a610754ebce08e66018f4fce1987d06c0378d922be735",
+        "header_sha256": "087dbb4dbf72202ade4fec45f9f072dfcc1c4d33642c5270c6483ae854c0d098",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/1cd52ca84a3d974c4206e9cb90231956324c5999/library_hero.jpg?t=1793261976",
+        "hero_sha256": "caa818e82cd9a526ad0d784692e1db16f7b5fb45c7dbabee5990710557e93c58"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/4115450/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_3240220",
+      "steam_app_id": 3240220,
+      "title": "Grand Theft Auto V Enhanced",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Racing"
+      ],
+      "tags": [
+        "Open World",
+        "Sexual Content",
+        "Action",
+        "Multiplayer",
+        "Crime",
+        "Shooter",
+        "Third Person",
+        "Adventure",
+        "First-Person",
+        "Racing",
+        "Automobile Sim",
+        "Sandbox",
+        "Third-Person Shooter",
+        "Funny",
+        "Nudity",
+        "Moddable",
+        "Co-op",
+        "Atmospheric",
+        "PvP",
+        "Comedy"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "In-App Purchases",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Partial Controller Support",
+        "Remote Play on Phone",
+        "Remote Play on Tablet"
+      ],
+      "filter_tags": [
+        "Action",
+        "Adventure",
+        "Single-player"
+      ],
+      "description": "Experience entertainment blockbusters Grand Theft Auto V and Grand Theft Auto Online — now upgraded for a new generation with stunning visuals, faster loading, 3D audio, and more, plus exclusive content for GTA Online players.",
+      "developers": [
+        "Rockstar North"
+      ],
+      "publishers": [
+        "Rockstar Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "4 Mar, 2025"
+      },
+      "cover_url": "/assets/steam/3240220/cover.jpg",
+      "header_url": "/assets/steam/3240220/header.jpg",
+      "store_url": "https://store.steampowered.com/app/3240220/",
+      "chart_rank": 10,
+      "chart_peak": 128524,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=3240220&l=english",
+        "tags_url": "https://store.steampowered.com/app/3240220/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/394239e5da54fed177bd0ab04590812f6add1bb5/library_600x900.jpg?t=1781187782",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/header.jpg?t=1781187782",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "abb4e15192477cfef5813557ee3b0c8a1878f1a598897aa41eedc42978731152",
+        "header_sha256": "5cf8f5568871796d18c15937ed3824497b94130b577cb354a524fd240dd394b7",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/156530620aa0b27bc9c73f78c3ca64f7d8fed03d/library_hero.jpg?t=1781187782",
+        "hero_sha256": "00ed09d881c612d00db6a1033f585c76040d56e333b419b690853032168fc8d2"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/3240220/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_1938090",
+      "steam_app_id": 1938090,
+      "title": "Call of Duty®",
+      "genre": "Action",
+      "genres": [
+        "Action"
+      ],
+      "tags": [
+        "FPS",
+        "Multiplayer",
+        "Shooter",
+        "Singleplayer",
+        "Action",
+        "Military",
+        "First-Person",
+        "War",
+        "Modern",
+        "Tactical",
+        "Violent",
+        "Co-op",
+        "Realistic",
+        "Story Rich",
+        "Atmospheric",
+        "Online Co-Op",
+        "Gore",
+        "Third-Person Shooter",
+        "Third Person",
+        "Battle Royale"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Full controller support",
+        "Captions available",
+        "In-App Purchases",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Playable without Timed Input",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Stereo Sound",
+        "Subtitle Options",
+        "Surround Sound",
+        "HDR available"
+      ],
+      "filter_tags": [
+        "Action",
+        "Single-player"
+      ],
+      "description": "The Call of Duty® experience supports Modern Warfare® 4, Black Ops 7 and Call of Duty®: Warzone™.",
+      "developers": [
+        "Treyarch",
+        "Raven Software",
+        "Beenox",
+        "High Moon Studios",
+        "Sledgehammer Games",
+        "Infinity Ward",
+        "Activision Shanghai",
+        "Demonware"
+      ],
+      "publishers": [
+        "Activision"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "27 Oct, 2022"
+      },
+      "cover_url": "/assets/steam/1938090/cover.jpg",
+      "header_url": "/assets/steam/1938090/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1938090/",
+      "chart_rank": 11,
+      "chart_peak": 118031,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1938090&l=english",
+        "tags_url": "https://store.steampowered.com/app/1938090/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/cdd2e375176da1f904a11940576790732d6ccbc0/library_capsule.jpg?t=1794591176",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/23af6cf41e2d09620caa07700a4cb3288dbcbaa8/header.jpg?t=1794591176",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "955e90156aaaf371406110da3128cd7d7b5e849ce12d5ce164b0cda0181a6740",
+        "header_sha256": "cb3003ac6674e3a5383b12795deeeacc785ae3040991e6c4d7cbf7e8eb4a814d",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/41805185a8493af69518e83d0dbb819e1de328d5/library_hero.jpg?t=1794591176",
+        "hero_sha256": "3125195192e6b1c4a71cd2c4acf3e93207ac2e620fcf06c0ba7235496fa4fc8f"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1938090/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_1091500",
+      "steam_app_id": 1091500,
+      "title": "Cyberpunk 2077",
+      "genre": "RPG",
+      "genres": [
+        "RPG"
+      ],
+      "tags": [
+        "Cyberpunk",
+        "Open World",
+        "Nudity",
+        "RPG",
+        "Singleplayer",
+        "Story Rich",
+        "FPS",
+        "Sci-fi",
+        "Futuristic",
+        "First-Person",
+        "Atmospheric",
+        "Exploration",
+        "Action",
+        "Violent",
+        "Great Soundtrack",
+        "Action RPG",
+        "Character Customization",
+        "Adventure",
+        "Immersive Sim",
+        "LGBTQ+"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Playable without Timed Input",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Save Anytime",
+        "Stereo Sound",
+        "Subtitle Options",
+        "Surround Sound",
+        "Steam Cloud",
+        "HDR available",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "Adventure",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.",
+      "developers": [
+        "CD PROJEKT RED"
+      ],
+      "publishers": [
+        "CD PROJEKT RED"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "9 Dec, 2020"
+      },
+      "cover_url": "/assets/steam/1091500/cover.jpg",
+      "header_url": "/assets/steam/1091500/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1091500/",
+      "chart_rank": 12,
+      "chart_peak": 97378,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1091500&l=english",
+        "tags_url": "https://store.steampowered.com/app/1091500/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/6399de67cce3cecadce7900e03f6e09ff910a235/library_capsule.jpg?t=1794474878",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg?t=1794474878",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "e49a7519801bc42c093b419774a750fe758d0eeeb82f58966448320a72e57a11",
+        "header_sha256": "7ad6e0ee4f23e26416f5663146f3e97b1c85bbfb157781027e2aa615a4be68cf",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/cf8cec802dc47d0f24b75f9eee135e96812e2652/library_hero.jpg?t=1794474878",
+        "hero_sha256": "44c73149490ecf4e211e1d7698e457a9694999d5f9b6ffec136a87c2b720b98b"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1091500/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_236390",
+      "steam_app_id": 236390,
+      "title": "War Thunder",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Massively Multiplayer",
+        "Simulation",
+        "Free To Play"
+      ],
+      "tags": [
+        "Free to Play",
+        "Action",
+        "Vehicular Combat",
+        "Simulation",
+        "Combat",
+        "Flight",
+        "VR",
+        "World War II",
+        "War",
+        "Military",
+        "Tanks",
+        "Multiplayer",
+        "Naval Combat",
+        "Massively Multiplayer",
+        "Modern",
+        "Cold War",
+        "Shooter",
+        "Realistic",
+        "Third Person",
+        "Third-Person Shooter"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "MMO",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Full controller support",
+        "VR Supported",
+        "Steam Trading Cards",
+        "In-App Purchases",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Playable without Timed Input",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "Steam Input API Support",
+        "Stereo Sound",
+        "Surround Sound",
+        "Remote Play on Phone",
+        "Remote Play on Tablet"
+      ],
+      "filter_tags": [
+        "Action",
+        "Simulation",
+        "Single-player"
+      ],
+      "description": "War Thunder is the most comprehensive free-to-play, cross-platform, MMO military game dedicated to aviation, armoured vehicles, and naval craft, from the early 20th century to the most advanced modern combat units. Join now and take part in major battles on land, in the air, and at sea.",
+      "developers": [
+        "Gaijin Entertainment"
+      ],
+      "publishers": [
+        "Gaijin Network Ltd"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "15 Aug, 2013"
+      },
+      "cover_url": "/assets/steam/236390/cover.jpg",
+      "header_url": "/assets/steam/236390/header.jpg",
+      "store_url": "https://store.steampowered.com/app/236390/",
+      "chart_rank": 13,
+      "chart_peak": 88410,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=236390&l=english",
+        "tags_url": "https://store.steampowered.com/app/236390/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/7dd482035ef502666b0ab1caa0e99c2a2609d957/library_capsule.jpg?t=1794405808",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/09150b32d79fc827c2d24bc7ee200748a3c1e43e/header.jpg?t=1794405808",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "71748b7dbb1304e66f3d538196ca510ec410e91dbbf7a8b646a4dcf6d1d6fec1",
+        "header_sha256": "43d75a680149b0007b1b81b80cdc3ca054dbc29ff871396c759f73440d83d56f",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/9be13644a4c46631f859cd95f67e83bfbcc45586/library_hero.jpg?t=1794405808",
+        "hero_sha256": "ddd8e6d36f340d03ceb7b1f4ae994dae5db2e50cd9a63183f162e2086b0ca83b"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/236390/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_322170",
+      "steam_app_id": 322170,
+      "title": "Geometry Dash",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Indie"
+      ],
+      "tags": [
+        "Difficult",
+        "Music",
+        "Level Editor",
+        "2D",
+        "Great Soundtrack",
+        "Rhythm",
+        "Precision Platformer",
+        "Singleplayer",
+        "Platformer",
+        "Colorful",
+        "Character Customization",
+        "Indie",
+        "Psychological Horror",
+        "Side Scroller",
+        "Arcade",
+        "Family Friendly",
+        "Action",
+        "Funny",
+        "Casual",
+        "Strategy"
+      ],
+      "features": [
+        "Single-player",
+        "Steam Achievements",
+        "Steam Trading Cards",
+        "Partial Controller Support",
+        "Includes level editor",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Action",
+        "Casual",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Jump and fly your way through danger in this rhythm-based action platformer!",
+      "developers": [
+        "RobTop Games"
+      ],
+      "publishers": [
+        "RobTop Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "22 Dec, 2014"
+      },
+      "cover_url": "/assets/steam/322170/cover.jpg",
+      "header_url": "/assets/steam/322170/header.jpg",
+      "store_url": "https://store.steampowered.com/app/322170/",
+      "chart_rank": 14,
+      "chart_peak": 62579,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=322170&l=english",
+        "tags_url": "https://store.steampowered.com/app/322170/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322170/library_600x900.jpg?t=1775300400",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322170/header.jpg?t=1775300400",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "8def85c365221eda305fcb210d15f425774a587fd926aaaf7b5f6e0d84e479d0",
+        "header_sha256": "542d615aae9ced6112e57849e7531ff597e6fbf59ee3466b3e06e022060d1be7",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322170/library_hero.jpg?t=1775300400",
+        "hero_sha256": "d45849cc35f5f8d15534091fdab83341a13a75b5a0683148477d9a41d0a65102"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/322170/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_271590",
+      "steam_app_id": 271590,
+      "title": "Grand Theft Auto V Legacy",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "tags": [
+        "Open World",
+        "Action",
+        "Multiplayer",
+        "Crime",
+        "Automobile Sim",
+        "Third Person",
+        "First-Person",
+        "Shooter",
+        "Adventure",
+        "Singleplayer",
+        "Third-Person Shooter",
+        "Racing",
+        "Co-op",
+        "Sandbox",
+        "Atmospheric",
+        "Funny",
+        "Great Soundtrack",
+        "Comedy",
+        "Moddable",
+        "RPG"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "Full controller support",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play on TV"
+      ],
+      "filter_tags": [
+        "Action",
+        "Adventure",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.",
+      "developers": [
+        "Rockstar North"
+      ],
+      "publishers": [
+        "Rockstar Games"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "13 Apr, 2015"
+      },
+      "cover_url": "/assets/steam/271590/cover.jpg",
+      "header_url": "/assets/steam/271590/header.jpg",
+      "store_url": "https://store.steampowered.com/app/271590/",
+      "chart_rank": 15,
+      "chart_peak": 96720,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=271590&l=english",
+        "tags_url": "https://store.steampowered.com/app/271590/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/library_600x900.jpg?t=1765387725",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "301cbc71c0265978a6b62ede653a298559e63c8d96ca88be20a1885d6189a2d2",
+        "header_sha256": "e1ee8ed03ef2926d224e331a1bc61711822bbe7261cf847624089c1e95207a9a",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/library_hero.jpg?t=1765387725",
+        "hero_sha256": "9911eacd492474f3f8bd99852458c7b04abc4c9990dfc72219e7bdc80ea6d5b4"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/271590/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_1973530",
+      "steam_app_id": 1973530,
+      "title": "Limbus Company",
+      "genre": "Free To Play",
+      "genres": [
+        "Free To Play"
+      ],
+      "tags": [
+        "Story Rich",
+        "Lore-Rich",
+        "Free to Play",
+        "Turn-Based Combat",
+        "Visual Novel",
+        "Turn-Based Tactics",
+        "Great Soundtrack",
+        "Singleplayer",
+        "Strategy",
+        "RPG",
+        "Turn-Based Strategy",
+        "Strategy RPG",
+        "Anime",
+        "Dark Fantasy",
+        "2D",
+        "PvE",
+        "Action",
+        "Sci-fi",
+        "Roguelite",
+        "Colorful"
+      ],
+      "features": [
+        "Single-player",
+        "In-App Purchases",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Action",
+        "Strategy",
+        "RPG",
+        "Single-player"
+      ],
+      "description": "As the Executive Manager of Limbus Company, lead your group of twelve Sinners, venture into the buried facilities of Lobotomy Corporation, and lay claim on the Golden Boughs.",
+      "developers": [
+        "ProjectMoon"
+      ],
+      "publishers": [
+        "ProjectMoon"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "26 Feb, 2023"
+      },
+      "cover_url": "/assets/steam/1973530/cover.jpg",
+      "header_url": "/assets/steam/1973530/header.jpg",
+      "store_url": "https://store.steampowered.com/app/1973530/",
+      "chart_rank": 16,
+      "chart_peak": 63119,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=1973530&l=english",
+        "tags_url": "https://store.steampowered.com/app/1973530/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/library_600x900.jpg?t=1793975559",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1793975559",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "b7eaf199538e6d2dcdc5c0c83c1f77f486c749efacf68c0bc54e4dd0791208d7",
+        "header_sha256": "bbdddff9077014f01d5ff8814bc3b2d95ce4cb78089407c7a9329d3aafef920a",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/library_hero.jpg?t=1793975559",
+        "hero_sha256": "4c8e8cc459619b9d9d137e430557337c0d936ab66cbaa0319dd7a3bb17d63090"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/1973530/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_359550",
+      "steam_app_id": 359550,
+      "title": "Tom Clancy's Rainbow Six Siege",
+      "genre": "Action",
+      "genres": [
+        "Action",
+        "Free To Play"
+      ],
+      "tags": [
+        "FPS",
+        "PvP",
+        "Multiplayer",
+        "Shooter",
+        "Tactical",
+        "eSports",
+        "Competitive",
+        "Online Co-Op",
+        "Action",
+        "Hero Shooter",
+        "Team-Based",
+        "Military",
+        "Strategy",
+        "First-Person",
+        "Co-op",
+        "Realistic",
+        "Destruction",
+        "War",
+        "Difficult",
+        "3D"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Full controller support",
+        "Steam Trading Cards",
+        "In-App Purchases",
+        "DualShock Controller Support",
+        "DualShock Controller Support",
+        "DualSense Controller Support",
+        "DualSense Controller Support",
+        "Remote Play on Phone",
+        "Remote Play on Tablet"
+      ],
+      "filter_tags": [
+        "Action",
+        "Strategy",
+        "Single-player"
+      ],
+      "description": "Tom Clancy's Rainbow Six Siege is an elite, tactical team-based shooter where superior planning and execution triumph.",
+      "developers": [
+        "Ubisoft Montreal"
+      ],
+      "publishers": [
+        "Ubisoft"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "1 Dec, 2015"
+      },
+      "cover_url": "/assets/steam/359550/cover.jpg",
+      "header_url": "/assets/steam/359550/header.jpg",
+      "store_url": "https://store.steampowered.com/app/359550/",
+      "chart_rank": 17,
+      "chart_peak": 67292,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=359550&l=english",
+        "tags_url": "https://store.steampowered.com/app/359550/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/5878a9291aaf2334e08424c6db8e9635d9fa05b4/library_capsule.jpg?t=1792001976",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/1c7b1ea3405a69c54429e2aa3dc31f3cbbeaa456/header_alt_assets_28.jpg?t=1792001976",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "af14d2c0e76135ce9b7bdb5235ef5e1b99bc936345d601a7fd07eadbf886a1b8",
+        "header_sha256": "0da864e6a9fe3f7ca9a944302fdd641462b6c0ac69961ee30588a4222be7ca52",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/6a17af1cb99e9822a54b6b80f8186ac932b88d3d/library_hero.jpg?t=1792001976",
+        "hero_sha256": "2c2d05bb9144189681e00ad3f4b28a50465744777d991eb5dbab62d907f10803"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/359550/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
+    },
+    {
+      "id": "steam_227300",
+      "steam_app_id": 227300,
+      "title": "Euro Truck Simulator 2",
+      "genre": "Simulation",
+      "genres": [
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Driving",
+        "Transportation",
+        "Simulation",
+        "Open World",
+        "Automobile Sim",
+        "Realistic",
+        "Moddable",
+        "Relaxing",
+        "Exploration",
+        "Economy",
+        "Management",
+        "Immersive Sim",
+        "Atmospheric",
+        "Multiplayer",
+        "Controller",
+        "Family Friendly",
+        "Third Person",
+        "Adventure",
+        "Casual",
+        "Indie"
+      ],
+      "features": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Keyboard Only Option",
+        "Playable without Timed Input",
+        "Save Anytime",
+        "Steam Input API Support",
+        "Stereo Sound",
+        "Surround Sound",
+        "Partial Controller Support",
+        "Steam Cloud",
+        "Includes level editor",
+        "Remote Play on Phone",
+        "Remote Play on Tablet",
+        "Remote Play Together",
+        "Family Sharing"
+      ],
+      "filter_tags": [
+        "Indie",
+        "Adventure",
+        "Casual",
+        "Simulation",
+        "Single-player"
+      ],
+      "description": "Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore, your endurance, skill and speed will all be pushed to their limits.",
+      "developers": [
+        "SCS Software"
+      ],
+      "publishers": [
+        "SCS Software"
+      ],
+      "release_date": {
+        "coming_soon": false,
+        "date": "12 Oct, 2012"
+      },
+      "cover_url": "/assets/steam/227300/cover.jpg",
+      "header_url": "/assets/steam/227300/header.jpg",
+      "store_url": "https://store.steampowered.com/app/227300/",
+      "chart_rank": 18,
+      "chart_peak": 68570,
+      "source": {
+        "metadata_url": "https://store.steampowered.com/api/appdetails?appids=227300&l=english",
+        "tags_url": "https://store.steampowered.com/app/227300/?l=english",
+        "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/library_600x900.jpg?t=1794502925",
+        "header_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/9a81dc3126c56637297b654f9dcac057cfd79b77/header.jpg?t=1794502925",
+        "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+        "cover_sha256": "e9da27da861ae36906d1aa65b3af23a25c4fdc1f1121ebd6b45c5bca1859e7df",
+        "header_sha256": "b1af927983fbb23542f0fcb2ef09b4bd9be3bc0d1e9531c56ae83064d1182f77",
+        "hero_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/library_hero.jpg?t=1794502925",
+        "hero_sha256": "d2475c6d90ab32f5b97f28049e0b9b9cb69b60d3833f2da64e0b5f606d370dc0"
+      },
+      "cover_size": [
+        300,
+        450
+      ],
+      "hero_url": "/assets/steam/227300/hero.jpg",
+      "hero_size": [
+        1920,
+        620
+      ]
     }
   ],
   "profiles": [
@@ -386,5 +3764,19 @@
         "portal": 4
       }
     }
-  ]
+  ],
+  "source_info": {
+    "retrieved_at_utc": "2026-11-22T10:09:56.641068+00:00",
+    "chart_api_url": "https://api.steampowered.com/ISteamChartsService/GetMostPlayedGames/v1/",
+    "chart_page_url": "https://store.steampowered.com/charts/mostplayed",
+    "chart_rollup_date": 1795219200,
+    "rights_note": "Game artwork belongs to the respective rights holders. Source URLs are retained; no open-content licence is claimed.",
+    "skipped_chart_entries": [
+      {
+        "app_id": 431960,
+        "reason": "Software utility excluded from game catalogue",
+        "title": "Wallpaper Engine"
+      }
+    ]
+  }
 }

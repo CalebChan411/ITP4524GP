@@ -1,4 +1,4 @@
-"""Game recommendation demo based on Lecture 9; Python standard library only.
+"""GameLens recommendation demo based on Lecture 9; Python standard library only.
 
 Run: python demo.py
 The browser opens automatically. Close the terminal or press Ctrl+C to stop.
@@ -10,7 +10,9 @@ from collections import Counter
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import math
+import mimetypes
 from pathlib import Path
+from urllib.parse import urlsplit
 import webbrowser
 
 BASE = Path(__file__).resolve().parent
@@ -18,6 +20,14 @@ DATA = json.loads((BASE / 'demo_data.json').read_text(encoding='utf-8'))
 GAMES = {game['id']: game for game in DATA['games']}
 PROFILES = {profile['id']: profile for profile in DATA['profiles']}
 METHODS = {'content', 'collaborative', 'popular'}
+FILTERS = {'Indie', 'Action', 'Adventure', 'Casual', 'Single-player',
+           'Simulation', 'Strategy', 'RPG'}
+PUBLIC_FILES = {}
+for game in GAMES.values():
+    for field in ('cover_url', 'header_url', 'hero_url'):
+        if game.get(field):
+            PUBLIC_FILES[game[field]] = BASE / game[field].lstrip('/')
+PUBLIC_FILES['/sources/artwork_sources.csv'] = BASE / 'sources/artwork_sources.csv'
 
 
 def cosine(first, second):
@@ -28,8 +38,9 @@ def cosine(first, second):
     return numerator / norm if norm else 0.0
 
 
-def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=None):
-    """Return genuine calculations on the small, explicitly fictional dataset.
+def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=None,
+              filters=None, seed_id=None):
+    """Recommend games using Steam metadata and fictional example feedback.
 
     Content filtering compares the user's liked-game tag profile with each game.
     User-based CF uses cosine similarity on binary liked-game vectors, then
@@ -39,8 +50,15 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
     """
     if method not in METHODS:
         raise ValueError('Unknown recommendation method.')
-    if genre != 'all' and genre not in {g['genre'] for g in GAMES.values()}:
+    known_genres = FILTERS | {tag for game in GAMES.values() for tag in game['tags']}
+    if genre != 'all' and genre not in known_genres:
         raise ValueError('Unknown genre.')
+    if filters is None:
+        filters = []
+    if not isinstance(filters, list) or any(not isinstance(tag, str) or tag not in FILTERS for tag in filters):
+        raise ValueError('Unknown category or play-mode filter.')
+    if seed_id is not None and (seed_id not in GAMES or method != 'content'):
+        raise ValueError('Related-game queries require a known game and content-based filtering.')
     if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 12:
         raise ValueError('Choose between 1 and 12 results.')
     if profile_id == 'new':
@@ -61,7 +79,8 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
         player_name = profile['name']
 
     liked_ids = [game for game, rating in ratings.items() if rating >= 4]
-    user_tags = Counter(tag for game in liked_ids for tag in GAMES[game]['tags'])
+    user_tags = Counter(tag for game in ([seed_id] if seed_id else liked_ids)
+                        for tag in GAMES[game]['tags'])
     user_vector = {game: 1 for game in liked_ids}
     neighbours = []
     for peer in DATA['profiles']:
@@ -76,7 +95,11 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
     eligible_count = 0
     for game_id, game in GAMES.items():
         # All recorded interactions, including low ratings, are excluded.
-        if game_id in ratings or (genre != 'all' and game['genre'] != genre):
+        if game_id in ratings or game_id == seed_id:
+            continue
+        if genre != 'all' and genre not in game.get('filter_tags', []) and genre not in game['tags']:
+            continue
+        if not set(filters).issubset(game.get('filter_tags', [])):
             continue
         eligible_count += 1
         shared_tags = sorted(set(game['tags']) & set(user_tags),
@@ -85,10 +108,11 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
             score = cosine(user_tags, {tag: 1 for tag in game['tags']})
             if score <= 0:
                 continue
-            seeds = sorted([key for key in liked_ids
+            seeds = sorted([key for key in ([seed_id] if seed_id else liked_ids)
                             if set(GAMES[key]['tags']) & set(game['tags'])], key=lambda key: (
                 -len(set(GAMES[key]['tags']) & set(game['tags'])), key))[:2]
-            reason = 'Shares tags with ' + ' and '.join(GAMES[key]['title'] for key in seeds) + ', which you liked.'
+            reason = 'Shares tags with ' + ' and '.join(GAMES[key]['title'] for key in seeds)
+            reason += '.' if seed_id else ', which you liked.'
             detail = 'Shared interests: ' + ', '.join(shared_tags[:3]) + '.'
         elif method == 'collaborative':
             supporters = [(sim, peer) for sim, peer, vector in neighbours if game_id in vector]
@@ -113,7 +137,7 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
         'profile_id': profile_id, 'player_name': player_name, 'method': method,
         'results': candidates[:limit], 'eligible_count': eligible_count,
         'matched_count': len(candidates), 'history_count': len(ratings),
-        'neighbour_count': len(neighbours),
+        'neighbour_count': len(neighbours), 'seed_id': seed_id,
         'taste_tags': [tag for tag, _ in user_tags.most_common(5)],
     }
 
@@ -135,11 +159,16 @@ class Handler(BaseHTTPRequestHandler):
                           'application/json; charset=utf-8')
 
     def do_GET(self):
-        if self.path in ('/', '/index.html'):
+        path = urlsplit(self.path).path
+        if path in ('/', '/index.html'):
             self.send_content(200, (BASE / 'index.html').read_bytes(), 'text/html; charset=utf-8')
-        elif self.path == '/api/catalog':
+        elif path == '/api/catalog':
             self.send_json(200, DATA)
-        elif self.path == '/favicon.ico':
+        elif path in PUBLIC_FILES:
+            file = PUBLIC_FILES[path]
+            content_type = mimetypes.guess_type(str(file))[0] or 'application/octet-stream'
+            self.send_content(200, file.read_bytes(), content_type)
+        elif path == '/favicon.ico':
             self.send_content(204, b'', 'image/x-icon')
         else:
             self.send_json(404, {'error': 'Not found.'})
@@ -160,6 +189,7 @@ class Handler(BaseHTTPRequestHandler):
                 method=payload.get('method', 'content'),
                 genre=payload.get('genre', 'all'),
                 limit=payload.get('limit', 6), liked=payload.get('liked'),
+                filters=payload.get('filters'), seed_id=payload.get('seed_id'),
             )
         except (ValueError, TypeError) as error:
             self.send_json(400, {'error': str(error)})
@@ -174,7 +204,7 @@ def main():
     args = parser.parse_args()
     server = ThreadingHTTPServer(('127.0.0.1', args.port), Handler)
     url = f'http://127.0.0.1:{server.server_port}'
-    print('\nGame recommendation demo', flush=True)
+    print('\nGameLens recommendation demo', flush=True)
     print('Open: ' + url, flush=True)
     print('Demo data only. No third-party packages required.', flush=True)
     print('Press Ctrl+C or close this terminal to stop.\n', flush=True)

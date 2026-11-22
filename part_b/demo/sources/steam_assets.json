@@ -1,0 +1,2548 @@
+{
+  "request_url": "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/?input_json=%7B%22ids%22%3A+%5B%7B%22appid%22%3A+413150%7D%2C+%7B%22appid%22%3A+105600%7D%2C+%7B%22appid%22%3A+1455840%7D%2C+%7B%22appid%22%3A+1135690%7D%2C+%7B%22appid%22%3A+972660%7D%2C+%7B%22appid%22%3A+427520%7D%2C+%7B%22appid%22%3A+1366540%7D%2C+%7B%22appid%22%3A+255710%7D%2C+%7B%22appid%22%3A+703080%7D%2C+%7B%22appid%22%3A+289070%7D%2C+%7B%22appid%22%3A+590380%7D%2C+%7B%22appid%22%3A+268500%7D%2C+%7B%22appid%22%3A+646570%7D%2C+%7B%22appid%22%3A+212680%7D%2C+%7B%22appid%22%3A+620%7D%2C+%7B%22appid%22%3A+210970%7D%2C+%7B%22appid%22%3A+736260%7D%2C+%7B%22appid%22%3A+653530%7D%2C+%7B%22appid%22%3A+1145360%7D%2C+%7B%22appid%22%3A+367520%7D%2C+%7B%22appid%22%3A+588650%7D%2C+%7B%22appid%22%3A+504230%7D%2C+%7B%22appid%22%3A+632360%7D%2C+%7B%22appid%22%3A+548430%7D%2C+%7B%22appid%22%3A+730%7D%2C+%7B%22appid%22%3A+578080%7D%2C+%7B%22appid%22%3A+570%7D%2C+%7B%22appid%22%3A+4262460%7D%2C+%7B%22appid%22%3A+1422450%7D%2C+%7B%22appid%22%3A+1172470%7D%2C+%7B%22appid%22%3A+2868840%7D%2C+%7B%22appid%22%3A+4115450%7D%2C+%7B%22appid%22%3A+3240220%7D%2C+%7B%22appid%22%3A+1938090%7D%2C+%7B%22appid%22%3A+1091500%7D%2C+%7B%22appid%22%3A+236390%7D%2C+%7B%22appid%22%3A+322170%7D%2C+%7B%22appid%22%3A+271590%7D%2C+%7B%22appid%22%3A+1973530%7D%2C+%7B%22appid%22%3A+359550%7D%2C+%7B%22appid%22%3A+227300%7D%5D%2C+%22context%22%3A+%7B%22language%22%3A+%22english%22%2C+%22country_code%22%3A+%22US%22%7D%2C+%22data_request%22%3A+%7B%22include_assets%22%3A+true%7D%7D",
+  "response": {
+    "response": {
+      "store_items": [
+        {
+          "item_type": 0,
+          "id": 413150,
+          "success": 1,
+          "visible": true,
+          "name": "Stardew Valley",
+          "store_url_path": "app/413150/Stardew_Valley",
+          "store_url_slug": "Stardew_Valley",
+          "appid": 413150,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              9,
+              38,
+              48,
+              39,
+              24
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              23,
+              41,
+              42,
+              44,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/413150/${FILENAME}?t=1786554168",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "35d1377200084a4034238c05b0c8930451e2fb40",
+            "page_background_path": "app/413150?t=1786554168",
+            "last_modified": 1786554168
+          },
+          "best_purchase_option": {
+            "packageid": 82712,
+            "purchase_option_name": "Stardew Valley",
+            "final_price_in_cents": "1499",
+            "formatted_final_price": "$14.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 105600,
+          "success": 1,
+          "visible": true,
+          "name": "Terraria",
+          "store_url_path": "app/105600/Terraria",
+          "store_url_slug": "Terraria",
+          "appid": 105600,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              49,
+              36,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              23,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/105600/${FILENAME}?t=1792530636",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "858961e95fbf869f136e1770d586e0caefd4cfac",
+            "page_background_path": "app/105600?t=1792530636",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1792530636
+          },
+          "best_purchase_option": {
+            "packageid": 8183,
+            "purchase_option_name": "Terraria",
+            "final_price_in_cents": "999",
+            "formatted_final_price": "$9.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 1455840,
+          "success": 1,
+          "visible": true,
+          "name": "Dorfromantik",
+          "store_url_path": "app/1455840/Dorfromantik",
+          "store_url_slug": "Dorfromantik",
+          "appid": 1455840,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              23,
+              25,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1455840/${FILENAME}?t=1786951108",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "1644d240987ad87fec194d1868fcc080c5a46c5e/library_hero.jpg",
+            "library_hero_2x": "1644d240987ad87fec194d1868fcc080c5a46c5e/library_hero_2x.jpg",
+            "community_icon": "c7f24bc1facf1af3378ad655eed2dee7acc5c7b2",
+            "page_background_path": "app/1455840?t=1786951108",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1786951108
+          },
+          "best_purchase_option": {
+            "packageid": 512330,
+            "purchase_option_name": "Dorfromantik",
+            "final_price_in_cents": "1399",
+            "formatted_final_price": "$13.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 1135690,
+          "success": 1,
+          "visible": true,
+          "name": "Unpacking",
+          "store_url_path": "app/1135690/Unpacking",
+          "store_url_slug": "Unpacking",
+          "appid": 1135690,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              64,
+              66,
+              67,
+              68,
+              69,
+              74,
+              76,
+              78,
+              79,
+              23,
+              62
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              56,
+              57,
+              58
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1135690/${FILENAME}?t=1789426289",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "f6dffe30852176b5c1286e9755d0e5169a3d07d0",
+            "page_background_path": "app/1135690?t=1789426289",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1789426289
+          },
+          "best_purchase_option": {
+            "packageid": 386202,
+            "purchase_option_name": "Unpacking",
+            "final_price_in_cents": "799",
+            "original_price_in_cents": "1999",
+            "formatted_final_price": "$7.99",
+            "formatted_original_price": "$19.99",
+            "discount_pct": 60,
+            "active_discounts": [
+              {
+                "discount_amount": "1200",
+                "discount_description": "#discount_desc_preset_daily",
+                "discount_end_date": 1796061600
+              }
+            ],
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 972660,
+          "success": 1,
+          "visible": true,
+          "name": "Spiritfarer®: Farewell Edition",
+          "store_url_path": "app/972660/Spiritfarer_Farewell_Edition",
+          "store_url_slug": "Spiritfarer_Farewell_Edition",
+          "appid": 972660,
+          "type": 0,
+          "related_items": {
+            "demo_appid": [
+              1202910
+            ],
+            "demos": [
+              {
+                "appid": 1202910,
+                "show_above_purchase": true
+              }
+            ]
+          },
+          "content_descriptorids": [
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              9,
+              39
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              23,
+              41,
+              42,
+              43,
+              44,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/972660/${FILENAME}?t=1752503178",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "header_2x": "header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "662114ef0e4c75747f85000ff38f441dbf9f16e8/library_600x900.jpg",
+            "library_capsule_2x": "662114ef0e4c75747f85000ff38f441dbf9f16e8/library_600x900_2x.jpg",
+            "library_hero": "0a02163910003520ba1960251b954878fcc0c5c6/library_hero.jpg",
+            "library_hero_2x": "0a02163910003520ba1960251b954878fcc0c5c6/library_hero_2x.jpg",
+            "community_icon": "21c6c86b51df38e9480231792acf0cfc30f51820",
+            "page_background_path": "app/972660?t=1752503178",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1752503178
+          },
+          "best_purchase_option": {
+            "packageid": 319017,
+            "purchase_option_name": "Spiritfarer®: Farewell Edition",
+            "final_price_in_cents": "2999",
+            "formatted_final_price": "$29.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 427520,
+          "success": 1,
+          "visible": true,
+          "name": "Factorio",
+          "store_url_path": "app/427520/Factorio",
+          "store_url_slug": "Factorio",
+          "appid": 427520,
+          "type": 0,
+          "related_items": {
+            "demo_appid": [
+              452280
+            ],
+            "demos": [
+              {
+                "appid": 452280,
+                "label": "Factorio Demo",
+                "show_above_purchase": true
+              }
+            ]
+          },
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              9,
+              38,
+              48,
+              27
+            ],
+            "feature_categoryids": [
+              22,
+              64,
+              65,
+              67,
+              68,
+              74,
+              78,
+              79,
+              23,
+              17,
+              42,
+              62
+            ],
+            "controller_categoryids": [
+              55,
+              56,
+              57,
+              58,
+              18
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/427520/${FILENAME}?t=1792752343",
+            "main_capsule": "b45c330f8fcf3368074b64957981e000b5e485a1/capsule_616x353.jpg",
+            "main_capsule_2x": "b45c330f8fcf3368074b64957981e000b5e485a1/capsule_616x353_2x.jpg",
+            "small_capsule": "2dca545120676172d4b6db984d210a7fdc387a1e/capsule_231x87.jpg",
+            "small_capsule_2x": "2dca545120676172d4b6db984d210a7fdc387a1e/capsule_231x87_2x.jpg",
+            "header": "ab9a2df0a77caebde20dc45adc021de8cdcf7cc5/header.jpg",
+            "header_2x": "ab9a2df0a77caebde20dc45adc021de8cdcf7cc5/header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "40c83223e68dde242f831dc5945c96348a7c1a8c/hero_capsule.jpg",
+            "hero_capsule_2x": "40c83223e68dde242f831dc5945c96348a7c1a8c/hero_capsule_2x.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "2fcd262bd4bad87bccc539ee1ba14f6e70e62983/library_hero.jpg",
+            "library_hero_2x": "2fcd262bd4bad87bccc539ee1ba14f6e70e62983/library_hero_2x.jpg",
+            "community_icon": "267f5a89f36ab287e600a4e7d4e73d3d11f0fd7d",
+            "page_background_path": "app/427520?t=1792752343",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1792752343
+          },
+          "best_purchase_option": {
+            "packageid": 88199,
+            "purchase_option_name": "Factorio",
+            "final_price_in_cents": "3500",
+            "formatted_final_price": "$35.00",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 1366540,
+          "success": 1,
+          "visible": true,
+          "name": "Dyson Sphere Program",
+          "store_url_path": "app/1366540/Dyson_Sphere_Program",
+          "store_url_slug": "Dyson_Sphere_Program",
+          "appid": 1366540,
+          "type": 0,
+          "is_early_access": true,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1366540/${FILENAME}?t=1776523171",
+            "main_capsule": "ec677c954a9334d7cf915908f1e118ef5abd4e92/capsule_616x353.jpg",
+            "main_capsule_2x": "ec677c954a9334d7cf915908f1e118ef5abd4e92/capsule_616x353_2x.jpg",
+            "small_capsule": "b43e122cefea2a22b69903ad87d42e98d4ac44ef/capsule_231x87.jpg",
+            "small_capsule_2x": "b43e122cefea2a22b69903ad87d42e98d4ac44ef/capsule_231x87_2x.jpg",
+            "header": "2521472f3f71b6f179515fdcfa33d27c212ba3ce/header.jpg",
+            "header_2x": "2521472f3f71b6f179515fdcfa33d27c212ba3ce/header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "d912d308f3d6b729a5d57bfbdd3f1f59f3722514/hero_capsule.jpg",
+            "hero_capsule_2x": "d912d308f3d6b729a5d57bfbdd3f1f59f3722514/hero_capsule_2x.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "0467874bc14dbfb65b8590750bab47e612c4276f/library_hero.jpg",
+            "library_hero_2x": "0467874bc14dbfb65b8590750bab47e612c4276f/library_hero_2x.jpg",
+            "community_icon": "55fa75b8e6586427da47f58f320e975e990a460b",
+            "page_background_path": "app/1366540?t=1776523171",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1776523171
+          },
+          "best_purchase_option": {
+            "packageid": 479270,
+            "purchase_option_name": "Dyson Sphere Program",
+            "final_price_in_cents": "1999",
+            "formatted_final_price": "$19.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 255710,
+          "success": 1,
+          "visible": true,
+          "name": "Cities: Skylines",
+          "store_url_path": "app/255710/Cities_Skylines",
+          "store_url_slug": "Cities_Skylines",
+          "appid": 255710,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              23,
+              17,
+              42,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/255710/${FILENAME}?t=1794508006",
+            "main_capsule": "c950fea5ca1836a8727dabf7da3393c1941f1bc3/capsule_616x353.jpg",
+            "main_capsule_2x": "c950fea5ca1836a8727dabf7da3393c1941f1bc3/capsule_616x353_2x.jpg",
+            "small_capsule": "4cf458b43b41e4f86d3e4e604e7a7577c7926b01/capsule_231x87.jpg",
+            "small_capsule_2x": "4cf458b43b41e4f86d3e4e604e7a7577c7926b01/capsule_231x87_2x.jpg",
+            "header": "header.jpg",
+            "header_2x": "header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "029726819133d7e27d18873027140808e639ddfa/hero_capsule.jpg",
+            "hero_capsule_2x": "029726819133d7e27d18873027140808e639ddfa/hero_capsule_2x.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "6cf7b10dd29db28448ef79698ed2118a03617d63",
+            "page_background_path": "app/255710?t=1794508006",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1794508006
+          },
+          "best_purchase_option": {
+            "packageid": 62700,
+            "purchase_option_name": "Cities: Skylines",
+            "final_price_in_cents": "2999",
+            "formatted_final_price": "$29.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 703080,
+          "success": 1,
+          "visible": true,
+          "name": "Planet Zoo",
+          "store_url_path": "app/703080/Planet_Zoo",
+          "store_url_slug": "Planet_Zoo",
+          "appid": 703080,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              23,
+              61,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/703080/${FILENAME}?t=1765896213",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "68c7a610498955f547b0ece0aff081d23f2025b5",
+            "page_background_path": "app/703080?t=1765896213",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1765896213
+          },
+          "best_purchase_option": {
+            "packageid": 202709,
+            "purchase_option_name": "Planet Zoo",
+            "final_price_in_cents": "4499",
+            "formatted_final_price": "$44.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 289070,
+          "success": 1,
+          "visible": true,
+          "name": "Sid Meier’s Civilization® VI",
+          "store_url_path": "app/289070/Sid_Meiers_Civilization_VI",
+          "store_url_slug": "Sid_Meiers_Civilization_VI",
+          "appid": 289070,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              49,
+              36,
+              47,
+              37,
+              24,
+              27
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              35,
+              32,
+              42,
+              44,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/289070/${FILENAME}?t=1792718069",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "95dca23c23f718952bd30cc4a0687cc951a43468/library_hero.jpg",
+            "library_hero_2x": "95dca23c23f718952bd30cc4a0687cc951a43468/library_hero_2x.jpg",
+            "community_icon": "9dc914132fec244adcede62fb8e7524a72a7398c",
+            "page_background_path": "app/289070?t=1792718069",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1792718069
+          },
+          "best_purchase_option": {
+            "packageid": 123215,
+            "purchase_option_name": "Sid Meier's Civilization VI",
+            "final_price_in_cents": "599",
+            "original_price_in_cents": "5999",
+            "formatted_final_price": "$5.99",
+            "formatted_original_price": "$59.99",
+            "discount_pct": 90,
+            "active_discounts": [
+              {
+                "discount_amount": "5400",
+                "discount_description": "#discount_desc_preset_special",
+                "discount_end_date": 1796320800
+              }
+            ],
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 590380,
+          "success": 1,
+          "visible": true,
+          "name": "Into the Breach",
+          "store_url_path": "app/590380/Into_the_Breach",
+          "store_url_slug": "Into_the_Breach",
+          "appid": 590380,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              23,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/590380/${FILENAME}?t=1755610784",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "0539a82edc8163180b672bf9e073d53687ab3cad",
+            "page_background_path": "app/590380?t=1755610784",
+            "last_modified": 1755610784
+          },
+          "best_purchase_option": {
+            "packageid": 153088,
+            "purchase_option_name": "Into the Breach",
+            "final_price_in_cents": "1499",
+            "formatted_final_price": "$14.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 268500,
+          "success": 1,
+          "visible": true,
+          "name": "XCOM® 2",
+          "store_url_path": "app/268500/XCOM_2",
+          "store_url_slug": "XCOM_2",
+          "appid": 268500,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              23,
+              42,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/268500/${FILENAME}?t=1772813016",
+            "main_capsule": "838096e6133f7525d157ed9117bb7282abc75167/capsule_616x353.jpg",
+            "main_capsule_2x": "838096e6133f7525d157ed9117bb7282abc75167/capsule_616x353_2x.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "f275aeb0b1b947262810569356a199848c643754",
+            "page_background_path": "app/268500?t=1772813016",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1772813016
+          },
+          "best_purchase_option": {
+            "packageid": 88099,
+            "purchase_option_name": "XCOM 2",
+            "final_price_in_cents": "1999",
+            "formatted_final_price": "$19.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 646570,
+          "success": 1,
+          "visible": true,
+          "name": "Slay the Spire",
+          "store_url_path": "app/646570/Slay_the_Spire",
+          "store_url_slug": "Slay_the_Spire",
+          "appid": 646570,
+          "type": 0,
+          "related_items": {
+            "provides_engine_appid": [
+              646570
+            ]
+          },
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              64,
+              68,
+              74,
+              76,
+              77,
+              79,
+              23,
+              15,
+              25,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/646570/${FILENAME}?t=1774015376",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "33ea124ea8c03a9ce7012d34c3b348a351612fca",
+            "page_background_path": "app/646570?t=1774015376",
+            "last_modified": 1774015376
+          },
+          "best_purchase_option": {
+            "packageid": 181611,
+            "purchase_option_name": "Slay the Spire",
+            "final_price_in_cents": "2499",
+            "formatted_final_price": "$24.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 212680,
+          "success": 1,
+          "visible": true,
+          "name": "FTL: Faster Than Light",
+          "store_url_path": "app/212680/FTL_Faster_Than_Light",
+          "store_url_slug": "FTL_Faster_Than_Light",
+          "appid": 212680,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              41,
+              42,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/212680/${FILENAME}?t=1748969356",
+            "main_capsule": "b136d73a215d7aaba1026f0ac36015628b0d58cf/capsule_616x353.jpg",
+            "main_capsule_2x": "b136d73a215d7aaba1026f0ac36015628b0d58cf/capsule_616x353_2x.jpg",
+            "small_capsule": "9eb97114b0c5b54ddf16393f28646ff3cb813a9f/capsule_231x87.jpg",
+            "small_capsule_2x": "9eb97114b0c5b54ddf16393f28646ff3cb813a9f/capsule_231x87_2x.jpg",
+            "header": "f21426ac9ad51338fa33becce88984758e07c38b/header.jpg",
+            "header_2x": "f21426ac9ad51338fa33becce88984758e07c38b/header_2x.jpg",
+            "page_background": "e055da77438dd6d210e9b19b63129c9ebcf9e0dd/page_bg_v6.jpg",
+            "hero_capsule": "e201586d56901b6cfc6127d03c9492703e8724f0/hero_capsule.jpg",
+            "hero_capsule_2x": "e201586d56901b6cfc6127d03c9492703e8724f0/hero_capsule_2x.jpg",
+            "library_capsule": "1742d40ddc6518a14cd1aed35957f157c4f9c3f8/library_600x900.jpg",
+            "library_capsule_2x": "1742d40ddc6518a14cd1aed35957f157c4f9c3f8/library_600x900_2x.jpg",
+            "library_hero": "88e4d477c3616509d182065cd4ebfcfa2a5d486b/library_hero.jpg",
+            "library_hero_2x": "88e4d477c3616509d182065cd4ebfcfa2a5d486b/library_hero_2x.jpg",
+            "community_icon": "e8770ddb95fde0804694b116dfe3479f5a65900d",
+            "page_background_path": "app/212680?t=1748969356",
+            "raw_page_background": "e055da77438dd6d210e9b19b63129c9ebcf9e0dd/page_bg_raw.jpg",
+            "last_modified": 1748969356
+          },
+          "best_purchase_option": {
+            "packageid": 16589,
+            "purchase_option_name": "FTL: Faster Than Light",
+            "final_price_in_cents": "999",
+            "formatted_final_price": "$9.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 620,
+          "success": 1,
+          "visible": true,
+          "name": "Portal 2",
+          "store_url_path": "app/620/Portal_2",
+          "store_url_slug": "Portal_2",
+          "appid": 620,
+          "type": 0,
+          "related_items": {
+            "provides_engine_appid": [
+              620
+            ]
+          },
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              9,
+              38,
+              39,
+              24
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              13,
+              30,
+              51,
+              67,
+              68,
+              69,
+              70,
+              74,
+              79,
+              23,
+              15,
+              17,
+              14,
+              41,
+              42,
+              43,
+              44,
+              62
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              56,
+              57,
+              58,
+              59
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/620/${FILENAME}?t=1790187113",
+            "main_capsule": "02b755eb0cf5f41c1838a99c9a353ebce32a88cd/capsule_616x353.jpg",
+            "main_capsule_2x": "02b755eb0cf5f41c1838a99c9a353ebce32a88cd/capsule_616x353_2x.jpg",
+            "small_capsule": "bd23943dcd0280aa2cdc066e2f86d2185cfd4cce/capsule_231x87.jpg",
+            "small_capsule_2x": "bd23943dcd0280aa2cdc066e2f86d2185cfd4cce/capsule_231x87_2x.jpg",
+            "header": "faffc0f560786e2f05104a8d2fac837c6969bf13/header.jpg",
+            "header_2x": "faffc0f560786e2f05104a8d2fac837c6969bf13/header_2x.jpg",
+            "hero_capsule": "9a8ae9bb0b85f125bd956024f86f30a3aeb799e8/hero_capsule.jpg",
+            "hero_capsule_2x": "9a8ae9bb0b85f125bd956024f86f30a3aeb799e8/hero_capsule_2x.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "a58588d857b8683f8065e55f97ab82ad8a945c51/library_hero.jpg",
+            "library_hero_2x": "a58588d857b8683f8065e55f97ab82ad8a945c51/library_hero_2x.jpg",
+            "community_icon": "25a5a16b2423bf7487ac5340b5b0948cef48c5f8",
+            "page_background_path": "app/620?t=1790187113",
+            "last_modified": 1790187113
+          },
+          "best_purchase_option": {
+            "packageid": 7877,
+            "purchase_option_name": "Portal 2",
+            "final_price_in_cents": "999",
+            "formatted_final_price": "$9.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 210970,
+          "success": 1,
+          "visible": true,
+          "name": "The Witness",
+          "store_url_path": "app/210970/The_Witness",
+          "store_url_slug": "The_Witness",
+          "appid": 210970,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              13,
+              23,
+              41,
+              42,
+              62
+            ],
+            "controller_categoryids": [
+              18
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/210970/${FILENAME}?t=1720810823",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "header_2x": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "5406b4e33862420abfb60a23e581cad2a1ec85f7",
+            "page_background_path": "app/210970?t=1720810823",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1720810823
+          },
+          "best_purchase_option": {
+            "packageid": 88364,
+            "purchase_option_name": "The Witness",
+            "final_price_in_cents": "999",
+            "original_price_in_cents": "3999",
+            "formatted_final_price": "$9.99",
+            "formatted_original_price": "$39.99",
+            "discount_pct": 75,
+            "active_discounts": [
+              {
+                "discount_amount": "3000",
+                "discount_description": "#discount_desc_preset_special",
+                "discount_end_date": 1795456800
+              }
+            ],
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 736260,
+          "success": 1,
+          "visible": true,
+          "name": "Baba Is You",
+          "store_url_path": "app/736260/Baba_Is_You",
+          "store_url_slug": "Baba_Is_You",
+          "appid": 736260,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              23,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              55,
+              56,
+              57,
+              58,
+              18
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/736260/${FILENAME}?t=1760102539",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "9b9e1838838c21ee443359efe30b6a56cf0531dd",
+            "page_background_path": "app/736260?t=1760102539",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1760102539
+          },
+          "best_purchase_option": {
+            "packageid": 215068,
+            "purchase_option_name": "Baba Is You",
+            "final_price_in_cents": "1499",
+            "formatted_final_price": "$14.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 653530,
+          "success": 1,
+          "visible": true,
+          "name": "Return of the Obra Dinn",
+          "store_url_path": "app/653530/Return_of_the_Obra_Dinn",
+          "store_url_slug": "Return_of_the_Obra_Dinn",
+          "appid": 653530,
+          "type": 0,
+          "content_descriptorids": [
+            1,
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              23,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/653530/${FILENAME}?t=1686697594",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "header_2x": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "24c6239385563bff1fccad712f27a0c1fe18349b",
+            "page_background_path": "app/653530?t=1686697594",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1686697594
+          },
+          "best_purchase_option": {
+            "packageid": 184160,
+            "purchase_option_name": "Return of the Obra Dinn",
+            "final_price_in_cents": "1999",
+            "formatted_final_price": "$19.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 1145360,
+          "success": 1,
+          "visible": true,
+          "name": "Hades",
+          "store_url_path": "app/1145360/Hades",
+          "store_url_slug": "Hades",
+          "appid": 1145360,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              13,
+              23,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1145360/${FILENAME}?t=1758127023",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "8a3fca36a00883e8066263ad35dd15d77a1f9abc",
+            "page_background_path": "app/1145360?t=1758127023",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1758127023
+          },
+          "best_purchase_option": {
+            "packageid": 415372,
+            "purchase_option_name": "Hades",
+            "final_price_in_cents": "2499",
+            "formatted_final_price": "$24.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 367520,
+          "success": 1,
+          "visible": true,
+          "name": "Hollow Knight",
+          "store_url_path": "app/367520/Hollow_Knight",
+          "store_url_slug": "Hollow_Knight",
+          "appid": 367520,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              23,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/367520/${FILENAME}?t=1776125684",
+            "main_capsule": "f30cc19e25cce7e46cd7dfe89f3ee7852e634232/capsule_616x353.jpg",
+            "main_capsule_2x": "f30cc19e25cce7e46cd7dfe89f3ee7852e634232/capsule_616x353_2x.jpg",
+            "small_capsule": "fba7289f4c7e90ae9c0caa87e4225f3f9111d7dd/capsule_231x87.jpg",
+            "small_capsule_2x": "fba7289f4c7e90ae9c0caa87e4225f3f9111d7dd/capsule_231x87_2x.jpg",
+            "header": "3c3489495136b26b34f8a9543c7f5645b99d388c/header.jpg",
+            "header_2x": "3c3489495136b26b34f8a9543c7f5645b99d388c/header_2x.jpg",
+            "hero_capsule": "e6cd56dba0de70a88e249fcf8721362ba24a9f82/hero_capsule.jpg",
+            "hero_capsule_2x": "e6cd56dba0de70a88e249fcf8721362ba24a9f82/hero_capsule_2x.jpg",
+            "library_capsule": "1eebc7e077ee345f126df35cd99c124273c4e4e3/library_capsule.jpg",
+            "library_capsule_2x": "1eebc7e077ee345f126df35cd99c124273c4e4e3/library_capsule_2x.jpg",
+            "library_hero": "0daf3933d392d7bb7c5a890917e20c917fcc458e/library_hero.jpg",
+            "library_hero_2x": "0daf3933d392d7bb7c5a890917e20c917fcc458e/library_hero_2x.jpg",
+            "community_icon": "f6ab055c2366237200b1a31cccbd6cf81e436d72",
+            "page_background_path": "app/367520?t=1776125684",
+            "last_modified": 1776125684
+          },
+          "best_purchase_option": {
+            "packageid": 66613,
+            "purchase_option_name": "Hollow Knight",
+            "final_price_in_cents": "1499",
+            "formatted_final_price": "$14.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 588650,
+          "success": 1,
+          "visible": true,
+          "name": "Dead Cells",
+          "store_url_path": "app/588650/Dead_Cells",
+          "store_url_slug": "Dead_Cells",
+          "appid": 588650,
+          "type": 0,
+          "content_descriptorids": [
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              23,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/588650/${FILENAME}?t=1779086887",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "a431361e5dae5fd6ac2433064b62b2a37abc38f1",
+            "page_background_path": "app/588650?t=1779086887",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1779086887
+          },
+          "best_purchase_option": {
+            "packageid": 152266,
+            "purchase_option_name": "Dead Cells",
+            "final_price_in_cents": "2499",
+            "formatted_final_price": "$24.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 504230,
+          "success": 1,
+          "visible": true,
+          "name": "Celeste",
+          "store_url_path": "app/504230/Celeste",
+          "store_url_slug": "Celeste",
+          "appid": 504230,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              23,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              56,
+              57,
+              58
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/504230/${FILENAME}?t=1714089525",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "header_2x": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "04cb7aa0b497a3962e6b1655b7fd81a2cc95d18b",
+            "page_background_path": "app/504230?t=1714089525",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1714089525
+          },
+          "best_purchase_option": {
+            "packageid": 116049,
+            "purchase_option_name": "Celeste",
+            "final_price_in_cents": "1999",
+            "formatted_final_price": "$19.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 632360,
+          "success": 1,
+          "visible": true,
+          "name": "Risk of Rain 2",
+          "store_url_path": "app/632360/Risk_of_Rain_2",
+          "store_url_slug": "Risk_of_Rain_2",
+          "appid": 632360,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              49,
+              36,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              29,
+              64,
+              67,
+              68,
+              69,
+              70,
+              78,
+              23,
+              25,
+              41,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/632360/${FILENAME}?t=1791475448",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "0b809ac6f25e6570fecae5fc47bca0139a7bf70c",
+            "page_background_path": "app/632360?t=1791475448",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1791475448
+          },
+          "best_purchase_option": {
+            "packageid": 172271,
+            "purchase_option_name": "Risk of Rain 2",
+            "final_price_in_cents": "2499",
+            "formatted_final_price": "$24.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 548430,
+          "success": 1,
+          "visible": true,
+          "name": "Deep Rock Galactic",
+          "store_url_path": "app/548430/Deep_Rock_Galactic",
+          "store_url_slug": "Deep_Rock_Galactic",
+          "appid": 548430,
+          "type": 0,
+          "content_descriptorids": [
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              13,
+              65,
+              66,
+              67,
+              68,
+              69,
+              74,
+              78,
+              23,
+              42,
+              43,
+              62
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/548430/${FILENAME}?t=1794917410",
+            "main_capsule": "695f05396a317c7cce7bd1ae6b6a0023fca9f2e9/capsule_616x353.jpg",
+            "main_capsule_2x": "695f05396a317c7cce7bd1ae6b6a0023fca9f2e9/capsule_616x353_2x.jpg",
+            "small_capsule": "1a881a724266fff7af201e18b1af3d2f4d6f4290/capsule_231x87.jpg",
+            "small_capsule_2x": "1a881a724266fff7af201e18b1af3d2f4d6f4290/capsule_231x87_2x.jpg",
+            "header": "37b58a6c4816ee60b0ca97cb6724d6e904c58c41/header.jpg",
+            "header_2x": "37b58a6c4816ee60b0ca97cb6724d6e904c58c41/header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "855f6ba6aae6dd6f977429f19a40e27afca152a4/hero_capsule.jpg",
+            "hero_capsule_2x": "855f6ba6aae6dd6f977429f19a40e27afca152a4/hero_capsule_2x.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "35c4a38067592e934fbb389098eccb0d8a8de000/library_hero.jpg",
+            "library_hero_2x": "35c4a38067592e934fbb389098eccb0d8a8de000/library_hero_2x.jpg",
+            "community_icon": "e033e23c29a192a17c16a7645a2b423ac64ff447",
+            "page_background_path": "app/548430?t=1794917410",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1794917410
+          },
+          "best_purchase_option": {
+            "packageid": 135552,
+            "purchase_option_name": "Deep Rock Galactic",
+            "final_price_in_cents": "2999",
+            "formatted_final_price": "$29.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 730,
+          "success": 1,
+          "visible": true,
+          "name": "Counter-Strike 2",
+          "store_url_path": "app/730/CounterStrike_2",
+          "store_url_slug": "CounterStrike_2",
+          "appid": 730,
+          "type": 0,
+          "is_free": true,
+          "related_items": {
+            "provides_engine_appid": [
+              730
+            ]
+          },
+          "content_descriptorids": [
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              1,
+              27
+            ],
+            "feature_categoryids": [
+              29,
+              30,
+              51,
+              35,
+              64,
+              66,
+              67,
+              68,
+              69,
+              70,
+              74,
+              8,
+              15,
+              41,
+              42,
+              43,
+              63
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/730/${FILENAME}?t=1793054556",
+            "main_capsule": "6328493f4cc4a8fb83e1149be1cac5a7823fe588/capsule_616x353.jpg",
+            "main_capsule_2x": "6328493f4cc4a8fb83e1149be1cac5a7823fe588/capsule_616x353_2x.jpg",
+            "small_capsule": "942c04efaa5bc87afb6f2a97dbf17ac614c8a84d/capsule_231x87.jpg",
+            "small_capsule_2x": "942c04efaa5bc87afb6f2a97dbf17ac614c8a84d/capsule_231x87_2x.jpg",
+            "header": "162664aa5da85f418105350c5d67ca565f6c3713/header.jpg",
+            "header_2x": "162664aa5da85f418105350c5d67ca565f6c3713/header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "6fa459ed6388e8d5a8fd96cdb6ba60acd5210481/hero_capsule.jpg",
+            "hero_capsule_2x": "6fa459ed6388e8d5a8fd96cdb6ba60acd5210481/hero_capsule_2x.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "8dbc71957312bbd3baea65848b545be9eae2a355",
+            "page_background_path": "app/730?t=1793054556",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1793054556
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 578080,
+          "success": 1,
+          "visible": true,
+          "name": "PUBG: BATTLEGROUNDS",
+          "store_url_path": "app/578080/PUBG_BATTLEGROUNDS",
+          "store_url_slug": "PUBG_BATTLEGROUNDS",
+          "appid": 578080,
+          "type": 0,
+          "is_free": true,
+          "content_descriptorids": [
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              1,
+              49,
+              36
+            ],
+            "feature_categoryids": [
+              68,
+              69,
+              70,
+              15,
+              41,
+              42,
+              62
+            ],
+            "controller_categoryids": [
+              18
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/578080/${FILENAME}?t=1792718193",
+            "main_capsule": "3c8895a8ff87fb18d50ff17842511514d4200437/capsule_616x353.jpg",
+            "main_capsule_2x": "3c8895a8ff87fb18d50ff17842511514d4200437/capsule_616x353_2x.jpg",
+            "small_capsule": "14f42ab797699a9c9f137fda66582d8776da4330/capsule_231x87.jpg",
+            "small_capsule_2x": "14f42ab797699a9c9f137fda66582d8776da4330/capsule_231x87_2x.jpg",
+            "header": "841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg",
+            "header_2x": "841ea38bc58cabb70aef65365cf50bc2d79329d9/header_2x.jpg",
+            "page_background": "378ba5d5c4cabc77814a29d8088bbb92aecec194/page_bg_v6.jpg",
+            "hero_capsule": "bdf06fda158573f5dd1b996c373356fba9cfa926/hero_capsule.jpg",
+            "hero_capsule_2x": "bdf06fda158573f5dd1b996c373356fba9cfa926/hero_capsule_2x.jpg",
+            "library_capsule": "36a1a274b3a7870e475ea1e110e58db8a0803c41/library_600x900.jpg",
+            "library_capsule_2x": "36a1a274b3a7870e475ea1e110e58db8a0803c41/library_600x900_2x.jpg",
+            "library_hero": "a14b88ee69f55d5354d3efc1f725eddf40650869/library_hero.jpg",
+            "library_hero_2x": "a14b88ee69f55d5354d3efc1f725eddf40650869/library_hero_2x.jpg",
+            "community_icon": "609f27278aa70697c13bf99f32c5a0248c381f9d",
+            "page_background_path": "app/578080?t=1792718193",
+            "raw_page_background": "378ba5d5c4cabc77814a29d8088bbb92aecec194/page_bg_raw.jpg",
+            "last_modified": 1792718193
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 570,
+          "success": 1,
+          "visible": true,
+          "name": "Dota 2",
+          "store_url_path": "app/570/Dota_2",
+          "store_url_slug": "Dota_2",
+          "appid": 570,
+          "type": 0,
+          "is_free": true,
+          "content_descriptorids": [
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              1,
+              9
+            ],
+            "feature_categoryids": [
+              29,
+              30,
+              40,
+              35,
+              66,
+              67,
+              68,
+              8,
+              63
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/570/${FILENAME}?t=1791407503",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "header_2x": "header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "6cddc26cb124bd87d3fbacd58cd83ba33e4cb0e7/library_capsule.jpg",
+            "library_capsule_2x": "6cddc26cb124bd87d3fbacd58cd83ba33e4cb0e7/library_capsule_2x.jpg",
+            "library_hero": "0e4a18e7b53d1d4d68bba65969919e6a85920b04/library_hero.jpg",
+            "library_hero_2x": "0e4a18e7b53d1d4d68bba65969919e6a85920b04/library_hero_2x.jpg",
+            "community_icon": "48eb825bb93787945065b460bdc109e395384ebf",
+            "page_background_path": "app/570?t=1791407503",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1791407503
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 4262460,
+          "success": 1,
+          "visible": true,
+          "name": "ROB RUN",
+          "store_url_path": "app/4262460/ROB_RUN",
+          "store_url_slug": "ROB_RUN",
+          "appid": 4262460,
+          "type": 0,
+          "is_free": true,
+          "is_early_access": true,
+          "content_descriptorids": [
+            1,
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              1,
+              20,
+              49,
+              36,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              35,
+              23,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/4262460/${FILENAME}?t=1793811654",
+            "main_capsule": "eb2c70e5d9af9f4d74f36f0a60487e84b4911a39/capsule_616x353.jpg",
+            "main_capsule_2x": "eb2c70e5d9af9f4d74f36f0a60487e84b4911a39/capsule_616x353_2x.jpg",
+            "small_capsule": "0cef00dbfabf5f15adbf8b18e84cc8ef53dce963/capsule_231x87.jpg",
+            "small_capsule_2x": "0cef00dbfabf5f15adbf8b18e84cc8ef53dce963/capsule_231x87_2x.jpg",
+            "header": "db8e0cf43c9475b96fb9446b4908de79fcb9f619/header.jpg",
+            "header_2x": "db8e0cf43c9475b96fb9446b4908de79fcb9f619/header_2x.jpg",
+            "page_background": "dab8256c1dff89eff8f8b6d5e25327a68d8659dc/page_bg_v6.jpg",
+            "hero_capsule": "de2a19b5d2150766f655a83925a0f634c28ee59b/hero_capsule.jpg",
+            "hero_capsule_2x": "de2a19b5d2150766f655a83925a0f634c28ee59b/hero_capsule_2x.jpg",
+            "library_capsule": "69a7d94807fcdea67f649ecfa3da0aab369bd767/library_capsule.jpg",
+            "library_capsule_2x": "69a7d94807fcdea67f649ecfa3da0aab369bd767/library_capsule_2x.jpg",
+            "library_hero": "61dff3c7ebce05c75d9d60d69440b099d16cfd02/library_hero.jpg",
+            "library_hero_2x": "61dff3c7ebce05c75d9d60d69440b099d16cfd02/library_hero_2x.jpg",
+            "community_icon": "6925066dc70cf9453455a8c1db9539521a116f63",
+            "page_background_path": "app/4262460?t=1793811654",
+            "raw_page_background": "dab8256c1dff89eff8f8b6d5e25327a68d8659dc/page_bg_raw.jpg",
+            "last_modified": 1793811654
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 1422450,
+          "success": 1,
+          "visible": true,
+          "name": "Deadlock",
+          "store_url_path": "app/1422450/Deadlock",
+          "store_url_slug": "Deadlock",
+          "appid": 1422450,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              1
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1422450/${FILENAME}?t=1790716179",
+            "main_capsule": "bb234ef2fd0409fffbd0e0d0c470c05167d18535/capsule_616x353.jpg",
+            "main_capsule_2x": "bb234ef2fd0409fffbd0e0d0c470c05167d18535/capsule_616x353_2x.jpg",
+            "small_capsule": "88b400eca727f0547232b49b3e62827f07900c77/capsule_231x87.jpg",
+            "small_capsule_2x": "88b400eca727f0547232b49b3e62827f07900c77/capsule_231x87_2x.jpg",
+            "header": "aa249c5e8cc8f90941bd1dbdc311773cd1afe065/header.jpg",
+            "header_2x": "aa249c5e8cc8f90941bd1dbdc311773cd1afe065/header_2x.jpg",
+            "hero_capsule": "38993c9fff0431c57e05ad6aede05294f42d0e80/hero_capsule.jpg",
+            "hero_capsule_2x": "38993c9fff0431c57e05ad6aede05294f42d0e80/hero_capsule_2x.jpg",
+            "library_capsule": "43ca731f79816ad94bfcd45287c2e0a22080dab7/library_capsule.jpg",
+            "library_capsule_2x": "43ca731f79816ad94bfcd45287c2e0a22080dab7/library_capsule_2x.jpg",
+            "library_hero": "e38dad54f59519e592896c889bbfa7c90fd52270/library_hero.jpg",
+            "library_hero_2x": "e38dad54f59519e592896c889bbfa7c90fd52270/library_hero_2x.jpg",
+            "community_icon": "f6da1420a173324d49bcd470fa3eee781ad0fa5e",
+            "page_background_path": "app/1422450?t=1790716179",
+            "last_modified": 1790716179
+          },
+          "is_coming_soon": true
+        },
+        {
+          "item_type": 0,
+          "id": 1172470,
+          "success": 1,
+          "visible": true,
+          "name": "Apex Legends™",
+          "store_url_path": "app/1172470/Apex_Legends",
+          "store_url_slug": "Apex_Legends",
+          "appid": 1172470,
+          "type": 0,
+          "is_free": true,
+          "categories": {
+            "supported_player_categoryids": [
+              1,
+              49,
+              36,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              35,
+              72,
+              74
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              57,
+              58
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1172470/${FILENAME}?t=1794958367",
+            "main_capsule": "31401d14b58e11e064fbdad0bab9f37f9ba46f41/capsule_616x353_alt_assets_7.jpg",
+            "main_capsule_2x": "31401d14b58e11e064fbdad0bab9f37f9ba46f41/capsule_616x353_alt_assets_7_2x.jpg",
+            "small_capsule": "0f7e056bbc3fb645cfd812a0154ebf3d53ef47f1/capsule_231x87_alt_assets_7.jpg",
+            "small_capsule_2x": "0f7e056bbc3fb645cfd812a0154ebf3d53ef47f1/capsule_231x87_alt_assets_7_2x.jpg",
+            "header": "dc5c390e9a273a7248f75c1b2d59987f6179323c/header_alt_assets_7.jpg",
+            "header_2x": "dc5c390e9a273a7248f75c1b2d59987f6179323c/header_alt_assets_7_2x.jpg",
+            "page_background": "16d10d528954b357b64fa7e2e7fa11b988b22563/page_bg_v6.jpg",
+            "hero_capsule": "b5169bebca35166bb120a46ffcfc01dc4eac3533/hero_capsule_alt_assets_7.jpg",
+            "hero_capsule_2x": "b5169bebca35166bb120a46ffcfc01dc4eac3533/hero_capsule_alt_assets_7_2x.jpg",
+            "library_capsule": "b727d513ccbd272e35095089837d386176c59a97/library_capsule.jpg",
+            "library_capsule_2x": "b727d513ccbd272e35095089837d386176c59a97/library_capsule_2x.jpg",
+            "library_hero": "b9cb4783b9794eaa62020945f7caaf3cf822da20/library_hero.jpg",
+            "library_hero_2x": "b9cb4783b9794eaa62020945f7caaf3cf822da20/library_hero_2x.jpg",
+            "community_icon": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
+            "page_background_path": "app/1172470?t=1794958367",
+            "raw_page_background": "16d10d528954b357b64fa7e2e7fa11b988b22563/page_bg_raw.jpg",
+            "last_modified": 1794958367
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 2868840,
+          "success": 1,
+          "visible": true,
+          "name": "Slay the Spire 2",
+          "store_url_path": "app/2868840/Slay_the_Spire_2",
+          "store_url_slug": "Slay_the_Spire_2",
+          "appid": 2868840,
+          "type": 0,
+          "is_early_access": true,
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              68,
+              74,
+              76,
+              79,
+              80,
+              23,
+              15,
+              25,
+              62
+            ],
+            "controller_categoryids": [
+              28,
+              57,
+              59
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/2868840/${FILENAME}?t=1787169309",
+            "main_capsule": "6a19172e7bc3045dd4625018ca82dce8a18ed0ab/capsule_616x353.jpg",
+            "main_capsule_2x": "6a19172e7bc3045dd4625018ca82dce8a18ed0ab/capsule_616x353_2x.jpg",
+            "small_capsule": "fb0ad136e9eaa4297a1ab3440d88ecb7209f44a2/capsule_231x87.jpg",
+            "small_capsule_2x": "fb0ad136e9eaa4297a1ab3440d88ecb7209f44a2/capsule_231x87_2x.jpg",
+            "header": "b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
+            "header_2x": "b0958d387dc366211e0f353443710cfcf9fdb020/header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "6c41d0ed8e10c375bbf0d39d6fc597faa5778c8d/hero_capsule.jpg",
+            "hero_capsule_2x": "6c41d0ed8e10c375bbf0d39d6fc597faa5778c8d/hero_capsule_2x.jpg",
+            "library_capsule": "4bf4dad2c9c82b1989eee4a664ca7ce7bf3cc4a7/library_600x900.jpg",
+            "library_capsule_2x": "4bf4dad2c9c82b1989eee4a664ca7ce7bf3cc4a7/library_600x900_2x.jpg",
+            "library_hero": "142685c713492a21940cf2c01e50f85aca5780c8/library_hero.jpg",
+            "library_hero_2x": "142685c713492a21940cf2c01e50f85aca5780c8/library_hero_2x.jpg",
+            "community_icon": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
+            "page_background_path": "app/2868840?t=1787169309",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1787169309
+          },
+          "best_purchase_option": {
+            "packageid": 1023134,
+            "purchase_option_name": "Slay the Spire 2",
+            "final_price_in_cents": "1999",
+            "original_price_in_cents": "2499",
+            "formatted_final_price": "$19.99",
+            "formatted_original_price": "$24.99",
+            "discount_pct": 20,
+            "active_discounts": [
+              {
+                "discount_amount": "500",
+                "discount_description": "#discount_desc_preset_special",
+                "discount_end_date": 1795716000
+              }
+            ],
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 4115450,
+          "success": 1,
+          "visible": true,
+          "name": "Phantom Blade Zero",
+          "store_url_path": "app/4115450/Phantom_Blade_Zero",
+          "store_url_slug": "Phantom_Blade_Zero",
+          "appid": 4115450,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              64,
+              65,
+              68,
+              69,
+              78,
+              23,
+              62
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/4115450/${FILENAME}?t=1793261976",
+            "main_capsule": "98af27aecb2eedd674e4e18b5fb3e58754729589/capsule_616x353.jpg",
+            "main_capsule_2x": "98af27aecb2eedd674e4e18b5fb3e58754729589/capsule_616x353_2x.jpg",
+            "small_capsule": "aef06490c9a4ad912142fe3b766ee08a2b38ef80/capsule_231x87.jpg",
+            "small_capsule_2x": "aef06490c9a4ad912142fe3b766ee08a2b38ef80/capsule_231x87_2x.jpg",
+            "header": "7f882f889630270d3d3fb93825ac6f55b55e7a6c/header.jpg",
+            "header_2x": "7f882f889630270d3d3fb93825ac6f55b55e7a6c/header_2x.jpg",
+            "page_background": "8477e332081c0d28657885bf4b3c509823e289c9/page_bg_v6.jpg",
+            "hero_capsule": "50119189210964783051d73cb8f4fd3cdd8ad546/hero_capsule.jpg",
+            "hero_capsule_2x": "50119189210964783051d73cb8f4fd3cdd8ad546/hero_capsule_2x.jpg",
+            "library_capsule": "471e77854910665c03eb9a53ad06f2ac12903acd/library_capsule.jpg",
+            "library_capsule_2x": "471e77854910665c03eb9a53ad06f2ac12903acd/library_capsule_2x.jpg",
+            "library_hero": "1cd52ca84a3d974c4206e9cb90231956324c5999/library_hero.jpg",
+            "library_hero_2x": "1cd52ca84a3d974c4206e9cb90231956324c5999/library_hero_2x.jpg",
+            "community_icon": "ce420dc458dd3d7af276f48fbaa44a05876760dc",
+            "page_background_path": "app/4115450?t=1793261976",
+            "raw_page_background": "8477e332081c0d28657885bf4b3c509823e289c9/page_bg_raw.jpg",
+            "last_modified": 1793261976
+          },
+          "best_purchase_option": {
+            "packageid": 1766409,
+            "purchase_option_name": "Phantom Blade Zero",
+            "final_price_in_cents": "5999",
+            "formatted_final_price": "$59.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 3240220,
+          "success": 1,
+          "visible": true,
+          "name": "Grand Theft Auto V Enhanced",
+          "store_url_path": "app/3240220/Grand_Theft_Auto_V_Enhanced",
+          "store_url_slug": "Grand_Theft_Auto_V_Enhanced",
+          "appid": 3240220,
+          "type": 0,
+          "content_descriptorids": [
+            1,
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              49,
+              36,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              22,
+              35,
+              41,
+              42
+            ],
+            "controller_categoryids": [
+              57,
+              58,
+              18
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/3240220/${FILENAME}?t=1781187782",
+            "main_capsule": "4c8d7ce5142a528bdac68c093bd1bcc720e2baee/capsule_616x353.jpg",
+            "main_capsule_2x": "4c8d7ce5142a528bdac68c093bd1bcc720e2baee/capsule_616x353_2x.jpg",
+            "small_capsule": "a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_231x87.jpg",
+            "small_capsule_2x": "a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_231x87_2x.jpg",
+            "header": "header.jpg",
+            "header_2x": "header_2x.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "597b780d9d00f1e037baeacbff4b499e8e034193/hero_capsule.jpg",
+            "hero_capsule_2x": "597b780d9d00f1e037baeacbff4b499e8e034193/hero_capsule_2x.jpg",
+            "library_capsule": "394239e5da54fed177bd0ab04590812f6add1bb5/library_600x900.jpg",
+            "library_capsule_2x": "394239e5da54fed177bd0ab04590812f6add1bb5/library_600x900_2x.jpg",
+            "library_hero": "156530620aa0b27bc9c73f78c3ca64f7d8fed03d/library_hero.jpg",
+            "library_hero_2x": "156530620aa0b27bc9c73f78c3ca64f7d8fed03d/library_hero_2x.jpg",
+            "community_icon": "8355a7bbdb704f727bfba80ec56bc7228991338e",
+            "page_background_path": "app/3240220?t=1781187782",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1781187782
+          },
+          "best_purchase_option": {
+            "packageid": 1148516,
+            "purchase_option_name": "Grand Theft Auto V Enhanced",
+            "final_price_in_cents": "2999",
+            "formatted_final_price": "$29.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 1938090,
+          "success": 1,
+          "visible": true,
+          "name": "Call of Duty®",
+          "store_url_path": "app/1938090/Call_of_Duty",
+          "store_url_slug": "Call_of_Duty",
+          "appid": 1938090,
+          "type": 0,
+          "content_descriptorids": [
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              49,
+              36,
+              9,
+              38,
+              27
+            ],
+            "feature_categoryids": [
+              22,
+              13,
+              35,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              74,
+              61
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              56,
+              57,
+              58
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1938090/${FILENAME}?t=1794591176",
+            "main_capsule": "4a6229112eb83c16b4fad25dd33c9c965e9b3b5e/capsule_616x353_alt_assets_43.jpg",
+            "main_capsule_2x": "4a6229112eb83c16b4fad25dd33c9c965e9b3b5e/capsule_616x353_alt_assets_43_2x.jpg",
+            "small_capsule": "0ac3cc02398b9db61c8db4fef2e3e1b4b8b66e4b/capsule_231x87.jpg",
+            "small_capsule_2x": "0ac3cc02398b9db61c8db4fef2e3e1b4b8b66e4b/capsule_231x87_2x.jpg",
+            "header": "23af6cf41e2d09620caa07700a4cb3288dbcbaa8/header.jpg",
+            "header_2x": "23af6cf41e2d09620caa07700a4cb3288dbcbaa8/header_2x.jpg",
+            "page_background": "daf5d7dee8c89ae737aaac6b712288b934ee84dc/page_bg_v6.jpg",
+            "hero_capsule": "c0a6569c6d610697f102e87983913219319e0af2/hero_capsule.jpg",
+            "hero_capsule_2x": "c0a6569c6d610697f102e87983913219319e0af2/hero_capsule_2x.jpg",
+            "library_capsule": "cdd2e375176da1f904a11940576790732d6ccbc0/library_capsule.jpg",
+            "library_capsule_2x": "cdd2e375176da1f904a11940576790732d6ccbc0/library_capsule_2x.jpg",
+            "library_hero": "41805185a8493af69518e83d0dbb819e1de328d5/library_hero.jpg",
+            "library_hero_2x": "41805185a8493af69518e83d0dbb819e1de328d5/library_hero_2x.jpg",
+            "community_icon": "8eaf32220060344996cbf11f697a4f4be943e5f3",
+            "page_background_path": "app/1938090?t=1794591176",
+            "raw_page_background": "daf5d7dee8c89ae737aaac6b712288b934ee84dc/page_bg_raw.jpg",
+            "last_modified": 1794591176
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 1091500,
+          "success": 1,
+          "visible": true,
+          "name": "Cyberpunk 2077",
+          "store_url_path": "app/1091500/Cyberpunk_2077",
+          "store_url_slug": "Cyberpunk_2077",
+          "appid": 1091500,
+          "type": 0,
+          "content_descriptorids": [
+            1,
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              74,
+              78,
+              79,
+              23,
+              61,
+              62
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              57,
+              58
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1091500/${FILENAME}?t=1794474878",
+            "main_capsule": "f5283a1d1a2a44b9b67a861cc2e047859557a872/capsule_616x353_alt_assets_9.jpg",
+            "main_capsule_2x": "f5283a1d1a2a44b9b67a861cc2e047859557a872/capsule_616x353_alt_assets_9_2x.jpg",
+            "small_capsule": "e104809f1370b37190ab346ff28f2dbf5037fed6/capsule_231x87_alt_assets_9.jpg",
+            "small_capsule_2x": "e104809f1370b37190ab346ff28f2dbf5037fed6/capsule_231x87_alt_assets_9_2x.jpg",
+            "header": "48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg",
+            "header_2x": "48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9_2x.jpg",
+            "page_background": "644eb087007768417a847e52c38eeaf34b57fd12/page_bg_v6.jpg",
+            "hero_capsule": "fdc73f21320557808c3be64b4a90f6bdaec0fa47/hero_capsule_alt_assets_9.jpg",
+            "hero_capsule_2x": "fdc73f21320557808c3be64b4a90f6bdaec0fa47/hero_capsule_alt_assets_9_2x.jpg",
+            "library_capsule": "6399de67cce3cecadce7900e03f6e09ff910a235/library_capsule.jpg",
+            "library_capsule_2x": "6399de67cce3cecadce7900e03f6e09ff910a235/library_capsule_2x.jpg",
+            "library_hero": "cf8cec802dc47d0f24b75f9eee135e96812e2652/library_hero.jpg",
+            "library_hero_2x": "cf8cec802dc47d0f24b75f9eee135e96812e2652/library_hero_2x.jpg",
+            "community_icon": "6897c3848f3e0350d512f59d5bae174a1e3739f9",
+            "page_background_path": "app/1091500?t=1794474878",
+            "raw_page_background": "644eb087007768417a847e52c38eeaf34b57fd12/page_bg_raw.jpg",
+            "last_modified": 1794474878
+          },
+          "best_purchase_option": {
+            "packageid": 367653,
+            "purchase_option_name": "Cyberpunk 2077",
+            "final_price_in_cents": "5999",
+            "formatted_final_price": "$59.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 236390,
+          "success": 1,
+          "visible": true,
+          "name": "War Thunder",
+          "store_url_path": "app/236390/War_Thunder",
+          "store_url_slug": "War_Thunder",
+          "appid": 236390,
+          "type": 0,
+          "is_free": true,
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              20,
+              49,
+              36,
+              9,
+              38,
+              27
+            ],
+            "feature_categoryids": [
+              22,
+              53,
+              29,
+              35,
+              64,
+              66,
+              67,
+              68,
+              69,
+              70,
+              74,
+              41,
+              42
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              57,
+              59
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/236390/${FILENAME}?t=1794405808",
+            "main_capsule": "f3028ebf495c238a9da93278cfb0c62b7c164472/capsule_616x353.jpg",
+            "main_capsule_2x": "f3028ebf495c238a9da93278cfb0c62b7c164472/capsule_616x353_2x.jpg",
+            "small_capsule": "1ebb0fdc38fc6f27dae69ba750d0d489ed55fe6f/capsule_231x87.jpg",
+            "small_capsule_2x": "1ebb0fdc38fc6f27dae69ba750d0d489ed55fe6f/capsule_231x87_2x.jpg",
+            "header": "09150b32d79fc827c2d24bc7ee200748a3c1e43e/header.jpg",
+            "header_2x": "09150b32d79fc827c2d24bc7ee200748a3c1e43e/header_2x.jpg",
+            "page_background": "ee918ecb1022455b7fd9ff272c18b095e8762b7e/page_bg_v6.jpg",
+            "hero_capsule": "45abf35d17be64bf19d486ac5807bca7002afd6a/hero_capsule.jpg",
+            "hero_capsule_2x": "45abf35d17be64bf19d486ac5807bca7002afd6a/hero_capsule_2x.jpg",
+            "library_capsule": "7dd482035ef502666b0ab1caa0e99c2a2609d957/library_capsule.jpg",
+            "library_capsule_2x": "7dd482035ef502666b0ab1caa0e99c2a2609d957/library_capsule_2x.jpg",
+            "library_hero": "9be13644a4c46631f859cd95f67e83bfbcc45586/library_hero.jpg",
+            "library_hero_2x": "9be13644a4c46631f859cd95f67e83bfbcc45586/library_hero_2x.jpg",
+            "community_icon": "c69fbafb6e9891314cc5df0fe6a659612c289bf9",
+            "page_background_path": "app/236390?t=1794405808",
+            "raw_page_background": "ee918ecb1022455b7fd9ff272c18b095e8762b7e/page_bg_raw.jpg",
+            "last_modified": 1794405808
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 322170,
+          "success": 1,
+          "visible": true,
+          "name": "Geometry Dash",
+          "store_url_path": "app/322170/Geometry_Dash",
+          "store_url_slug": "Geometry_Dash",
+          "appid": 322170,
+          "type": 0,
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              17,
+              41,
+              42,
+              62
+            ],
+            "controller_categoryids": [
+              18
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/322170/${FILENAME}?t=1775300400",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "7fb2e71773468dbd98d56c733b604c92f5ab0ad4",
+            "page_background_path": "app/322170?t=1775300400",
+            "last_modified": 1775300400
+          },
+          "best_purchase_option": {
+            "packageid": 50572,
+            "purchase_option_name": "Geometry Dash",
+            "final_price_in_cents": "499",
+            "formatted_final_price": "$4.99",
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 271590,
+          "success": 1,
+          "visible": true,
+          "name": "Grand Theft Auto V Legacy",
+          "store_url_path": "app/271590/Grand_Theft_Auto_V_Legacy",
+          "store_url_slug": "Grand_Theft_Auto_V_Legacy",
+          "appid": 271590,
+          "type": 0,
+          "content_descriptorids": [
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              49,
+              36,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              22,
+              41,
+              42,
+              43
+            ],
+            "controller_categoryids": [
+              28
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/271590/${FILENAME}?t=1765387725",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "1e72f87eb927fa1485e68aefaff23c7fd7178251",
+            "page_background_path": "app/271590?t=1765387725",
+            "last_modified": 1765387725
+          },
+          "unlisted": true
+        },
+        {
+          "item_type": 0,
+          "id": 1973530,
+          "success": 1,
+          "visible": true,
+          "name": "Limbus Company",
+          "store_url_path": "app/1973530/Limbus_Company",
+          "store_url_slug": "Limbus_Company",
+          "appid": 1973530,
+          "type": 0,
+          "is_free": true,
+          "content_descriptorids": [
+            2,
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2
+            ],
+            "feature_categoryids": [
+              35,
+              62
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/1973530/${FILENAME}?t=1793975559",
+            "main_capsule": "capsule_616x353.jpg",
+            "small_capsule": "capsule_231x87.jpg",
+            "header": "header.jpg",
+            "page_background": "page_bg_generated_v6b.jpg",
+            "hero_capsule": "hero_capsule.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "community_icon": "37cc38d5fff9b40f682abd05e7cb3f429629823c",
+            "page_background_path": "app/1973530?t=1793975559",
+            "raw_page_background": "page_bg_raw.jpg",
+            "last_modified": 1793975559
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 359550,
+          "success": 1,
+          "visible": true,
+          "name": "Tom Clancy's Rainbow Six Siege",
+          "store_url_path": "app/359550/Tom_Clancys_Rainbow_Six_Siege",
+          "store_url_slug": "Tom_Clancys_Rainbow_Six_Siege",
+          "appid": 359550,
+          "type": 0,
+          "is_free": true,
+          "content_descriptorids": [
+            5
+          ],
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              49,
+              36,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              29,
+              35,
+              41,
+              42
+            ],
+            "controller_categoryids": [
+              28,
+              55,
+              56,
+              57,
+              58
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/359550/${FILENAME}?t=1792001976",
+            "main_capsule": "a5d36d517e802e812ef9bb21e5c7aef7109ef6a7/capsule_616x353_alt_assets_28.jpg",
+            "main_capsule_2x": "a5d36d517e802e812ef9bb21e5c7aef7109ef6a7/capsule_616x353_alt_assets_28_2x.jpg",
+            "small_capsule": "3530857a30ecb9ed4e6b9c3df9d7e162d9008aae/capsule_231x87_alt_assets_28.jpg",
+            "small_capsule_2x": "3530857a30ecb9ed4e6b9c3df9d7e162d9008aae/capsule_231x87_alt_assets_28_2x.jpg",
+            "header": "1c7b1ea3405a69c54429e2aa3dc31f3cbbeaa456/header_alt_assets_28.jpg",
+            "header_2x": "1c7b1ea3405a69c54429e2aa3dc31f3cbbeaa456/header_alt_assets_28_2x.jpg",
+            "page_background": "4ed63a0ad40e034b918f7f36cc2b136e207884d4/page_bg_v6.jpg",
+            "hero_capsule": "883c304e3b893b11624096c9f8f91921b1847bf5/hero_capsule.jpg",
+            "hero_capsule_2x": "883c304e3b893b11624096c9f8f91921b1847bf5/hero_capsule_2x.jpg",
+            "library_capsule": "5878a9291aaf2334e08424c6db8e9635d9fa05b4/library_capsule.jpg",
+            "library_capsule_2x": "5878a9291aaf2334e08424c6db8e9635d9fa05b4/library_capsule_2x.jpg",
+            "library_hero": "6a17af1cb99e9822a54b6b80f8186ac932b88d3d/library_hero.jpg",
+            "library_hero_2x": "6a17af1cb99e9822a54b6b80f8186ac932b88d3d/library_hero_2x.jpg",
+            "community_icon": "624745d333ac54aedb1ee911013e2edb7722550e",
+            "page_background_path": "app/359550?t=1792001976",
+            "raw_page_background": "4ed63a0ad40e034b918f7f36cc2b136e207884d4/page_bg_raw.jpg",
+            "edition_comparison": "e4a18664e59ac98ecb6e7fafa5ff76e3c6409b0d/edition_comparision.jpg",
+            "last_modified": 1792001976
+          }
+        },
+        {
+          "item_type": 0,
+          "id": 227300,
+          "success": 1,
+          "visible": true,
+          "name": "Euro Truck Simulator 2",
+          "store_url_path": "app/227300/Euro_Truck_Simulator_2",
+          "store_url_slug": "Euro_Truck_Simulator_2",
+          "appid": 227300,
+          "type": 0,
+          "related_items": {
+            "demo_appid": [
+              231120
+            ],
+            "demos": [
+              {
+                "appid": 231120,
+                "show_above_purchase": true
+              }
+            ]
+          },
+          "categories": {
+            "supported_player_categoryids": [
+              2,
+              1,
+              9,
+              38
+            ],
+            "feature_categoryids": [
+              22,
+              29,
+              30,
+              67,
+              68,
+              69,
+              70,
+              74,
+              75,
+              78,
+              79,
+              23,
+              17,
+              41,
+              42,
+              44,
+              62
+            ],
+            "controller_categoryids": [
+              59,
+              18
+            ]
+          },
+          "assets": {
+            "asset_url_format": "steam/apps/227300/${FILENAME}?t=1794502925",
+            "main_capsule": "5237101dc9efe4873c9be1804d4ed2619ad7bee4/capsule_616x353.jpg",
+            "main_capsule_2x": "5237101dc9efe4873c9be1804d4ed2619ad7bee4/capsule_616x353_2x.jpg",
+            "small_capsule": "da84d11d3ddd817e0cca299608b469a854d75ba5/capsule_231x87.jpg",
+            "small_capsule_2x": "da84d11d3ddd817e0cca299608b469a854d75ba5/capsule_231x87_2x.jpg",
+            "header": "9a81dc3126c56637297b654f9dcac057cfd79b77/header.jpg",
+            "header_2x": "9a81dc3126c56637297b654f9dcac057cfd79b77/header_2x.jpg",
+            "hero_capsule": "b1783fbc824cba63d3393db25af776d77e68a079/hero_capsule.jpg",
+            "hero_capsule_2x": "b1783fbc824cba63d3393db25af776d77e68a079/hero_capsule_2x.jpg",
+            "library_capsule": "library_600x900.jpg",
+            "library_capsule_2x": "library_600x900_2x.jpg",
+            "library_hero": "library_hero.jpg",
+            "library_hero_2x": "library_hero_2x.jpg",
+            "community_icon": "adc18a4fc9adc0330144b76d61cbda68bb2394a0",
+            "page_background_path": "app/227300?t=1794502925",
+            "edition_comparison": "e586ef63a0d32a32995b02d66e7f2d797a5966fc/edition_comparision.jpg",
+            "last_modified": 1794502925
+          },
+          "best_purchase_option": {
+            "packageid": 19007,
+            "purchase_option_name": "Euro Truck Simulator 2",
+            "final_price_in_cents": "499",
+            "original_price_in_cents": "1999",
+            "formatted_final_price": "$4.99",
+            "formatted_original_price": "$19.99",
+            "discount_pct": 75,
+            "active_discounts": [
+              {
+                "discount_amount": "1500",
+                "discount_description": "#discount_desc_preset_special",
+                "discount_end_date": 1795539600
+              }
+            ],
+            "user_can_purchase_as_gift": true,
+            "hide_discount_pct_for_compliance": false,
+            "included_game_count": 1,
+            "must_purchase_as_set": false,
+            "package_group": "default",
+            "price_cannot_be_displayed_as_discount": false
+          }
+        }
+      ]
+    }
+  }
+}
