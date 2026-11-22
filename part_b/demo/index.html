@@ -6,12 +6,13 @@
 <title>Next Play · Game Recommendation Demo</title>
 <style>
 :root{--paper:#f6f4ee;--surface:#fffefa;--ink:#22392f;--muted:#778078;--line:#dedfd5;--green:#284e3e;--lime:#d9e7a6;--sans:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.6}button,select,input{font:inherit}button,select,summary{cursor:pointer}button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #a07839;outline-offset:3px}button{color:inherit}button:disabled{cursor:wait;opacity:.65}header{border-bottom:1px solid var(--line)}.header-inner{max-width:1440px;margin:auto;padding:22px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:750;letter-spacing:-.7px}.brand-mark{width:32px;height:32px;border:1.5px solid var(--green);border-radius:9px;display:grid;place-items:center}.brand-mark svg{width:19px}.brand small{font-size:11px;font-weight:500;letter-spacing:1.4px;margin-left:12px;color:var(--muted)}.header-right{display:flex;align-items:center;gap:18px;color:var(--muted);font-size:12px}.demo-tag{border:1px solid #c6d0bc;border-radius:30px;color:var(--green);padding:3px 11px}.shell{max-width:1440px;margin:auto;padding:32px 40px 18px;display:grid;grid-template-columns:252px minmax(0,1fr);gap:38px}.sidebar{padding-right:26px;border-right:1px solid var(--line)}.section-label{font-size:11px;letter-spacing:1.8px;color:var(--muted);font-weight:600}.sidebar h2{font-size:18px;letter-spacing:-.4px;margin:7px 0 22px}.field-label{display:block;font-size:12px;font-weight:600;margin-bottom:7px}select{width:100%;padding:10px 30px 10px 11px;background:var(--surface);border:1px solid #cbd0c2;border-radius:7px;color:var(--ink)}.player-card{padding:20px 0 17px;display:flex;gap:11px;align-items:center}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e2e8d5;font-size:17px;font-weight:600}.player-name{font-weight:650;font-size:15px}.player-taste{font-size:12px;color:var(--muted)}.player-note{font-size:12px;color:var(--muted);margin:0 0 18px}.history-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;margin-bottom:9px}.history-label span{font-size:11px;color:var(--muted);font-weight:400}.history{display:flex;flex-direction:column;gap:7px}.history-item{font-size:11px;display:flex;justify-content:space-between;gap:7px;border:1px solid var(--line);background:#fbfaf5;padding:6px 9px;border-radius:5px}.history-item span:first-child{overflow-wrap:anywhere}.stars{color:#8d7945;white-space:nowrap}.text-button{border:0;background:none;text-decoration:underline;text-underline-offset:4px;padding:7px 0;color:var(--green);font-size:12px}.sidebar-note{border-top:1px solid var(--line);margin-top:19px;padding-top:16px;color:var(--muted);font-size:11px}.steps{margin:18px 0;padding:15px;background:#e9eddf;border-radius:8px;color:#5a6f57;font-size:11px}.steps strong{display:block;color:var(--green);font-size:12px;margin-bottom:8px}.steps div{margin:5px 0}.hero{display:flex;justify-content:space-between;gap:18px;align-items:start;margin-bottom:23px}.hero h1{font-size:clamp(25px,2.8vw,38px);letter-spacing:-1.7px;line-height:1.35;margin:7px 0 9px;font-weight:700}.hero p{color:var(--muted);font-size:12px;margin:0}.hero-stamp{width:88px;height:88px;border:1px solid #c3ccb6;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(9deg);color:#6b7c56;flex-shrink:0;font-size:10px;letter-spacing:1.5px;margin-top:6px}.hero-stamp b{font-size:22px;line-height:1.4;letter-spacing:0;font-weight:500}.toolbar{border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:19px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}.methods{display:flex;padding:3px;border:1px solid var(--line);border-radius:8px;gap:3px;background:#efeee7}.method{background:none;border:0;border-radius:5px;padding:7px 12px;font-size:12px;color:#758073;transition:background .15s}.method[aria-pressed=true]{background:var(--green);color:#fff}.filters{display:flex;gap:9px}.filter{white-space:nowrap;display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}.filter select{padding:6px 20px 6px 9px;width:auto;font-size:11px;background:transparent}.result-header{flex-wrap:wrap;display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}.result-header h2{font-size:15px;margin:0;font-weight:650}.result-header p{font-size:11px;color:var(--muted);margin:0}.taste-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:17px}.taste-tag{font-size:10px;padding:2px 8px;background:#e8eddf;color:#62734e;border-radius:3px}.game-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;transition:opacity .15s}.game-grid[aria-busy=true]{opacity:.45}.game-card{background:var(--surface);border:1px solid #e0e1d7;border-radius:9px;overflow:hidden;min-width:0;transition:transform .15s,box-shadow .15s}.game-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px #283b2d0c}.poster{height:111px;position:relative;overflow:hidden;background:var(--tone);color:white}.poster:before{content:"";position:absolute;width:150px;height:150px;right:-20px;top:-54px;border:1px solid #ffffff33;border-radius:50%;box-shadow:0 0 0 24px #ffffff09,0 0 0 50px #ffffff07}.poster:after{content:"";position:absolute;left:36px;bottom:-55px;width:120px;height:120px;background:#ffffff0d;transform:rotate(35deg);border:1px solid #ffffff1a}.art-word{position:absolute;right:17px;bottom:-11px;font-size:53px;letter-spacing:-5px;opacity:.18;font-weight:700;line-height:1.5}.rank{position:absolute;left:13px;top:11px;font-size:11px;color:#ffffffab;letter-spacing:1px}.edition{position:absolute;left:13px;bottom:12px;font-size:12px;letter-spacing:2px}.genre{position:absolute;right:11px;top:10px;background:#ffffff19;border:1px solid #ffffff38;padding:1px 7px;border-radius:10px;font-size:9px}.game-body{padding:13px 14px 11px}.game-title{margin:0 0 4px;font-size:14px;font-weight:650;letter-spacing:-.25px;line-height:1.4;min-height:20px}.game-description{font-size:10px;color:var(--muted);margin:0 0 11px;line-height:1.6;min-height:16px}.game-tags{display:flex;gap:5px;flex-wrap:wrap;min-height:21px}.game-tag{font-size:9px;border:1px solid var(--line);border-radius:3px;padding:0 5px;color:#73806c}.card-bottom{border-top:1px solid #e8e9e0;margin-top:10px;padding-top:8px;display:flex;justify-content:space-between;align-items:start;gap:5px}.score{font-size:10px;color:var(--green);white-space:nowrap}.score b{font-weight:650}.why{font-size:10px;text-align:right;max-width:100%;border:0;padding:0;background:none;color:var(--muted)}.why:hover{color:var(--green);text-decoration:underline;text-underline-offset:3px}.why span{margin-left:3px}.empty{grid-column:1/-1;padding:55px 25px;border:1px dashed #b9c2ad;border-radius:9px;text-align:center;color:#74806b}.empty h3{color:var(--ink);font-size:17px;margin-top:0}.reset{border:1px solid var(--line);background:var(--surface);padding:7px 15px;border-radius:5px;margin-top:10px;font-size:12px}.data-note{color:#7a7f70;font-size:10px;padding:14px 0 4px;margin:10px 0 0}.course-note{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:8px}.course-note summary{color:var(--green)}.course-note p{margin:9px 0;max-width:850px;line-height:1.9}footer{max-width:1440px;margin:auto;padding:8px 40px 21px;font-size:10px;letter-spacing:.9px;color:#8a8f82;display:flex;justify-content:space-between;gap:12px}.busy-text{font-size:11px;color:var(--muted)}dialog{width:min(720px,calc(100% - 28px));border:1px solid #d6dccc;border-radius:12px;background:var(--paper);color:var(--ink);padding:25px;max-height:85vh}dialog::backdrop{background:#172b2566;backdrop-filter:blur(3px)}.dialog-header{display:flex;justify-content:space-between;gap:12px;align-items:start}.dialog-header h2{margin:0;font-size:22px}.dialog-header p{font-size:12px;color:var(--muted);margin:5px 0 19px}.close{background:none;border:0;font-size:25px;line-height:1}.game-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-height:47vh;overflow:auto;padding:3px}.pick{display:flex;align-items:center;gap:7px;background:var(--surface);padding:9px;border:1px solid var(--line);border-radius:6px;font-size:11px;min-height:51px;cursor:pointer}.pick:has(input:checked){background:#e7eddb;border-color:#7b9065}.pick input{accent-color:var(--green)}.dialog-footer{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:20px;font-size:12px;color:var(--muted)}.primary{background:var(--green);color:white;border:0;border-radius:6px;padding:10px 18px;font-size:12px}.dialog-error{color:#9c482e;font-size:12px;min-height:18px;margin:9px 0 0}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.6}button,select,input{font:inherit}button,select,summary{cursor:pointer}button:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #a07839;outline-offset:3px}button{color:inherit}button:disabled{cursor:wait;opacity:.65}header{border-bottom:1px solid var(--line)}.header-inner{max-width:1440px;margin:auto;padding:22px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:750;letter-spacing:-.7px}.brand-mark{width:32px;height:32px;border:1.5px solid var(--green);border-radius:9px;display:grid;place-items:center}.brand-mark svg{width:19px}.brand small{font-size:11px;font-weight:500;letter-spacing:1.4px;margin-left:12px;color:var(--muted)}.header-right{display:flex;align-items:center;gap:18px;color:var(--muted);font-size:12px}.demo-tag{border:1px solid #c6d0bc;border-radius:30px;color:var(--green);padding:3px 11px}.shell{max-width:1440px;margin:auto;padding:32px 40px 18px;display:grid;grid-template-columns:252px minmax(0,1fr);gap:38px}.sidebar{padding-right:26px;border-right:1px solid var(--line)}.section-label{font-size:11px;letter-spacing:1.8px;color:var(--muted);font-weight:600}.sidebar h2{font-size:18px;letter-spacing:-.4px;margin:7px 0 22px}.field-label{display:block;font-size:12px;font-weight:600;margin-bottom:7px}select{width:100%;padding:10px 30px 10px 11px;background:var(--surface);border:1px solid #cbd0c2;border-radius:7px;color:var(--ink)}.player-card{padding:20px 0 17px;display:flex;gap:11px;align-items:center}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e2e8d5;font-size:17px;font-weight:600}.player-name{font-weight:650;font-size:15px}.player-taste{font-size:12px;color:var(--muted)}.player-note{font-size:12px;color:var(--muted);margin:0 0 18px}.history-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;margin-bottom:9px}.history-label span{font-size:11px;color:var(--muted);font-weight:400}.history{display:flex;flex-direction:column;gap:7px}.history-item{font-size:11px;display:flex;justify-content:space-between;gap:7px;border:1px solid var(--line);background:#fbfaf5;padding:6px 9px;border-radius:5px}.history-item span:first-child{overflow-wrap:anywhere}.stars{color:#8d7945;white-space:nowrap}.text-button{border:0;background:none;text-decoration:underline;text-underline-offset:4px;padding:7px 0;color:var(--green);font-size:12px}.sidebar-note{border-top:1px solid var(--line);margin-top:19px;padding-top:16px;color:var(--muted);font-size:11px}.steps{margin:18px 0;padding:15px;background:#e9eddf;border-radius:8px;color:#5a6f57;font-size:11px}.steps strong{display:block;color:var(--green);font-size:12px;margin-bottom:8px}.steps div{margin:5px 0}.hero{display:flex;justify-content:space-between;gap:18px;align-items:start;margin-bottom:23px}.hero h1{font-size:clamp(25px,2.8vw,38px);letter-spacing:-1.7px;line-height:1.35;margin:7px 0 9px;font-weight:700}.hero p{color:var(--muted);font-size:12px;margin:0}.hero-stamp{width:88px;height:88px;border:1px solid #c3ccb6;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(9deg);color:#6b7c56;flex-shrink:0;font-size:10px;letter-spacing:1.5px;margin-top:6px}.hero-stamp b{font-size:22px;line-height:1.4;letter-spacing:0;font-weight:500}.toolbar{border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:19px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}.methods{display:flex;padding:3px;border:1px solid var(--line);border-radius:8px;gap:3px;background:#efeee7}.method{background:none;border:0;border-radius:5px;padding:7px 12px;font-size:12px;color:#758073;transition:background .15s}.method[aria-pressed=true]{background:var(--green);color:#fff}.filters{display:flex;gap:9px}.filter{white-space:nowrap;display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}.filter select{padding:6px 20px 6px 9px;width:auto;font-size:11px;background:transparent}.result-header{flex-wrap:wrap;display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}.result-header h2{font-size:15px;margin:0;font-weight:650}.result-header p{font-size:11px;color:var(--muted);margin:0}.taste-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:17px}.taste-tag{font-size:10px;padding:2px 8px;background:#e8eddf;color:#62734e;border-radius:3px}.game-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;transition:opacity .15s}.game-grid[aria-busy=true]{opacity:.45}.game-card{background:var(--surface);border:1px solid #e0e1d7;border-radius:9px;overflow:hidden;min-width:0;transition:transform .15s,box-shadow .15s}.game-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px #283b2d0c}.poster{height:111px;position:relative;overflow:hidden;background:var(--tone);color:white}.poster:before{content:"";position:absolute;width:150px;height:150px;right:-20px;top:-54px;border:1px solid #ffffff33;border-radius:50%;box-shadow:0 0 0 24px #ffffff09,0 0 0 50px #ffffff07}.poster:after{content:"";position:absolute;left:36px;bottom:-55px;width:120px;height:120px;background:#ffffff0d;transform:rotate(35deg);border:1px solid #ffffff1a}.art-word{position:absolute;right:17px;bottom:-11px;font-size:53px;letter-spacing:-5px;opacity:.18;font-weight:700;line-height:1.5}.rank{position:absolute;left:13px;top:11px;font-size:11px;color:#ffffffab;letter-spacing:1px}.edition{position:absolute;left:13px;bottom:12px;font-size:12px;letter-spacing:2px}.genre{position:absolute;right:11px;top:10px;background:#ffffff19;border:1px solid #ffffff38;padding:1px 7px;border-radius:10px;font-size:9px}.game-body{padding:13px 14px 11px}.game-title{margin:0 0 4px;font-size:14px;font-weight:650;letter-spacing:-.25px;line-height:1.4;min-height:20px}.game-description{font-size:10px;color:var(--muted);margin:0 0 11px;line-height:1.6;min-height:16px}.game-tags{display:flex;gap:5px;flex-wrap:wrap;min-height:21px}.game-tag{font-size:9px;border:1px solid var(--line);border-radius:3px;padding:0 5px;color:#73806c}.card-bottom{border-top:1px solid #e8e9e0;margin-top:10px;padding-top:8px;display:flex;justify-content:space-between;align-items:start;gap:5px}.score{font-size:10px;color:var(--green);white-space:nowrap}.score b{font-weight:650}.why{font-size:10px;text-align:right;max-width:100%;border:0;padding:0;background:none;color:var(--muted)}.why:hover{color:var(--green);text-decoration:underline;text-underline-offset:3px}.why span{margin-left:3px}.empty{grid-column:1/-1;padding:55px 25px;border:1px dashed #b9c2ad;border-radius:9px;text-align:center;color:#74806b}.empty h3{color:var(--ink);font-size:17px;margin-top:0}.reset{border:1px solid var(--line);background:var(--surface);padding:7px 15px;border-radius:5px;margin-top:10px;font-size:12px}.data-note{color:#7a7f70;font-size:10px;padding:14px 0 4px;margin:10px 0 0}.course-note{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:8px}.course-note summary{color:var(--green)}.course-note p{margin:9px 0;max-width:850px;line-height:1.9}footer{max-width:1440px;margin:auto;padding:8px 40px 21px;font-size:10px;letter-spacing:.9px;color:#8a8f82;display:flex;justify-content:space-between;gap:12px}.busy-text{font-size:11px;color:var(--muted)}dialog{width:min(720px,calc(100% - 28px));border:1px solid #d6dccc;border-radius:12px;background:var(--paper);color:var(--ink);padding:25px;max-height:85vh;overflow-y:auto;overscroll-behavior:contain}dialog::backdrop{background:#172b2566;backdrop-filter:blur(3px)}.dialog-header{display:flex;justify-content:space-between;gap:12px;align-items:start}.dialog-header h2{margin:0;font-size:22px}.dialog-header p{font-size:12px;color:var(--muted);margin:5px 0 19px}.close{background:none;border:0;font-size:25px;line-height:1}.game-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-height:47vh;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;padding:3px}.pick{display:flex;align-items:center;gap:7px;background:var(--surface);padding:9px;border:1px solid var(--line);border-radius:6px;font-size:11px;min-height:51px;cursor:pointer}.pick:has(input:checked){background:#e7eddb;border-color:#7b9065}.pick input{accent-color:var(--green)}.dialog-footer{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:20px;font-size:12px;color:var(--muted)}.primary{background:var(--green);color:white;border:0;border-radius:6px;padding:10px 18px;font-size:12px}.dialog-error{color:#9c482e;font-size:12px;min-height:18px;margin:9px 0 0}
 @media(min-width:1450px){.poster{height:126px}.game-title{font-size:15px}.game-description{font-size:11px}}
 @media(max-width:1100px){.header-inner{padding:20px 25px}.shell{padding:26px 25px;gap:24px;grid-template-columns:225px minmax(0,1fr)}.sidebar{padding-right:20px}.game-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-stamp{display:none}footer{padding:10px 25px 20px}.toolbar{gap:12px}.methods{width:100%}.method{flex:1}.filters{width:100%;justify-content:flex-end}}
 @media(max-width:700px){.header-inner{padding:17px 18px}.brand{font-size:18px}.brand small{display:none}.header-right>span:first-child{display:none}.shell{display:flex;flex-direction:column;padding:23px 18px;gap:21px}.sidebar{border:0;border-bottom:1px solid var(--line);padding:0 0 16px}.sidebar h2{margin:4px 0 13px;font-size:16px}.player-card{padding:12px 0 8px}.player-note{margin-bottom:9px}.history{flex-direction:row;flex-wrap:wrap}.history-item{max-width:100%;font-size:10px;padding:4px 7px}.history-label{margin-bottom:6px}.sidebar-note,.steps{display:none}.hero h1{font-size:30px}.hero{margin-bottom:17px}.hero p{font-size:11px}.toolbar{margin-bottom:15px}.method{padding:7px 8px;font-size:11px}.game-grid{gap:11px}.poster{height:93px}.game-body{padding:11px 10px 9px}.game-title{font-size:12px;min-height:34px}.game-description{font-size:10px;min-height:32px}.game-tag{font-size:9px}.card-bottom{flex-wrap:wrap;gap:5px}.why{margin-left:auto}.result-header h2{font-size:14px}.result-header p{font-size:10px}.art-word{font-size:43px}.edition{font-size:10px}.data-note{font-size:10px}footer{padding:0 18px 20px;font-size:9px}.game-picker{grid-template-columns:repeat(2,minmax(0,1fr))}.pick{font-size:10px}dialog{padding:19px}.dialog-footer{font-size:11px}.primary{padding:9px 12px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
+#preferenceDialog[open]{display:flex;flex-direction:column;overflow:hidden}#preferenceDialog .dialog-header,#preferenceDialog .dialog-error,#preferenceDialog .dialog-footer{flex-shrink:0}#preferenceDialog .game-picker{min-height:0;flex:0 1 auto}
 .reason-dialog{width:min(540px,calc(100% - 28px));overflow-y:auto;overscroll-behavior:contain}
 .reason-dialog .dialog-header>div{min-width:0}.reason-dialog h2{margin-top:6px;line-height:1.35;overflow-wrap:anywhere}
 .reason-dialog .close{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:#e8eddf}
@@ -46,7 +47,7 @@
 </main>
 </div>
 <footer><span>NEXT PLAY / COURSE PROJECT PROTOTYPE</span><span id="sampleCount">Demonstration sample · Prototype</span></footer>
-<dialog id="preferenceDialog" aria-labelledby="dialogTitle"><div class="dialog-header"><div><h2 id="dialogTitle">What do you enjoy playing?</h2><p>Choose 1–8 favourites to discover your next game.</p></div><button class="close" id="closeDialog" aria-label="Close preference selection">×</button></div><div class="game-picker" id="gamePicker"></div><p class="dialog-error" id="dialogError" role="alert"></p><div class="dialog-footer"><span id="selectedCount">0 selected</span><button class="primary" id="applyPreference">Find my next game →</button></div></dialog>
+<dialog id="preferenceDialog" aria-labelledby="dialogTitle"><div class="dialog-header"><div><h2 id="dialogTitle">What do you enjoy playing?</h2><p id="preferenceHint">Your current favourites are preselected. Choose up to 8, or clear all to see popular games.</p></div><button class="close" id="closeDialog" aria-label="Close preference selection">×</button></div><div class="game-picker" id="gamePicker"></div><p class="dialog-error" id="dialogError" role="alert"></p><div class="dialog-footer"><span id="selectedCount">0 selected</span><button class="primary" id="applyPreference">Find my next game →</button></div></dialog>
 <dialog id="reasonDialog" class="reason-dialog" aria-labelledby="reasonTitle" aria-describedby="reasonSummary reasonDetail">
 <div class="dialog-header"><div><div class="section-label">WHY THIS GAME?</div><h2 id="reasonTitle"></h2></div><button class="close" id="closeReason" type="button" aria-label="Close recommendation explanation" autofocus>×</button></div>
 <div class="reason-meta"><span id="reasonMethod"></span><span id="reasonScore"></span></div>
@@ -57,17 +58,24 @@
 <script>
 'use strict';
 let catalog, requestNumber = 0;
-const state = {profile_id:'lin',method:'content',genre:'all',limit:6,liked:[]};
+const state = {profile_id:'lin',method:'content',genre:'all',limit:6,liked:null};
 const $ = id => document.getElementById(id);
 const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const tones = {'Casual':'#6b8062','Action':'#7c574f','Strategy':'#3c625b','Puzzle':'#80724e','Simulation':'#617483'};
 const gamesById = () => Object.fromEntries(catalog.games.map(game=>[game.id,game]));
+function getActivePlayer(){
+ if(state.profile_id==='new'){
+  const liked=state.liked||[];
+  return {name:'New player',initial:'N',taste:liked.length?'Based on your chosen games':'No favourites selected',note:liked.length?'Your favourites are the starting point.':'Start with popular games, or add some favourites.',ratings:Object.fromEntries(liked.map(id=>[id,5]))};
+ }
+ return catalog.profiles.find(player=>player.id===state.profile_id);
+}
 function updatePlayer(){
- const player=state.profile_id==='new'?{name:'New player',initial:'N',taste:'Based on your chosen games',note:'Your favourites are the starting point.',ratings:Object.fromEntries(state.liked.map(id=>[id,5]))}:catalog.profiles.find(player=>player.id===state.profile_id);
+ const player=getActivePlayer();
  $('profile').value=state.profile_id;$('avatar').textContent=player.initial;$('playerName').textContent=player.name;$('playerTaste').textContent=player.taste;$('playerNote').textContent=player.note;
  const liked=Object.entries(player.ratings).filter(([,rating])=>rating>=4), games=gamesById();
  $('historyCount').textContent=`${Object.keys(player.ratings).length} rated`;
- $('history').innerHTML=liked.map(([id,rating])=>`<div class="history-item"><span>${escapeHTML(games[id].title)}</span><span class="stars">★ ${rating}</span></div>`).join('');
+ $('history').innerHTML=liked.length?liked.map(([id,rating])=>`<div class="history-item"><span>${escapeHTML(games[id].title)}</span><span class="stars">★ ${rating}</span></div>`).join(''):'<p class="player-note">No favourites selected yet.</p>';
  $('resultTitle').textContent=`Picked for ${player.name}`;
 }
 function renderCard(game,index){
@@ -75,39 +83,54 @@ function renderCard(game,index){
  const scoreTitle=state.method==='popular'?'Number of example players who rated the game 4 or above':state.method==='content'?'Cosine similarity between your preference vector and the game tags; not a probability':'Weighted support from similar example players; not a probability';
  return `<article class="game-card"><div class="poster" style="--tone:${tones[game.genre]||'#4d6655'}"><span class="rank">N° ${String(index+1).padStart(2,'0')}</span><span class="genre">${escapeHTML(game.genre)}</span><span class="art-word" aria-hidden="true">${escapeHTML(game.genre.slice(0,3).toUpperCase())}</span><span class="edition">${escapeHTML(game.edition)}</span></div><div class="game-body"><h3 class="game-title">${escapeHTML(game.title)}</h3><p class="game-description">${escapeHTML(game.description)}</p><div class="game-tags">${game.tags.slice(0,3).map(tag=>`<span class="game-tag">${escapeHTML(tag)}</span>`).join('')}</div><div class="card-bottom"><span class="score" title="${scoreTitle}">${scoreLabel}</span><button class="why" type="button" aria-haspopup="dialog" aria-controls="reasonDialog" aria-label="Why recommend ${escapeHTML(game.title)}?">Why this game?<span aria-hidden="true">↗</span></button></div></div></article>`;
 }
-let reasonTrigger = null;
-let reasonScrollStyles = null;
+// Both dialogs share the same scroll lock and focus restoration.
+const modalTriggers = new Map();
+let backgroundSnapshot = null;
+function openModal(dialog, trigger){
+ if(dialog.open)return;
+ if(modalTriggers.size===0){
+  const root=document.documentElement, body=document.body;
+  const scrollbarWidth=window.innerWidth-root.clientWidth;
+  const paddingRight=parseFloat(getComputedStyle(body).paddingRight)||0;
+  backgroundSnapshot={x:window.scrollX,y:window.scrollY,rootStyle:root.getAttribute('style'),bodyStyle:body.getAttribute('style')};
+  root.style.overflow='hidden';root.style.overscrollBehavior='none';
+  body.style.position='fixed';body.style.top=`-${backgroundSnapshot.y}px`;body.style.left=`-${backgroundSnapshot.x}px`;
+  body.style.width='100%';body.style.overflow='hidden';body.style.paddingRight=`${paddingRight+scrollbarWidth}px`;
+ }
+ modalTriggers.set(dialog,trigger);
+ dialog.showModal();
+}
+document.querySelectorAll('dialog').forEach(dialog=>{
+ dialog.addEventListener('close',()=>{
+  const trigger=modalTriggers.get(dialog);
+  modalTriggers.delete(dialog);
+  if(dialog.id==='preferenceDialog')$('profile').value=state.profile_id;
+  if(modalTriggers.size===0 && backgroundSnapshot){
+   const snapshot=backgroundSnapshot;
+   for(const [element,style] of [[document.documentElement,snapshot.rootStyle],[document.body,snapshot.bodyStyle]]){
+    if(style===null)element.removeAttribute('style');else element.setAttribute('style',style);
+   }
+   backgroundSnapshot=null;
+   window.scrollTo(snapshot.x,snapshot.y);
+   if(trigger && trigger.isConnected)trigger.focus({preventScroll:true});
+  }
+ });
+ dialog.addEventListener('click',event=>{
+  if(event.target!==dialog)return;
+  const bounds=dialog.getBoundingClientRect();
+  if(event.clientX<bounds.left || event.clientX>bounds.right || event.clientY<bounds.top || event.clientY>bounds.bottom)dialog.close();
+ });
+});
 function showReason(game, method, trigger){
- reasonTrigger=trigger;
  $('reasonTitle').textContent=game.title;
  $('reasonSummary').textContent=game.reason;
  $('reasonDetail').textContent=game.detail;
  $('reasonMethod').textContent={content:'Content-based recommendation',collaborative:'Similar-player recommendation',popular:'Popularity baseline'}[method];
  $('reasonScore').textContent=method==='popular'?`${game.score} example likes`:`${method==='content'?'Match score':'Peer support'}: ${game.score.toFixed(2)}`;
- const root=document.documentElement;
- const body=document.body;
- const scrollbarWidth=window.innerWidth-root.clientWidth;
- reasonScrollStyles={overflow:root.style.overflow,paddingRight:body.style.paddingRight};
- if(scrollbarWidth>0)body.style.paddingRight=`${(parseFloat(getComputedStyle(body).paddingRight)||0)+scrollbarWidth}px`;
- root.style.overflow='hidden';
- $('reasonDialog').showModal();
+ openModal($('reasonDialog'),trigger);
 }
 $('closeReason').onclick=()=> $('reasonDialog').close();
 $('dismissReason').onclick=()=> $('reasonDialog').close();
-$('reasonDialog').addEventListener('close',()=>{
- if(reasonScrollStyles){
-  document.documentElement.style.overflow=reasonScrollStyles.overflow;
-  document.body.style.paddingRight=reasonScrollStyles.paddingRight;
-  reasonScrollStyles=null;
- }
- if(reasonTrigger && reasonTrigger.isConnected)reasonTrigger.focus({preventScroll:true});
- reasonTrigger=null;
-});
-$('reasonDialog').addEventListener('click',event=>{
- if(event.target!==$('reasonDialog'))return;
- const bounds=$('reasonDialog').getBoundingClientRect();
- if(event.clientX<bounds.left || event.clientX>bounds.right || event.clientY<bounds.top || event.clientY>bounds.bottom)$('reasonDialog').close();
-});
 async function loadRecommendations(){
  const current=++requestNumber;
  if($('reasonDialog').open)$('reasonDialog').close();
@@ -120,7 +143,7 @@ async function loadRecommendations(){
   $('resultMeta').textContent=`${data.results.length} recommendations / ${data.eligible_count} unseen candidates`;
   $('tasteTags').innerHTML=(state.method==='popular'?['Ranked by example likes']:data.taste_tags).map(tag=>`<span class="taste-tag">${escapeHTML(tag)}</span>`).join('');
   if(!data.results.length){
-   const message=state.method==='collaborative'&&data.neighbour_count===0?'No example players share these favourites yet. Try Content-based recommendations.':'Try another genre or switch recommendation methods.';
+   const message=state.profile_id==='new'&&state.liked.length===0?'Add some favourites with Set your preferences, or switch to Popularity.':state.method==='collaborative'&&data.neighbour_count===0?'No example players share these favourites yet. Try Content-based recommendations.':'Try another genre or switch recommendation methods.';
    $('results').innerHTML=`<div class="empty"><h3>No matching recommendations yet</h3><p>${message}</p><button class="reset" id="clearFilters">Show all genres</button></div>`;
    $('clearFilters').onclick=()=>{state.genre='all';$('genre').value='all';loadRecommendations();};
   }else{
@@ -130,18 +153,28 @@ async function loadRecommendations(){
  }catch(error){if(current===requestNumber){$('resultMeta').textContent='Unable to load recommendations';$('results').innerHTML=`<div class="empty"><h3>Connection interrupted</h3><p>Make sure demo.py is still running, then refresh this page.</p></div>`;}}
  finally{if(current===requestNumber)$('results').setAttribute('aria-busy','false');}
 }
-function openPreference(){
- $('gamePicker').innerHTML=catalog.games.map(game=>`<label class="pick"><input type="checkbox" value="${escapeHTML(game.id)}" ${state.liked.includes(game.id)?'checked':''}><span>${escapeHTML(game.title)}</span></label>`).join('');
+function openPreference(trigger=$('newPlayer')){
+ const player=getActivePlayer();
+ const selected=new Set(Object.entries(player.ratings).filter(([,rating])=>rating>=4).map(([id])=>id));
+ const ordered=[...catalog.games].sort((first,second)=>Number(selected.has(second.id))-Number(selected.has(first.id)));
+ $('gamePicker').innerHTML=ordered.map(game=>`<label class="pick"><input type="checkbox" value="${escapeHTML(game.id)}" ${selected.has(game.id)?'checked':''}><span>${escapeHTML(game.title)}</span></label>`).join('');
+ $('preferenceHint').textContent=state.profile_id==='new'?'Your current favourites are preselected. Choose up to 8, or clear all to see popular games.':`${player.name}'s favourites are preselected. Apply to use a custom player. With none selected, start with popular games.`;
  $('dialogError').textContent='';
- const update=()=>{$('selectedCount').textContent=`${$('gamePicker').querySelectorAll('input:checked').length} selected`;};
- $('gamePicker').onchange=update;update();$('preferenceDialog').showModal();
+ const update=()=>{
+  const count=$('gamePicker').querySelectorAll('input:checked').length;
+  $('selectedCount').textContent=count?`${count} selected`:'0 selected · Popularity baseline';
+  $('dialogError').textContent=count>8?'Please choose no more than 8 games.':'';
+ };
+ $('gamePicker').onchange=update;update();
+ openModal($('preferenceDialog'),trigger);
+ $('gamePicker').scrollTop=0;
 }
-$('closeDialog').onclick=()=>{$('preferenceDialog').close();$('profile').value=state.profile_id;};
-$('preferenceDialog').addEventListener('cancel',()=>{$('profile').value=state.profile_id;});
+$('closeDialog').onclick=()=> $('preferenceDialog').close();
 $('applyPreference').onclick=()=>{
- const chosen=[...$('gamePicker').querySelectorAll('input:checked')].map(input=>input.value);
- if(chosen.length<1||chosen.length>8){$('dialogError').textContent='Please choose 1–8 games.';return;}
- state.liked=chosen;state.profile_id='new';state.method='content';state.genre='all';$('genre').value='all';$('preferenceDialog').close();updatePlayer();loadRecommendations();
+ const chosen=[...new Set([...$('gamePicker').querySelectorAll('input:checked')].map(input=>input.value))];
+ if(chosen.length>8){$('dialogError').textContent='Please choose no more than 8 games.';return;}
+ state.liked=chosen;state.profile_id='new';state.method=chosen.length?'content':'popular';state.genre='all';$('genre').value='all';
+ $('preferenceDialog').close();updatePlayer();loadRecommendations();
 };
 async function init(){
  try{
@@ -151,11 +184,11 @@ async function init(){
   $('genre').innerHTML='<option value="all">All genres</option>'+[...new Set(catalog.games.map(game=>game.genre))].map(genre=>`<option value="${escapeHTML(genre)}">${escapeHTML(genre)}</option>`).join('');
   $('sampleCount').textContent=`${catalog.games.length} example games · ${catalog.profiles.length} fictional players`;
   $('dataNote').textContent=catalog.notice;
-  $('profile').onchange=event=>{if(event.target.value==='new'){if(!state.liked.length){openPreference();return;}}state.profile_id=event.target.value;updatePlayer();loadRecommendations();};
+  $('profile').onchange=event=>{if(event.target.value==='new' && state.liked===null){openPreference(event.target);return;}state.profile_id=event.target.value;if(state.profile_id==='new' && state.liked.length===0)state.method='popular';updatePlayer();loadRecommendations();};
   $('genre').onchange=event=>{state.genre=event.target.value;loadRecommendations();};
   $('limit').onchange=event=>{state.limit=Number(event.target.value);loadRecommendations();};
   document.querySelectorAll('.method').forEach(button=>button.onclick=()=>{state.method=button.dataset.method;loadRecommendations();});
-  $('newPlayer').onclick=openPreference;updatePlayer();await loadRecommendations();
+  $('newPlayer').onclick=event=>openPreference(event.currentTarget);updatePlayer();await loadRecommendations();
  }catch(error){$('results').setAttribute('aria-busy','false');$('resultMeta').textContent='Start the demo first';$('results').innerHTML='<div class="empty"><h3>Run demo.py from the same folder</h3><p>Run demo.py with Python to open the interactive demo in your browser. No third-party packages are required.</p></div>';}
 }
 init();

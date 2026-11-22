@@ -44,10 +44,13 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
     if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 12:
         raise ValueError('Choose between 1 and 12 results.')
     if profile_id == 'new':
-        if not isinstance(liked, list) or not 1 <= len(liked) <= 8:
-            raise ValueError('Please choose 1 to 8 games you like.')
+        if not isinstance(liked, list):
+            raise ValueError('Please provide a list of favourite games.')
         if any(not isinstance(game, str) or game not in GAMES for game in liked):
             raise ValueError('Unknown game.')
+        liked = list(dict.fromkeys(liked))
+        if len(liked) > 8:
+            raise ValueError('Please choose no more than 8 games.')
         ratings = {game: 5 for game in liked}
         player_name = 'New player'
     else:
