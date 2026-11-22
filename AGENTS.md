@@ -10,3 +10,5 @@
 - Keep official Steam chart rankings separate from personalised recommendation scores and fictional example likes.
 - The project name is GameLens, with the tagline "Discover games that fit you."
 - Use Browse games for finding favourites and My favourites for managing them. Do not reintroduce a separate preferences picker.
+- Edits belong to the selected player, including the five example players. Persist each player separately and use current favourites for popularity counts and collaborative filtering.
+- Rotate the featured banner every five seconds without showing an interval label.

@@ -2,7 +2,8 @@
 
 Run: python demo.py
 The browser opens automatically. Close the terminal or press Ctrl+C to stop.
-All player ratings are fictional demonstration data, not Steam observations.
+Example ratings are fictional. Edited favourites are local inputs,
+not Steam observations.
 """
 
 import argparse
@@ -38,14 +39,54 @@ def cosine(first, second):
     return numerator / norm if norm else 0.0
 
 
+def favourite_ids(value):
+    """Validate and deduplicate a player's current favourites."""
+    if not isinstance(value, list):
+        raise ValueError('Please provide a list of favourite games.')
+    if any(not isinstance(game, str) or game not in GAMES for game in value):
+        raise ValueError('Unknown game.')
+    ids = list(dict.fromkeys(value))
+    if len(ids) > 8:
+        raise ValueError('Please choose no more than 8 games.')
+    return ids
+
+
+def current_profiles(profile_favourites, liked, profile_id):
+    """Build request-local feedback from defaults and the browser's edits."""
+    if profile_favourites is None:
+        profile_favourites = {}
+    if not isinstance(profile_favourites, dict) or any(
+            key not in PROFILES and key != 'new' for key in profile_favourites):
+        raise ValueError('Unknown player in profile favourites.')
+    edits = {key: favourite_ids(ids) for key, ids in profile_favourites.items()}
+    if 'new' not in edits:
+        if liked is not None:
+            edits['new'] = favourite_ids(liked)
+        elif profile_id == 'new':
+            raise ValueError('Please provide a list of favourite games.')
+        else:
+            edits['new'] = []
+    profiles = {}
+    for key, profile in PROFILES.items():
+        ratings = dict(profile['ratings'])
+        if key in edits:
+            # Keep the supplied low-rating history; stars replace positive feedback.
+            ratings = {game: rating for game, rating in ratings.items() if rating < 4}
+            ratings.update({game: 5 for game in edits[key]})
+        profiles[key] = {**profile, 'ratings': ratings}
+    profiles['new'] = {'id': 'new', 'name': 'Your profile',
+                       'ratings': {game: 5 for game in edits['new']}}
+    return profiles
+
+
 def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=None,
-              filters=None, seed_id=None):
+              filters=None, seed_id=None, profile_favourites=None):
     """Recommend games using Steam metadata and fictional example feedback.
 
     Content filtering compares the user's liked-game tag profile with each game.
     User-based CF uses cosine similarity on binary liked-game vectors, then
     scores candidates by the weighted support of other example users.
-    Popularity counts example users who gave a game a rating of at least 4.
+    Popularity counts current demo profiles who marked a game as a favourite.
     Scores from different methods have different meanings, not probabilities.
     """
     if method not in METHODS:
@@ -61,29 +102,19 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
         raise ValueError('Related-game queries require a known game and content-based filtering.')
     if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 12:
         raise ValueError('Choose between 1 and 12 results.')
-    if profile_id == 'new':
-        if not isinstance(liked, list):
-            raise ValueError('Please provide a list of favourite games.')
-        if any(not isinstance(game, str) or game not in GAMES for game in liked):
-            raise ValueError('Unknown game.')
-        liked = list(dict.fromkeys(liked))
-        if len(liked) > 8:
-            raise ValueError('Please choose no more than 8 games.')
-        ratings = {game: 5 for game in liked}
-        player_name = 'New player'
-    else:
-        if profile_id not in PROFILES:
-            raise ValueError('Unknown example player.')
-        profile = PROFILES[profile_id]
-        ratings = profile['ratings']
-        player_name = profile['name']
+    profiles = current_profiles(profile_favourites, liked, profile_id)
+    if profile_id not in profiles:
+        raise ValueError('Unknown player profile.')
+    profile = profiles[profile_id]
+    ratings = profile['ratings']
+    player_name = profile['name']
 
     liked_ids = [game for game, rating in ratings.items() if rating >= 4]
     user_tags = Counter(tag for game in ([seed_id] if seed_id else liked_ids)
                         for tag in GAMES[game]['tags'])
     user_vector = {game: 1 for game in liked_ids}
     neighbours = []
-    for peer in DATA['profiles']:
+    for peer in profiles.values():
         if peer['id'] == profile_id:
             continue
         peer_vector = {game: 1 for game, rating in peer['ratings'].items() if rating >= 4}
@@ -120,16 +151,18 @@ def recommend(profile_id='lin', method='content', genre='all', limit=6, liked=No
             if score <= 0:
                 continue
             supporters.sort(key=lambda pair: (-pair[0], pair[1]['id']))
-            reason = 'Liked by ' + ' and '.join(peer['name'] for _, peer in supporters[:2]) + ', who share some of your favourites.'
+            names = [peer['name'] for _, peer in supporters[:2]]
+            agreement = 'share' if len(names) > 1 else 'shares'
+            reason = 'Liked by ' + ' and '.join(names) + f', who {agreement} some of your favourites.'
             detail = 'Find similar players from shared favourites, then combine their weighted support for this game.'
         else:
-            count = sum(peer['ratings'].get(game_id, 0) >= 4 for peer in DATA['profiles'])
+            count = sum(peer['ratings'].get(game_id, 0) >= 4 for peer in profiles.values())
             score = float(count)
             if not count:
                 continue
             player_label = 'player' if count == 1 else 'players'
-            reason = f'{count} example {player_label} rated this game 4 or above.'
-            detail = 'Popularity baseline: ranked by example likes, without using your interests. Previously rated games are still excluded.'
+            reason = f'{count} demo {player_label} marked this game as a favourite.'
+            detail = 'Popularity baseline: ranked by current demo favourites, counting each player once. Previously recorded games are still excluded.'
         candidates.append({**game, 'score': round(score, 6), 'reason': reason,
                            'detail': detail, 'shared_tags': shared_tags})
     candidates.sort(key=lambda row: (-row['score'], row['title']))
@@ -190,6 +223,7 @@ class Handler(BaseHTTPRequestHandler):
                 genre=payload.get('genre', 'all'),
                 limit=payload.get('limit', 6), liked=payload.get('liked'),
                 filters=payload.get('filters'), seed_id=payload.get('seed_id'),
+                profile_favourites=payload.get('profile_favourites'),
             )
         except (ValueError, TypeError) as error:
             self.send_json(400, {'error': str(error)})
