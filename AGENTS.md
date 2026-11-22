@@ -9,3 +9,4 @@
 - Use verified official 2:3 portrait artwork for game covers. Never substitute a horizontal header inside a portrait cover frame.
 - Keep official Steam chart rankings separate from personalised recommendation scores and fictional example likes.
 - The project name is GameLens, with the tagline "Discover games that fit you."
+- Use Browse games for finding favourites and My favourites for managing them. Do not reintroduce a separate preferences picker.
