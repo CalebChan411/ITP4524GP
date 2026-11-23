@@ -1,25 +1,48 @@
-GameLens - Terminal Test Guide (macOS)
-====================================
+GameLens - Terminal Test Guide
+=============================
+Windows, macOS and Linux. Requires Python 3.12 and the complete project files.
 Manual commands for the four models and two evaluation scenarios.
 Copy command lines only, one section at a time.
 
 1. Open the project
 -------------------
-Default ZIP download location; adjust the path if extracted elsewhere.
+Extract the complete project ZIP before running any commands.
+Open the game_recommendation folder containing this test.txt in your terminal.
+VS Code: File > Open Folder > select game_recommendation > Terminal > New Terminal.
+The current folder must contain game_recommendation.py and requirements.txt.
+The commands below work regardless of your username or download location.
 
-cd "$HOME/Downloads/ITP4524GP-main/part_b/game_recommendation"
+2. Set up your own environment
+------------------------------
+Choose ONE option matching your operating system and terminal.
+Each person creates their own environment; exclude .venv* folders when sharing.
 
-First use: create a Python 3.12 environment and install dependencies.
+Windows - PowerShell:
+py -3.12 -m venv .venv312
+.\.venv312\Scripts\Activate.ps1
 
+Windows - Command Prompt (CMD):
+py -3.12 -m venv .venv312
+.venv312\Scripts\activate.bat
+
+macOS / Linux - bash or zsh:
 python3.12 -m venv .venv312
 source .venv312/bin/activate
+
+If PowerShell blocks activation, use the CMD option in the same project folder.
+If py or python3.12 is not found, install Python 3.12 and reopen your terminal.
+Python 3.12 installers: https://www.python.org/downloads/release/python-31210/
+On Linux, your distribution may also require its Python 3.12 venv package.
+
+Confirm Python 3.12.x, then install dependencies (all operating systems):
+python --version
 python install_requirements.py
 
-Returning users: activate the existing environment in each new terminal.
+Success: "Installation complete. Run game_recommendation.py next."
+For later sessions, reopen this folder and run your activation command above.
+The remaining commands are the same on Windows, macOS and Linux.
 
-source .venv312/bin/activate
-
-2. Train and evaluate
+3. Train and evaluate
 ---------------------
 Run once to rebuild the datasets, four models, metrics and five plots.
 This uses the supplied data snapshot without fetching Steam data.
@@ -29,7 +52,7 @@ python game_recommendation.py
 Success: a held-out results table and saved model/results paths appear.
 Word reports, slides and the presentation script are not updated by this command.
 
-3. View user history and recommendations
+4. View user history and recommendations
 ----------------------------------------
 Each command prints the user ID, known games with play hours, and the top five
 recommendations from each model. These commands load the saved models.
@@ -59,7 +82,7 @@ Recommendation columns:
 model_name = method; rank = recommendation order; title = game; score = ranking score.
 Rank 1 comes first. Scores differ by model and are not probabilities.
 
-4. View test results in Terminal
+5. View test results in Terminal
 --------------------------------
 Test 01: use each user's full final-training history as the query.
 Test 02: use only their most-played known game as the query.
@@ -72,7 +95,7 @@ python -c "import pandas as pd; d=pd.read_csv('results/test_01_full_history_resu
 Test 02 metrics:
 python -c "import pandas as pd; d=pd.read_csv('results/test_02_single_game_results.csv'); print(d[['model','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
 
-5. Read the results
+6. Read the results
 -------------------
 Model keys: popularity = Model 01; content_tags = Model 02;
 content_full = Model 03; user_cf = Model 04.
