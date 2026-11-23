@@ -1,14 +1,11 @@
-# Project language and scope
+# GameLens course project
 
-- Use English for project interfaces, sample descriptions, recommendation explanations, messages, code comments, reports, slides and presentation scripts.
-- Discussion with the user may remain in Chinese unless they request otherwise.
-- Base the project on the supplied ITP4524 course material. Clearly identify necessary supplements and demonstration data.
-- Keep README and agent instruction files out of downloadable demo and submission ZIPs.
-
-- Use the agreed Steam-inspired dark visual direction with original GameLens branding.
-- Use verified official 2:3 portrait artwork for game covers. Never substitute a horizontal header inside a portrait cover frame.
-- Keep official Steam chart rankings separate from personalised recommendation scores and fictional example likes.
-- The project name is GameLens, with the tagline "Discover games that fit you."
-- Use Browse games for finding favourites and My favourites for managing them. Do not reintroduce a separate preferences picker.
-- Edits belong to the selected player, including the five example players. Persist each player separately and use current favourites for popularity counts and collaborative filtering.
-- Rotate the featured banner every five seconds without showing an interval label.
+- The main project is `part_b/game_recommendation`: a Python modelling and evaluation project, following the structure of Part A2. A website is not required.
+- Keep the former website under `archive/website_prototype` as a historical prototype. Do not continue adding website features unless the user asks.
+- Use English for code, reports, slides, presentation scripts and saved results. Discussion with the user may be Chinese.
+- Base the main recommendation methods on ITP4524 Lecture 9 and the supplied Python Foundations. Identify necessary supplementary encoding and ranking evaluation methods clearly.
+- Use real Steam metadata and historical user-game interactions with recorded sources and retrieval dates. Never fabricate players, observations, model results or contributions.
+- Keep raw/source data, prepared data, split assignments, fitted models and evaluation outputs separate and reproducible.
+- Fit transformations and any interaction-derived statistics on training data only. Keep validation/test interactions out of model profiles, popularity counts and similarity matrices.
+- Compare methods using the same held-out users, candidate games and ranking cutoffs. State the sampling limitations and do not treat unobserved interactions as confirmed dislikes.
+- Include only necessary code, datasets, models, report, slides and results in the submission archive. Exclude README and AGENTS files.

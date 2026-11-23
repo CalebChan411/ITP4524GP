@@ -1,0 +1,32 @@
+{
+  "original_action_rows": 200000,
+  "duplicate_action_rows": 707,
+  "invalid_action_rows_removed": 0,
+  "positive_definition": "Observed play time >= 1 hour; an implicit interest proxy.",
+  "matched_positive_interactions_before_user_filter": 24371,
+  "matched_users_before_user_filter": 8076,
+  "minimum_distinct_games_per_user": 5,
+  "eligible_users": 1232,
+  "positive_interactions": 14847,
+  "catalogue_games": 111,
+  "density": 0.10856879606879608,
+  "split_seed": 4524,
+  "split_type": "Per-user random holdout; no timestamps are available.",
+  "split_rows": {
+    "training": 10803,
+    "validation": 1495,
+    "testing": 2549
+  },
+  "final_training_rows": 12298,
+  "selected_by_validation": "user_cf",
+  "content_full_tag_weight": 0.5,
+  "cf_neighbours": 30,
+  "example_user_selected_from_training_only": "00919b5131b1b3a8",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  },
+  "generated_at_utc": "2026-11-23T05:17:29.721875+00:00"
+}

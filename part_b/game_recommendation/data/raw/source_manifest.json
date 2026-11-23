@@ -1,0 +1,27 @@
+{
+  "retrieved_at_utc": "2026-11-23T04:53:18.373958+00:00",
+  "catalogue_country": "US",
+  "catalogue_language": "English",
+  "interaction_dataset": "Steam Video Games / Steam-200k",
+  "canonical_source": "https://www.kaggle.com/datasets/tamber/steam-video-games",
+  "download_url": "https://raw.githubusercontent.com/guilherminog/raw-steam200k/main/steam-200k.csv",
+  "download_sha256": "2464a568e9b6b007d13d34e2e3a6c8de00e5e7443f4913155f365aaa328c2874",
+  "original_rows": 200000,
+  "original_users": 12393,
+  "original_games": 5155,
+  "identifier_transformation": "SHA256(GameLens-Steam200k:original_id), first 16 hex characters",
+  "sampling_rule": "Top 200 titles by distinct players with at least one hour in the interaction snapshot; exact title matching plus three documented original-app aliases.",
+  "matched_titles": 111,
+  "unique_appids": 111,
+  "skipped_titles": 89,
+  "direct_review_endpoint": "https://store.steampowered.com/appreviews/620?json=1",
+  "direct_review_status": "Returned HTTP 302 to the storefront homepage in this environment. No individual review data was fabricated.",
+  "limitations": [
+    "The interaction snapshot is historical and has no event timestamps.",
+    "The catalogue contains current metadata, not historical prices at play time.",
+    "Play time is implicit feedback, not a verified positive rating.",
+    "The sample favours games with many players and users with multiple observed games.",
+    "Public source access does not establish an open licence; retain source attribution."
+  ],
+  "metadata_cache_policy": "Existing API responses are reused. Per-response retrieval times are recorded in steam_games.csv; retrieved_at_utc is the snapshot assembly start."
+}
