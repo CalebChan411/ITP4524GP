@@ -120,6 +120,12 @@ Precision and Recall are averaged per user. Values are fractions: 0.30 = 30%.
 Compare models at the same test and k. Higher coverage alone does not mean better
 matching. Unobserved games are not confirmed dislikes.
 
+Metric illustration (PPT slide 13): hidden games I/J; recommended I/K/L/M/N.
+One hit gives Precision@5 = 1/5 = 20% and Recall@5 = 1/2 = 50%.
+Model 04's cosine/weighted-support illustration is on slide 10.
+These are teaching examples, separate from the measured CSV results.
+The 20-slide presentation and script assign five slides to each speaker.
+
 validation_results.csv: candidate settings and validation metrics.
 experiment_summary.json: local-run settings plus the approved reporting_reference.
 Selection uses validation Recall@5, then Precision@5; tests assess that selection.
