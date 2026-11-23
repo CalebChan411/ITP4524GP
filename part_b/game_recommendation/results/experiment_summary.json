@@ -2,6 +2,14 @@
   "original_action_rows": 200000,
   "duplicate_action_rows": 707,
   "invalid_action_rows_removed": 0,
+  "missing_game_values": {
+    "price_usd": 4,
+    "positive_percent": 0,
+    "review_count": 0,
+    "release_year": 3,
+    "tags": 0,
+    "genres": 0
+  },
   "positive_definition": "Observed play time >= 1 hour; an implicit interest proxy.",
   "matched_positive_interactions_before_user_filter": 24371,
   "matched_users_before_user_filter": 8076,
@@ -19,8 +27,24 @@
   },
   "final_training_rows": 12298,
   "selected_by_validation": "user_cf",
+  "selected_model_file": "models/04_user_based_collaborative_filtering.joblib",
+  "selection_metric": "Validation Recall@5, then Precision@5",
   "content_full_tag_weight": 0.5,
   "cf_neighbours": 30,
+  "numeric_feature_columns": [
+    "price_usd",
+    "positive_percent",
+    "log_review_count",
+    "release_year",
+    "is_free",
+    "single_player",
+    "multi_player",
+    "co_op",
+    "windows",
+    "mac",
+    "linux"
+  ],
+  "ranking_ties": "Scores rounded to 12 decimal places, then training popularity and app ID. Zero-support CF uses this popularity fallback.",
   "example_user_selected_from_training_only": "00919b5131b1b3a8",
   "versions": {
     "python": "3.12.14",
@@ -28,5 +52,5 @@
     "pandas": "2.2.3",
     "sklearn": "1.8.0"
   },
-  "generated_at_utc": "2026-11-23T05:53:43.347333+00:00"
+  "generated_at_utc": "2026-11-23T12:42:33.102799+00:00"
 }

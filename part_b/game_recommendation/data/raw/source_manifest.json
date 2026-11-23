@@ -23,5 +23,5 @@
     "The sample favours games with many players and users with multiple observed games.",
     "Public source access does not establish an open licence; retain source attribution."
   ],
-  "metadata_cache_policy": "Existing API responses are reused. Per-response retrieval times are recorded in steam_games.csv; retrieved_at_utc is the snapshot assembly start."
+  "metadata_cache_policy": "Existing API responses are reused. Per-response retrieval times are recorded in steam_games.csv; this manifest records the snapshot assembly start."
 }

@@ -83,7 +83,7 @@ def resolve_app(name):
     return int(matches[0]['id']), 'Exact title after punctuation/trademark normalisation', 'store_search'
 
 
-def collect_game(name, tag_names, snapshot):
+def collect_game(name, tag_names):
     app_id, note, match_method = resolve_app(name)
     meta_url = 'https://store.steampowered.com/api/appdetails?' + urlencode(
         {'appids': app_id, 'l': 'english', 'cc': 'us'})
@@ -114,7 +114,6 @@ def collect_game(name, tag_names, snapshot):
     currency = price.get('currency', 'USD' if free else '')
     usd = currency == 'USD'
     price_usd = 0.0 if free else (price.get('final', 0) / 100 if usd and 'final' in price else None)
-    original_usd = 0.0 if free else (price.get('initial', 0) / 100 if usd and 'initial' in price else None)
     released = current.get('release', {}).get('steam_release_date')
     date_text = game.get('release_date', {}).get('date', '')
     if not released:
@@ -123,34 +122,19 @@ def collect_game(name, tag_names, snapshot):
     year = datetime.fromtimestamp(released, timezone.utc).year if released else None
     row = {
         'dataset_game_name': name, 'appid': app_id, 'title': game['name'],
-        'price_usd': price_usd, 'original_price_usd': original_usd,
-        'price_currency': currency, 'is_free': int(free),
-        'discount_percent': price.get('discount_percent'),
+        'price_usd': price_usd, 'is_free': int(free),
         'positive_percent': summary.get('percent_positive'),
         'review_count': summary.get('review_count'),
-        'steam_review_score': summary.get('review_score'),
-        'review_score_label': summary.get('review_score_label', ''),
-        'critic_score': game.get('metacritic', {}).get('score'),
-        'release_year': year, 'release_timestamp': released,
-        'release_date_text': date_text,
-        'required_age': pd.to_numeric(game.get('required_age'), errors='coerce'),
+        'release_year': year,
         'windows': int(game.get('platforms', {}).get('windows', False)),
         'mac': int(game.get('platforms', {}).get('mac', False)),
         'linux': int(game.get('platforms', {}).get('linux', False)),
-        'controller_support': game.get('controller_support', ''),
-        'achievement_count': game.get('achievements', {}).get('total'),
-        'dlc_count': len(game.get('dlc', [])),
         'genres': '|'.join(genres), 'tags': '|'.join(tags or genres),
-        'categories': '|'.join(categories),
         'single_player': int('Single-player' in categories),
         'multi_player': int(any(x in categories for x in ['Multi-player', 'PvP', 'Online PvP'])),
         'co_op': int(any('Co-op' in x for x in categories)),
-        'developers': '|'.join(game.get('developers', [])),
-        'publishers': '|'.join(game.get('publishers', [])),
         'mapping_method': match_method, 'mapping_note': note,
         'metadata_url': meta_url, 'review_summary_url': browse_url,
-        'store_url': f'https://store.steampowered.com/app/{app_id}/',
-        'retrieved_at_utc': snapshot,
         'metadata_retrieved_at_utc': datetime.fromtimestamp(
             (CACHE / 'details' / f'{app_id}.json').stat().st_mtime, timezone.utc).isoformat(),
         'review_summary_retrieved_at_utc': datetime.fromtimestamp(
@@ -183,7 +167,7 @@ def main():
     rows, skipped = [], []
     print(f'Collecting up to {len(names)} matched Steam games; {len(actions):,} original actions.', flush=True)
     with ThreadPoolExecutor(max_workers=3) as pool:
-        futures = {pool.submit(collect_game, name, tag_names, snapshot): name for name in names}
+        futures = {pool.submit(collect_game, name, tag_names): name for name in names}
         for future in as_completed(futures):
             name = futures[future]
             try:
@@ -205,7 +189,7 @@ def main():
         'sampling_rule': 'Top 200 titles by distinct players with at least one hour in the interaction snapshot; exact title matching plus three documented original-app aliases.',
         'matched_titles': len(catalogue), 'unique_appids': int(catalogue.appid.nunique()),
         'skipped_titles': len(skipped),
-        'metadata_cache_policy': 'Existing API responses are reused. Per-response retrieval times are recorded in steam_games.csv; retrieved_at_utc is the snapshot assembly start.',
+        'metadata_cache_policy': 'Existing API responses are reused. Per-response retrieval times are recorded in steam_games.csv; this manifest records the snapshot assembly start.',
         'direct_review_endpoint': 'https://store.steampowered.com/appreviews/620?json=1',
         'direct_review_status': 'Returned HTTP 302 to the storefront homepage in this environment. No individual review data was fabricated.',
         'limitations': [

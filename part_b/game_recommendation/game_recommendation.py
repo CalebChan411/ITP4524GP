@@ -85,14 +85,15 @@ def prepare_data():
     games['tag_document'] = games.apply(lambda row: '|'.join(sorted({
         token.strip().casefold() for field in ['tags', 'genres']
         for token in str(row[field]).split('|') if token.strip() and token != 'nan'})), axis=1)
+    missing = games[['price_usd', 'positive_percent', 'review_count', 'release_year',
+                     'tags', 'genres']].isna().sum()
+    # Keep only fields used by fitting, evaluation plots or the recommendation display.
+    games = games[['appid', 'title', 'genres', 'review_count', 'tag_document', *FEATURES]].copy()
     (DATA / 'processed').mkdir(parents=True, exist_ok=True)
     games.to_csv(DATA / 'processed' / 'games.csv', index=False)
-    interactions.to_csv(DATA / 'processed' / 'positive_interactions.csv', index=False)
-    missing = games[['price_usd', 'positive_percent', 'review_count', 'release_year',
-                     'critic_score', 'tags', 'genres']].isna().sum().rename('missing_count')
-    missing.to_csv(RESULTS / 'missing_values.csv', index_label='feature')
     summary = {'original_action_rows': original_rows, 'duplicate_action_rows': duplicates,
                'invalid_action_rows_removed': missing_rows,
+               'missing_game_values': {name: int(value) for name, value in missing.items()},
                'positive_definition': 'Observed play time >= 1 hour; an implicit interest proxy.',
                'matched_positive_interactions_before_user_filter': len(mapped),
                'matched_users_before_user_filter': int(mapped.user_id.nunique()),
@@ -253,7 +254,7 @@ def choose_parameters(training, validation, games):
     return alpha, neighbours, chosen
 
 
-def make_plots(games, training, measurements):
+def make_plots(games, measurements):
     charts = RESULTS / 'plots'; charts.mkdir(exist_ok=True)
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10,
                          'axes.spines.top': False, 'axes.spines.right': False,
@@ -281,15 +282,6 @@ def make_plots(games, training, measurements):
     ax.set(xlabel='Current US price (USD)', ylabel='Positive Steam reviews (%)',
            title='Price and approval: descriptive comparison')
     ax.legend(frameon=False);fig.tight_layout();fig.savefig(charts / 'price_and_approval.png', dpi=170);plt.close(fig)
-    fig, axes = plt.subplots(1, 2, figsize=(11, 3.8))
-    axes[0].hist(training.groupby('user_id').size(), bins=20, color=wine, edgecolor='white')
-    axes[0].set(xlabel='Observed games per user', ylabel='Users', title='Final training histories')
-    popular = training.groupby('appid').user_id.nunique().nlargest(10)
-    labels = games.set_index('appid').loc[popular.index, 'title'].str.slice(0, 30)
-    axes[1].barh(np.arange(len(popular)), popular.values, color=stone)
-    axes[1].set_yticks(np.arange(len(popular)), labels);axes[1].invert_yaxis()
-    axes[1].set(xlabel='Training users', title='Most frequent training games')
-    fig.tight_layout();fig.savefig(charts / 'interaction_distribution.png', dpi=170);plt.close(fig)
     at_five = measurements[measurements.k == 5]
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.3))
     for ax, metric, title in zip(axes, ['recall', 'precision'], ['Recall@5', 'Precision@5']):
@@ -313,11 +305,15 @@ def make_plots(games, training, measurements):
     fig.savefig(charts / 'test_01_vs_test_02_recall_at5.png', dpi=170);plt.close(fig)
 
 
+def choose_example_user(training):
+    sizes = training.groupby('user_id').size()
+    return sorted(sizes.index, key=lambda key: (abs(sizes[key] - sizes.median()), key))[0]
+
+
 def example_rows(models, training, games, user_id=None):
     first = next(iter(models.values()))
-    sizes = training.groupby('user_id').size()
     if user_id is None:
-        user_id = sorted(sizes.index, key=lambda key: (abs(sizes[key] - sizes.median()), key))[0]
+        user_id = choose_example_user(training)
     if user_id not in first['users']:
         raise ValueError('Unknown user. Run --recommend without an ID to see a saved example.')
     index = first['users'].index(user_id)
@@ -346,7 +342,10 @@ def main():
     if args.recommend:
         models = {name: joblib.load(MODELS / MODEL_FILES[name]) for name in NAMES}
         games = pd.read_csv(DATA / 'processed' / 'games.csv')
-        training = pd.read_csv(DATA / 'splits' / 'final_training.csv', dtype={'user_id': str})
+        training = pd.concat([
+            pd.read_csv(DATA / 'splits' / f'{name}.csv', dtype={'user_id': str})
+            for name in ('training', 'validation')
+        ]).sort_values(['user_id', 'appid']).reset_index(drop=True)
         user, rows, history = example_rows(models, training, games,
                                           None if args.recommend == 'example' else args.recommend)
         print('User:', user);print('\nObserved history:\n', history[['title', 'play_hours']].to_string(index=False))
@@ -358,52 +357,33 @@ def main():
     alpha, neighbours, selected = choose_parameters(splits['training'], splits['validation'], games)
     print(f'Validation selected: {NAMES[selected]}; full-content tag weight={alpha}; CF neighbours={neighbours}.', flush=True)
     final_training = pd.concat([splits['training'], splits['validation']]).sort_values(['user_id', 'appid']).reset_index(drop=True)
-    final_training.to_csv(DATA / 'splits' / 'final_training.csv', index=False)
     models = fit_models(final_training, games, alpha, neighbours)
-    measurements, per_user = [], []
+    measurements = []
     for name, model in models.items():
         for history, queries in [('full', model['user_item']), ('one_game', short_queries(final_training, model))]:
-            rows, ranks, _ = evaluate(model, splits['testing'], queries)
+            rows, _, _ = evaluate(model, splits['testing'], queries)
             for row in rows:
                 measurements.append({'model': name, 'model_name': NAMES[name],
                                      'history': history, 'test_name': TEST_NAMES[history], **row})
-            truth = splits['testing'].groupby('user_id').appid.apply(set).to_dict()
-            for user, items in zip(model['users'], ranks):
-                predicted = [model['appids'][i] for i in items]
-                per_user.append({'user_id': user, 'model': name, 'model_name': NAMES[name],
-                                 'history': history, 'test_name': TEST_NAMES[history],
-                                 'test_items': '|'.join(map(str, sorted(truth[user]))),
-                                 'recommended_items': '|'.join(map(str, predicted)),
-                                 'hits_at_5': len(set(predicted[:5]) & truth[user])})
         joblib.dump(model, MODELS / MODEL_FILES[name], compress=3)
     metrics = pd.DataFrame(measurements)
     for history, filename in TEST_FILES.items():
         metrics[metrics.history == history].to_csv(RESULTS / filename, index=False)
-    pd.DataFrame(per_user).to_csv(RESULTS / 'per_user_test_results.csv', index=False)
-    user, examples, observed = example_rows(models, final_training, games)
-    examples.to_csv(RESULTS / 'example_recommendations.csv', index=False)
-    observed.to_csv(RESULTS / 'example_history.csv', index=False)
+    user = choose_example_user(final_training)
     summary.update({'split_seed': SEED, 'split_type': 'Per-user random holdout; no timestamps are available.',
                     'split_rows': {key: len(value) for key, value in splits.items()},
                     'final_training_rows': len(final_training), 'selected_by_validation': selected,
+                    'selected_model_file': f'models/{MODEL_FILES[selected]}',
+                    'selection_metric': 'Validation Recall@5, then Precision@5',
                     'content_full_tag_weight': alpha, 'cf_neighbours': neighbours,
+                    'numeric_feature_columns': FEATURES,
+                    'ranking_ties': 'Scores rounded to 12 decimal places, then training popularity and app ID. Zero-support CF uses this popularity fallback.',
                     'example_user_selected_from_training_only': user,
                     'versions': {'python': sys.version.split()[0], 'numpy': np.__version__,
                                  'pandas': pd.__version__, 'sklearn': sklearn.__version__},
                     'generated_at_utc': datetime.now(timezone.utc).isoformat()})
     (RESULTS / 'experiment_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
-    (RESULTS / 'model_manifest.json').write_text(json.dumps({
-        'selected_model': selected, 'selection_metric': 'Validation Recall@5, then Precision@5',
-        'selected_model_file': f'models/{MODEL_FILES[selected]}',
-        'model_files': {name: f'models/{filename}' for name, filename in MODEL_FILES.items()},
-        'model_names': NAMES,
-        'test_names': TEST_NAMES,
-        'test_result_files': {TEST_NAMES[key]: f'results/{filename}' for key, filename in TEST_FILES.items()},
-        'feature_columns': FEATURES, 'versions': summary['versions'],
-        'final_fit': 'Training plus validation; testing interactions excluded.',
-        'ranking_ties': 'Scores rounded to 12 decimal places, then training popularity and app ID. Zero-support CF uses this popularity fallback.',
-    }, indent=2) + '\n')
-    make_plots(games, final_training, metrics)
+    make_plots(games, metrics)
     print('\nHeld-out test results:')
     print(metrics[metrics.k == 5][['model_name', 'test_name', 'precision', 'recall', 'hit_rate', 'coverage']].to_string(index=False, float_format=lambda x: f'{x:.4f}'))
     print(f'\nExample user: {user}\nSaved models: {MODELS}\nResults: {RESULTS}')
