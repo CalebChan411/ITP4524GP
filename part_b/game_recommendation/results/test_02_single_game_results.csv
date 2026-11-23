@@ -5,5 +5,5 @@ content_tags,Model 02 - Content-based Tags,one_game,Test 02 - Single-game Query,
 content_tags,Model 02 - Content-based Tags,one_game,Test 02 - Single-game Query,10,0.040746753246753246,0.20905202301306197,0.3457792207792208,1.0,1232
 content_full,Model 03 - Content-based Tags and Metadata,one_game,Test 02 - Single-game Query,5,0.051461038961038964,0.13817166329341654,0.23944805194805194,0.9819819819819819,1232
 content_full,Model 03 - Content-based Tags and Metadata,one_game,Test 02 - Single-game Query,10,0.040503246753246756,0.21735800725248777,0.3449675324675325,1.0,1232
-user_cf,Model 04 - User-based Collaborative Filtering,one_game,Test 02 - Single-game Query,5,0.11818181818181818,0.3264185219542362,0.48295454545454547,0.5945945945945946,1232
-user_cf,Model 04 - User-based Collaborative Filtering,one_game,Test 02 - Single-game Query,10,0.08409090909090909,0.4538555780438897,0.6298701298701299,0.8288288288288288,1232
+user_cf,Model 04 - User-based Collaborative Filtering,one_game,Test 02 - Single-game Query,5,0.1215909090909091,0.3384524746537733,0.4991883116883117,0.6036036036036037,1232
+user_cf,Model 04 - User-based Collaborative Filtering,one_game,Test 02 - Single-game Query,10,0.08563311688311688,0.4544942994415397,0.6298701298701299,0.7927927927927928,1232

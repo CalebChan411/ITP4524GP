@@ -44,9 +44,11 @@ The remaining commands are the same on Windows, macOS and Linux.
 VS Code Run button: use Python: Select Interpreter and choose the project's
 .venv312 interpreter. Terminal activation alone may not change that selection.
 
-3. Train and evaluate
----------------------
-Run once to rebuild the datasets, four models, metrics and five plots.
+3. Optional rebuild and evaluation
+----------------------------------
+The reference models and results are included. For a demonstration, go to section 4.
+Use the following command to rebuild datasets, models, metrics and plots.
+It replaces the generated files; use a separate project copy to retain originals.
 This uses the supplied data snapshot without fetching Steam data.
 
 python game_recommendation.py
@@ -92,17 +94,17 @@ Test 02: use only their most-played known game as the query.
 Both use the same hidden test games and exclude all known training games.
 Test 02 checks reduced input for existing users, not genuinely new users.
 
-Approved reporting reference (Windows, Python 3.12.10; supplied to four decimals):
-python -c "import json,pandas as pd; r=json.load(open('results/experiment_summary.json',encoding='utf-8'))['reporting_reference']; print(r['source']); print(pd.DataFrame(r['metrics'])[['model','history','precision','recall','hit_rate','coverage']].to_string(index=False))"
+Approved Windows reference (full-precision CSVs, shown to four decimals):
+python -c "import json,pandas as pd; r=json.load(open('results/experiment_summary.json',encoding='utf-8'))['reporting_reference']; print(r['source']); print(pd.DataFrame(r['metrics'])[['model','history','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
 
-The bundled report, slides and comparison figures use this Top-5 reference.
-Original Windows CSVs, Top-10/validation scores and model files are still needed
-to replace the earlier cloud-run artifacts bundled with the project.
+The supplied CSVs, models, report, slides and figures use this Windows reference.
+Its archive metadata records Python 3.14.2; the supplied Python 3.12.10 console
+matches the Top-5 values to four decimals. Python 3.12 remains recommended locally.
 
-Local Test 01 metrics (the bundled cloud run until you rerun the program):
+Test 01 CSV (Windows reference until you rerun the program):
 python -c "import pandas as pd; d=pd.read_csv('results/test_01_full_history_results.csv'); print(d[['model','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
 
-Local Test 02 metrics (the bundled cloud run until you rerun the program):
+Test 02 CSV (Windows reference until you rerun the program):
 python -c "import pandas as pd; d=pd.read_csv('results/test_02_single_game_results.csv'); print(d[['model','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
 
 6. Read the results
