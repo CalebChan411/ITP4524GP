@@ -382,12 +382,19 @@ def main():
                     'versions': {'python': sys.version.split()[0], 'numpy': np.__version__,
                                  'pandas': pd.__version__, 'sklearn': sklearn.__version__},
                     'generated_at_utc': datetime.now(timezone.utc).isoformat()})
-    (RESULTS / 'experiment_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
+    summary_path = RESULTS / 'experiment_summary.json'
+    if summary_path.exists():
+        previous = json.loads(summary_path.read_text())
+        if 'reporting_reference' in previous:
+            summary['reporting_reference'] = previous['reporting_reference']
+    summary_path.write_text(json.dumps(summary, indent=2) + '\n')
     make_plots(games, metrics)
     print('\nHeld-out test results:')
     print(metrics[metrics.k == 5][['model_name', 'test_name', 'precision', 'recall', 'hit_rate', 'coverage']].to_string(index=False, float_format=lambda x: f'{x:.4f}'))
     print(f'\nExample user: {user}\nSaved models: {MODELS}\nResults: {RESULTS}')
     print(f'Recommended model for this benchmark: {NAMES[selected]}\nSelected file: {MODELS / MODEL_FILES[selected]}')
+    if 'reporting_reference' in summary:
+        print('The approved reporting reference is retained in experiment_summary.json; the results above describe this local run.')
     print('Run python game_recommendation.py --recommend to demonstrate the saved models.')
 
 

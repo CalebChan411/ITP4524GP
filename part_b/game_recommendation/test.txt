@@ -41,6 +41,8 @@ python install_requirements.py
 Success: "Installation complete. Run game_recommendation.py next."
 For later sessions, reopen this folder and run your activation command above.
 The remaining commands are the same on Windows, macOS and Linux.
+VS Code Run button: use Python: Select Interpreter and choose the project's
+.venv312 interpreter. Terminal activation alone may not change that selection.
 
 3. Train and evaluate
 ---------------------
@@ -51,6 +53,7 @@ python game_recommendation.py
 
 Success: a held-out results table and saved model/results paths appear.
 Word reports, slides and the presentation script are not updated by this command.
+Reruns regenerate local measurements/plots and retain the reporting reference.
 
 4. View user history and recommendations
 ----------------------------------------
@@ -89,10 +92,17 @@ Test 02: use only their most-played known game as the query.
 Both use the same hidden test games and exclude all known training games.
 Test 02 checks reduced input for existing users, not genuinely new users.
 
-Test 01 metrics:
+Approved reporting reference (Windows, Python 3.12.10; supplied to four decimals):
+python -c "import json,pandas as pd; r=json.load(open('results/experiment_summary.json',encoding='utf-8'))['reporting_reference']; print(r['source']); print(pd.DataFrame(r['metrics'])[['model','history','precision','recall','hit_rate','coverage']].to_string(index=False))"
+
+The bundled report, slides and comparison figures use this Top-5 reference.
+Original Windows CSVs, Top-10/validation scores and model files are still needed
+to replace the earlier cloud-run artifacts bundled with the project.
+
+Local Test 01 metrics (the bundled cloud run until you rerun the program):
 python -c "import pandas as pd; d=pd.read_csv('results/test_01_full_history_results.csv'); print(d[['model','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
 
-Test 02 metrics:
+Local Test 02 metrics (the bundled cloud run until you rerun the program):
 python -c "import pandas as pd; d=pd.read_csv('results/test_02_single_game_results.csv'); print(d[['model','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
 
 6. Read the results
@@ -109,8 +119,9 @@ Compare models at the same test and k. Higher coverage alone does not mean bette
 matching. Unobserved games are not confirmed dislikes.
 
 validation_results.csv: candidate settings and validation metrics.
-experiment_summary.json: data counts, split settings and selected model file.
+experiment_summary.json: local-run settings plus the approved reporting_reference.
 Selection uses validation Recall@5, then Precision@5; tests assess that selection.
 results/plots/: three data-analysis plots and two test-comparison plots.
 
-Use CSVs and plots from the same final run when preparing the report and slides.
+Keep reference-run files together. Local reruns can differ, especially for user
+CF neighbours with equal similarity; do not mix their metrics with the reference.
