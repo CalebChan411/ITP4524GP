@@ -37,8 +37,26 @@ RESULTS = BASE / 'results'
 SEED = 4524
 MIN_GAMES = 5
 PLAY_THRESHOLD = 1.0
-NAMES = {'popularity': 'Popularity', 'content_tags': 'Content: tags',
-         'content_full': 'Content: full features', 'user_cf': 'User-based CF'}
+NAMES = {
+    'popularity': 'Model 01 - Popularity Baseline',
+    'content_tags': 'Model 02 - Content-based Tags',
+    'content_full': 'Model 03 - Content-based Tags and Metadata',
+    'user_cf': 'Model 04 - User-based Collaborative Filtering',
+}
+MODEL_FILES = {
+    'popularity': '01_popularity_baseline.joblib',
+    'content_tags': '02_content_based_tags.joblib',
+    'content_full': '03_content_based_tags_and_metadata.joblib',
+    'user_cf': '04_user_based_collaborative_filtering.joblib',
+}
+TEST_NAMES = {
+    'full': 'Test 01 - Full-history Query',
+    'one_game': 'Test 02 - Single-game Query',
+}
+TEST_FILES = {
+    'full': 'test_01_full_history_results.csv',
+    'one_game': 'test_02_single_game_results.csv',
+}
 FEATURES = ['price_usd', 'positive_percent', 'log_review_count', 'release_year',
             'is_free', 'single_player', 'multi_player', 'co_op', 'windows', 'mac', 'linux']
 
@@ -223,7 +241,8 @@ def choose_parameters(training, validation, games):
         model = fit_models(training, games, alpha, neighbours)[method]
         measures, _, _ = evaluate(model, validation, model['user_item'])
         for result in measures:
-            rows.append({'model': method, 'tag_weight': alpha if method == 'content_full' else None,
+            rows.append({'model': method, 'model_name': NAMES[method],
+                         'tag_weight': alpha if method == 'content_full' else None,
                          'neighbours': neighbours if method == 'user_cf' else None, **result})
     tuning = pd.DataFrame(rows)
     tuning.to_csv(RESULTS / 'validation_results.csv', index=False)
@@ -277,19 +296,21 @@ def make_plots(games, training, measurements):
         x = np.arange(len(NAMES));width = .35
         for offset, history, color in [(-width / 2, 'full', wine), (width / 2, 'one_game', stone)]:
             values = at_five[at_five.history == history].set_index('model').loc[list(NAMES), metric]
-            ax.bar(x + offset, values, width, color=color, label='Full history' if history == 'full' else 'One-game query')
+            ax.bar(x + offset, values, width, color=color,
+                   label='Test 01: full history' if history == 'full' else 'Test 02: single game')
         ax.set_xticks(x, ['Popularity', 'Content:\ntags', 'Content:\nfull', 'User CF'])
         ax.set(ylabel=title, title=title);ax.legend(frameon=False, fontsize=8)
-    fig.tight_layout();fig.savefig(charts / 'test_comparison.png', dpi=170);plt.close(fig)
+    fig.tight_layout();fig.savefig(charts / 'test_01_vs_test_02_comparison.png', dpi=170);plt.close(fig)
     fig, ax = plt.subplots(figsize=(7, 3.8))
     x = np.arange(len(NAMES));width = .35
     for offset, history, color in [(-width/2, 'full', wine), (width/2, 'one_game', stone)]:
         values = at_five[at_five.history == history].set_index('model').loc[list(NAMES), 'recall']
-        ax.bar(x+offset, values, width, color=color, label='Full history' if history=='full' else 'One-game query')
+        ax.bar(x+offset, values, width, color=color,
+               label='Test 01: full history' if history=='full' else 'Test 02: single game')
     ax.set_xticks(x, ['Popularity', 'Content: tags', 'Content: full', 'User CF'])
     ax.set(ylabel='Recall@5', title='Held-out recall under two query settings')
     ax.legend(frameon=False);fig.tight_layout()
-    fig.savefig(charts / 'recall_at5.png', dpi=170);plt.close(fig)
+    fig.savefig(charts / 'test_01_vs_test_02_recall_at5.png', dpi=170);plt.close(fig)
 
 
 def example_rows(models, training, games, user_id=None):
@@ -307,7 +328,8 @@ def example_rows(models, training, games, user_id=None):
         ranks = rank_scores(scores, model)[index]
         for rank, item in enumerate(ranks, 1):
             appid = model['appids'][item];game = lookup.loc[appid]
-            rows.append({'user_id': user_id, 'model': name, 'rank': rank, 'appid': appid,
+            rows.append({'user_id': user_id, 'model': name, 'model_name': NAMES[name],
+                         'rank': rank, 'appid': appid,
                          'title': game.title, 'score': scores[index, item],
                          'price_usd': game.price_usd, 'positive_percent': game.positive_percent,
                          'review_count': game.review_count})
@@ -322,19 +344,19 @@ def main():
     args = parser.parse_args()
     for folder in [MODELS, RESULTS]:folder.mkdir(parents=True, exist_ok=True)
     if args.recommend:
-        models = {name: joblib.load(MODELS / f'{name}.joblib') for name in NAMES}
+        models = {name: joblib.load(MODELS / MODEL_FILES[name]) for name in NAMES}
         games = pd.read_csv(DATA / 'processed' / 'games.csv')
         training = pd.read_csv(DATA / 'splits' / 'final_training.csv', dtype={'user_id': str})
         user, rows, history = example_rows(models, training, games,
                                           None if args.recommend == 'example' else args.recommend)
         print('User:', user);print('\nObserved history:\n', history[['title', 'play_hours']].to_string(index=False))
-        print('\nSaved-model recommendations:\n', rows[rows['rank'] <= 5][['model', 'rank', 'title', 'score']].to_string(index=False))
+        print('\nSaved-model recommendations:\n', rows[rows['rank'] <= 5][['model_name', 'rank', 'title', 'score']].to_string(index=False))
         return
     games, interactions, summary = prepare_data()
     splits = make_splits(interactions)
     print(f"Prepared {summary['eligible_users']:,} users, {summary['catalogue_games']} games and {len(interactions):,} positive interactions.", flush=True)
     alpha, neighbours, selected = choose_parameters(splits['training'], splits['validation'], games)
-    print(f'Validation selected: {selected}; full-content tag weight={alpha}; CF neighbours={neighbours}.', flush=True)
+    print(f'Validation selected: {NAMES[selected]}; full-content tag weight={alpha}; CF neighbours={neighbours}.', flush=True)
     final_training = pd.concat([splits['training'], splits['validation']]).sort_values(['user_id', 'appid']).reset_index(drop=True)
     final_training.to_csv(DATA / 'splits' / 'final_training.csv', index=False)
     models = fit_models(final_training, games, alpha, neighbours)
@@ -342,19 +364,22 @@ def main():
     for name, model in models.items():
         for history, queries in [('full', model['user_item']), ('one_game', short_queries(final_training, model))]:
             rows, ranks, _ = evaluate(model, splits['testing'], queries)
-            for row in rows:measurements.append({'model': name, 'history': history, **row})
+            for row in rows:
+                measurements.append({'model': name, 'model_name': NAMES[name],
+                                     'history': history, 'test_name': TEST_NAMES[history], **row})
             truth = splits['testing'].groupby('user_id').appid.apply(set).to_dict()
             for user, items in zip(model['users'], ranks):
                 predicted = [model['appids'][i] for i in items]
-                per_user.append({'user_id': user, 'model': name, 'history': history,
+                per_user.append({'user_id': user, 'model': name, 'model_name': NAMES[name],
+                                 'history': history, 'test_name': TEST_NAMES[history],
                                  'test_items': '|'.join(map(str, sorted(truth[user]))),
                                  'recommended_items': '|'.join(map(str, predicted)),
                                  'hits_at_5': len(set(predicted[:5]) & truth[user])})
-        joblib.dump(model, MODELS / f'{name}.joblib', compress=3)
-    joblib.dump(models[selected], MODELS / 'selected_model.joblib', compress=3)
+        joblib.dump(model, MODELS / MODEL_FILES[name], compress=3)
     metrics = pd.DataFrame(measurements)
-    metrics.to_csv(RESULTS / 'test_metrics.csv', index=False)
-    pd.DataFrame(per_user).to_csv(RESULTS / 'per_user_results.csv', index=False)
+    for history, filename in TEST_FILES.items():
+        metrics[metrics.history == history].to_csv(RESULTS / filename, index=False)
+    pd.DataFrame(per_user).to_csv(RESULTS / 'per_user_test_results.csv', index=False)
     user, examples, observed = example_rows(models, final_training, games)
     examples.to_csv(RESULTS / 'example_recommendations.csv', index=False)
     observed.to_csv(RESULTS / 'example_history.csv', index=False)
@@ -367,16 +392,22 @@ def main():
                                  'pandas': pd.__version__, 'sklearn': sklearn.__version__},
                     'generated_at_utc': datetime.now(timezone.utc).isoformat()})
     (RESULTS / 'experiment_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
-    (MODELS / 'model_manifest.json').write_text(json.dumps({
+    (RESULTS / 'model_manifest.json').write_text(json.dumps({
         'selected_model': selected, 'selection_metric': 'Validation Recall@5, then Precision@5',
+        'selected_model_file': f'models/{MODEL_FILES[selected]}',
+        'model_files': {name: f'models/{filename}' for name, filename in MODEL_FILES.items()},
+        'model_names': NAMES,
+        'test_names': TEST_NAMES,
+        'test_result_files': {TEST_NAMES[key]: f'results/{filename}' for key, filename in TEST_FILES.items()},
         'feature_columns': FEATURES, 'versions': summary['versions'],
         'final_fit': 'Training plus validation; testing interactions excluded.',
         'ranking_ties': 'Scores rounded to 12 decimal places, then training popularity and app ID. Zero-support CF uses this popularity fallback.',
     }, indent=2) + '\n')
     make_plots(games, final_training, metrics)
     print('\nHeld-out test results:')
-    print(metrics[metrics.k == 5][['model', 'history', 'precision', 'recall', 'hit_rate', 'coverage']].to_string(index=False, float_format=lambda x: f'{x:.4f}'))
+    print(metrics[metrics.k == 5][['model_name', 'test_name', 'precision', 'recall', 'hit_rate', 'coverage']].to_string(index=False, float_format=lambda x: f'{x:.4f}'))
     print(f'\nExample user: {user}\nSaved models: {MODELS}\nResults: {RESULTS}')
+    print(f'Recommended model for this benchmark: {NAMES[selected]}\nSelected file: {MODELS / MODEL_FILES[selected]}')
     print('Run python game_recommendation.py --recommend to demonstrate the saved models.')
 
 

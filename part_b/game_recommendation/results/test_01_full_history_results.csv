@@ -1,0 +1,9 @@
+model,model_name,history,test_name,k,precision,recall,hit_rate,coverage,users
+popularity,Model 01 - Popularity Baseline,full,Test 01 - Full-history Query,5,0.11834415584415585,0.31738500496617383,0.4780844155844156,0.1891891891891892,1232
+popularity,Model 01 - Popularity Baseline,full,Test 01 - Full-history Query,10,0.08571428571428572,0.43964977347688383,0.6201298701298701,0.2972972972972973,1232
+content_tags,Model 02 - Content-based Tags,full,Test 01 - Full-history Query,5,0.05470779220779221,0.1423411702835404,0.24269480519480519,0.8378378378378378,1232
+content_tags,Model 02 - Content-based Tags,full,Test 01 - Full-history Query,10,0.044805194805194806,0.22769766308727346,0.3587662337662338,0.954954954954955,1232
+content_full,Model 03 - Content-based Tags and Metadata,full,Test 01 - Full-history Query,5,0.06655844155844155,0.18022672223159236,0.29788961038961037,0.8828828828828829,1232
+content_full,Model 03 - Content-based Tags and Metadata,full,Test 01 - Full-history Query,10,0.0521103896103896,0.2806387155413129,0.4366883116883117,0.954954954954955,1232
+user_cf,Model 04 - User-based Collaborative Filtering,full,Test 01 - Full-history Query,5,0.1362012987012987,0.3651892592436424,0.5397727272727273,0.8198198198198198,1232
+user_cf,Model 04 - User-based Collaborative Filtering,full,Test 01 - Full-history Query,10,0.09618506493506493,0.4945144276718952,0.6688311688311688,0.990990990990991,1232

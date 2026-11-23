@@ -9,3 +9,6 @@
 - Fit transformations and any interaction-derived statistics on training data only. Keep validation/test interactions out of model profiles, popularity counts and similarity matrices.
 - Compare methods using the same held-out users, candidate games and ranking cutoffs. State the sampling limitations and do not treat unobserved interactions as confirmed dislikes.
 - Include only necessary code, datasets, models, report, slides and results in the submission archive. Exclude README and AGENTS files.
+- Keep exactly four numbered model files in `models/`. Record the selected model filename in `results/model_manifest.json`, without saving a duplicate selected-model binary.
+- Name the two test scenarios Test 01 (full-history query) and Test 02 (single-game query). Save their metrics in separate clearly named CSVs; Top 5 and Top 10 are cutoffs within each scenario.
+- In the report and presentation, explain the design and implementation, analyse comparable results, and finish with one justified model recommendation. Use validation for selection and state the limits of the final test evidence.

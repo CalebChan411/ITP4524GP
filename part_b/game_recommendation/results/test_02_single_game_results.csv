@@ -1,0 +1,9 @@
+model,model_name,history,test_name,k,precision,recall,hit_rate,coverage,users
+popularity,Model 01 - Popularity Baseline,one_game,Test 02 - Single-game Query,5,0.11834415584415585,0.31738500496617383,0.4780844155844156,0.1891891891891892,1232
+popularity,Model 01 - Popularity Baseline,one_game,Test 02 - Single-game Query,10,0.08571428571428572,0.43964977347688383,0.6201298701298701,0.2972972972972973,1232
+content_tags,Model 02 - Content-based Tags,one_game,Test 02 - Single-game Query,5,0.04431818181818182,0.11366022820974118,0.2021103896103896,0.972972972972973,1232
+content_tags,Model 02 - Content-based Tags,one_game,Test 02 - Single-game Query,10,0.040746753246753246,0.20905202301306197,0.3457792207792208,1.0,1232
+content_full,Model 03 - Content-based Tags and Metadata,one_game,Test 02 - Single-game Query,5,0.051461038961038964,0.13817166329341654,0.23944805194805194,0.9819819819819819,1232
+content_full,Model 03 - Content-based Tags and Metadata,one_game,Test 02 - Single-game Query,10,0.040503246753246756,0.21735800725248777,0.3449675324675325,1.0,1232
+user_cf,Model 04 - User-based Collaborative Filtering,one_game,Test 02 - Single-game Query,5,0.11818181818181818,0.3264185219542362,0.48295454545454547,0.5945945945945946,1232
+user_cf,Model 04 - User-based Collaborative Filtering,one_game,Test 02 - Single-game Query,10,0.08409090909090909,0.4538555780438897,0.6298701298701299,0.8288288288288288,1232
