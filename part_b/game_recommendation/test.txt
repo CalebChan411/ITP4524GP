@@ -1,0 +1,93 @@
+GameLens - Terminal Test Guide (macOS)
+====================================
+Manual commands for the four models and two evaluation scenarios.
+Copy command lines only, one section at a time.
+
+1. Open the project
+-------------------
+Default ZIP download location; adjust the path if extracted elsewhere.
+
+cd "$HOME/Downloads/ITP4524GP-main/part_b/game_recommendation"
+
+First use: create a Python 3.12 environment and install dependencies.
+
+python3.12 -m venv .venv312
+source .venv312/bin/activate
+python install_requirements.py
+
+Returning users: activate the existing environment in each new terminal.
+
+source .venv312/bin/activate
+
+2. Train and evaluate
+---------------------
+Run once to rebuild the datasets, four models, metrics and five plots.
+This uses the supplied data snapshot without fetching Steam data.
+
+python game_recommendation.py
+
+Success: a held-out results table and saved model/results paths appear.
+Word reports, slides and the presentation script are not updated by this command.
+
+3. View user history and recommendations
+----------------------------------------
+Each command prints the user ID, known games with play hours, and the top five
+recommendations from each model. These commands load the saved models.
+User IDs represent anonymised historical players, not website login accounts.
+Interest is inferred from play time >= 1 hour; it is not an explicit favourite.
+
+Default example user:
+python game_recommendation.py --recommend
+
+User 00919b5131b1b3a8 - history includes Dota 2 and XCOM: Enemy Unknown:
+python game_recommendation.py --recommend 00919b5131b1b3a8
+
+User 0004cb703639fc12 - history includes Team Fortress 2 and Garry's Mod:
+python game_recommendation.py --recommend 0004cb703639fc12
+
+User 00084358a8270e14 - history includes Left 4 Dead 2 and Terraria:
+python game_recommendation.py --recommend 00084358a8270e14
+
+User 00560a5025e790d4 - history includes Orcs Must Die! 2 and Torchlight II:
+python game_recommendation.py --recommend 00560a5025e790d4
+
+To try others, copy a complete user_id from data/splits/training.csv and replace
+the ID after --recommend. The current program uses existing histories;
+manually choosing favourite games is not an implemented command.
+
+Recommendation columns:
+model_name = method; rank = recommendation order; title = game; score = ranking score.
+Rank 1 comes first. Scores differ by model and are not probabilities.
+
+4. View test results in Terminal
+--------------------------------
+Test 01: use each user's full final-training history as the query.
+Test 02: use only their most-played known game as the query.
+Both use the same hidden test games and exclude all known training games.
+Test 02 checks reduced input for existing users, not genuinely new users.
+
+Test 01 metrics:
+python -c "import pandas as pd; d=pd.read_csv('results/test_01_full_history_results.csv'); print(d[['model','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
+
+Test 02 metrics:
+python -c "import pandas as pd; d=pd.read_csv('results/test_02_single_game_results.csv'); print(d[['model','k','precision','recall','hit_rate','coverage']].round(4).to_string(index=False))"
+
+5. Read the results
+-------------------
+Model keys: popularity = Model 01; content_tags = Model 02;
+content_full = Model 03; user_cf = Model 04.
+k: 5 = top five recommendations; 10 = top ten recommendations.
+Precision: fraction of recommendations that match hidden test games.
+Recall: fraction of hidden test games recovered by the recommendations.
+Hit rate: fraction of users with at least one matching recommendation.
+Coverage: fraction of catalogue games recommended across all users.
+Precision and Recall are averaged per user. Values are fractions: 0.30 = 30%.
+Compare models at the same test and k. Higher coverage alone does not mean better
+matching. Unobserved games are not confirmed dislikes.
+
+validation_results.csv: candidate settings and validation metrics.
+experiment_summary.json: data counts, split settings and selected model file.
+Selection uses validation Recall@5, then Precision@5; tests assess that selection.
+results/plots/: three data-analysis plots and two test-comparison plots.
+
+Use CSVs and plots from the same final run when preparing the report and slides.
