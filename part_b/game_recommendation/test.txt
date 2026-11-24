@@ -126,7 +126,8 @@ Model 04's cosine/weighted-support illustration is on slide 10.
 These are teaching examples, separate from the measured CSV results.
 The 20-slide presentation and script assign five slides to each speaker.
 
-validation_results.csv: candidate settings and validation metrics.
+validation_results.csv: candidate settings and validation metrics; the report's
+section 5.1 compares the existing settings and explains the selected parameters.
 experiment_summary.json: local-run settings plus the approved reporting_reference.
 Selection uses validation Recall@5, then Precision@5; tests assess that selection.
 results/plots/: three data-analysis plots and two test-comparison plots.
