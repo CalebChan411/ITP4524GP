@@ -127,10 +127,13 @@ These are teaching examples, separate from the measured CSV results.
 The 20-slide presentation uses the supplied Gaming Design Portfolio template.
 It targets 15-20 minutes (scheduled core 18:15, including a short demo).
 Suggested speakers A/B/C/D cover slides 1-5 / 6-10 / 11-15 / 16-20 respectively.
-Open presentation.pptx in Presenter View for narration, visual cues and optional
-explanations; presentation_script.docx contains the matching structured script.
+presentation_script.docx uses short sentences and common English for speaking.
+presentation_notes.txt contains the same core talk, visual cues and extra help.
+The PowerPoint has no embedded speaker notes or speaker/source footer labels.
 Prepare the environment before class; use section 4 for the saved-model demo.
+Slide 3 shows how the two data sources were collected and saved.
 Slide 6 explains Model 01 using distinct positive training-user counts.
+Slide 11 connects six code steps to actual functions and library roles.
 Slide 16 connects a real history, two ranking approaches and their different lists.
 Slides 17-18 explain outcomes, implications and why Model 04 is recommended.
 Slide 19 connects learned lessons, actual obstacles, responses and future tests.

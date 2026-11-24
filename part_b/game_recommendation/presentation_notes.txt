@@ -1,0 +1,269 @@
+GameLens - Presentation Notes
+=============================
+20 slides | 15-20 minutes | Planned delivery: 18:15 including a short demo
+The PowerPoint has no embedded speaker notes.
+Core talk = what to say. Visual cue = what to point at.
+Extra help = use for questions or spare time.
+Keep the core talk slow and clear. Pause at charts and calculations.
+Read code function names normally; do not spell their underscores.
+
+SLIDE 01 - GameLens
+------------------------------------------------------------
+Suggested speaker A | Target 0:25
+
+CORE TALK
+Our project is GameLens, a game recommendation system. It suggests games from a player's past play records. We built four models in Python. We tested them on games kept hidden from each user’s known history. Today, we will show the data, the model designs and the test results. We will also show how the code works. At the end, we will explain our choice of model and what we learned.
+
+VISUAL CUE
+Introduce the project and the four speaking sections. Move to the problem we want to solve.
+
+EXTRA HELP
+The project is a Python modelling study. The terminal shows its recommendations.
+
+SLIDE 02 - Which games should we recommend?
+------------------------------------------------------------
+Suggested speaker A | Target 0:45
+
+CORE TALK
+Players have many games to choose from. A popular game may be a useful suggestion. But can a player's own history help us make a better list? That is our main question. We also ask whether extra game details help the content model. Our last question is about the amount of user input. What changes when we use only one known game? Each model ranks games the user has not already played in the known data. We then check whether the list includes hidden test games. This gives us a way to compare the models.
+
+VISUAL CUE
+Follow known history → four models → ranked games. Point to the three research questions.
+
+EXTRA HELP
+A ranking puts the highest-scoring game first. A game missing from the records may still interest the player.
+
+SLIDE 03 - Two real sources, different roles
+------------------------------------------------------------
+Suggested speaker A | Target 0:50
+
+CORE TALK
+We use two real data sources. Steam-200k gives us past user actions. It has 200,000 raw rows, 12,393 user IDs and 5,155 game titles. We downloaded its public CSV snapshot. Official Steam services give us current game details. These include tags, genres, price, review counts and approval percentage. Our collection script calls those services and saves the results. We match game titles to Steam app IDs. We keep 111 games with reliable matches. The play records tell us about users. The game details describe the items. These two sources come from different periods, which limits our study.
+
+VISUAL CUE
+Point to the two sources, the collection steps and the two saved raw files. Explain their different roles.
+
+EXTRA HELP
+An API lets a program request data from a service. Our requests use English and the US store. User IDs were changed into codes.
+
+SLIDE 04 - Clean the data and select our users
+------------------------------------------------------------
+Suggested speaker A | Target 0:50
+
+CORE TALK
+We clean the data before building the models. First, we remove 707 duplicate action rows. We find no invalid action fields that need removal. Next, we keep recorded play of at least one hour. We use this as a sign of interest. It is not a direct like or rating. We keep reliable game matches and users with at least five matched games. This leaves 1,232 users and 14,847 user-game records. Four prices and three release years are missing. For Model Three, we fill them using training medians. We also mark where values were missing.
+
+VISUAL CUE
+Read the cleaning stages from left to right. Explain the one-hour rule and the minimum of five games.
+
+EXTRA HELP
+A median is the middle value after sorting. We learn it from training data. We do not use hidden test plays to fill values.
+
+SLIDE 05 - Explore the data before modelling
+------------------------------------------------------------
+Suggested speaker A | Target 0:55
+
+CORE TALK
+We look at the data before choosing the features. The left chart shows the main genres. A game can have more than one genre. The right chart compares price with approval percentage. Their Spearman correlation is about 0.174, which is weak. This does not show that higher prices cause better reviews. Our sample has 22 free games and 89 paid games. Price and reviews may still help match game profiles. So we test their value in Model Three. We do not assume that more features will always give a better result.
+
+VISUAL CUE
+Explain one pattern from each chart. Link the weak price relationship to the decision to test extra features.
+
+EXTRA HELP
+The scatter uses games with a recorded price. Approval percentage comes from Steam reviews. It is not a Metacritic score.
+
+SLIDE 06 - Four models: begin with the baseline
+------------------------------------------------------------
+Suggested speaker B | Target 1:00
+
+CORE TALK
+We compare four models. They are separate choices, built from the same known data. Model One is our popularity baseline. It counts how many different training users played each game for at least one hour. Each user counts once. More hours do not add more points. The model sorts games by this count. It then removes games already known for the target user. In this example, Team Fortress Two has 571 training users. Skyrim has 377 and Garry's Mod has 375. These are real saved-model counts. We keep this simple model to check whether personalisation adds value. The next three models use personal history in different ways.
+
+VISUAL CUE
+Introduce the four model cards. Then explain Model One using the steps and real count example.
+
+EXTRA HELP
+The example uses the final training data, which combines training and validation. Global counts are shared. Final lists can differ because users have different known games.
+
+SLIDE 07 - Model 02: match the content
+------------------------------------------------------------
+Suggested speaker B | Target 0:50
+
+CORE TALK
+Model Two uses game tags and genres. This follows the content-based approach in Lecture Nine. We use TF-IDF to turn the tags into numbers. A less common tag can receive more weight. We learn these weights from training games. Then we add the vectors of the user's known games. We set the result to unit length. This gives us a user profile. Cosine similarity compares that profile with each game vector. A higher match gives a higher score. This design uses game details to match interests. It does not need other players’ histories. TF-IDF also links to Lecture Eleven.
+
+VISUAL CUE
+Follow Describe → Encode → Build profile → Rank. Use the formula legend to identify the user profile and game vector.
+
+EXTRA HELP
+A vector is a list of numbers. Unit length keeps the comparison focused on direction. The cosine score is a ranking score, not a chance of liking the game.
+
+SLIDE 08 - Model 03: add structured features
+------------------------------------------------------------
+Suggested speaker B | Target 0:55
+
+CORE TALK
+Model Three adds 11 numeric features to the tag model. They include price, approval, review count, release year, game modes and supported systems. We use log review count to reduce very large differences. We fill missing values using training medians. We scale the values between zero and one. We then set the numeric block to unit length. Next, we join the tag and numeric blocks. We compare two tag weights on validation: 0.50 and 0.75. The 0.50 setting gets higher Recall at Five. So we keep equal weight for the two blocks. This tests whether extra game details improve the tag-only model.
+
+VISUAL CUE
+Name the feature groups. Then follow fill → scale → join → rank. Use the validation bars to explain the chosen weight.
+
+EXTRA HELP
+Alpha is the tag-block weight. The code multiplies each block by the square root of its weight. All learned filling and scaling values come from training data.
+
+SLIDE 09 - Model 04: learn from similar players
+------------------------------------------------------------
+Suggested speaker B | Target 1:00
+
+CORE TALK
+Model Four is user-based collaborative filtering. This is another method from Lecture Nine. We first build a user-by-game table. A one means the user has a positive play record. A zero means we did not observe one. We compare the user's play pattern with other players. Cosine similarity measures the match. We leave out the target user's own row. We keep up to 30 players with positive similarity. Closer players have more weight. Their game records give each unseen game a support score. Finally, we remove known games and rank the rest. Validation chose 30 neighbours rather than 10.
+
+VISUAL CUE
+Use the matrix to explain rows, columns, ones and zeros. Then explain find players → weight their plays → rank games.
+
+EXTRA HELP
+A zero is not a dislike. The 30 neighbours are a maximum. A player with zero similarity gives no support.
+
+SLIDE 10 - Model 04: a worked example
+------------------------------------------------------------
+Suggested speaker B | Target 1:10
+
+CORE TALK
+This is a small teaching example. It is separate from the real test results. The target played A and B. Peer One played A, B and C. Peer Two played A and D. First, we find each peer’s similarity to the target. Peer One gets about 0.8165. Peer Two gets 0.5000. Then we add their weights to get the total support weight. Only Peer One supports C. So C gets 0.6202 after we divide by the total. Only Peer Two supports D. D gets 0.3798. C therefore comes before D. A and B are removed because the target already played them. The real model uses up to 30 peers.
+
+VISUAL CUE
+Point to the matching ones. Show the two similarity values. Then follow each fraction to the final ranking.
+
+EXTRA HELP
+The denominator is the sum of positive similarity weights. We calculate with full values before rounding. These scores are not probabilities.
+
+SLIDE 11 - How we built the system
+------------------------------------------------------------
+Suggested speaker C | Target 0:40
+
+CORE TALK
+This page shows how we turned the design into code. The main file is game_recommendation.py. First, prepare_data cleans the tables. Next, make_splits creates the three data splits. Then choose_parameters compares settings on validation. After that, fit_models builds the final models using training plus validation. The scoring and evaluation functions rank games and check hidden test answers. We save four model files with joblib. Pandas handles tables. NumPy and SciPy handle number arrays and game matrices. Scikit-learn provides TF-IDF, scaling and neighbour search. Matplotlib draws the charts. The recommendation command loads the saved files. It does not need another training run.
+
+VISUAL CUE
+Follow the six numbered code steps. Match each library to the job listed below. Point out the saved model files.
+
+EXTRA HELP
+Fitting builds the counts, tag weights, numeric scales and neighbour index. We use existing library tools inside our own data and evaluation pipeline.
+
+SLIDE 12 - Two tests change the query
+------------------------------------------------------------
+Suggested speaker C | Target 1:10
+
+CORE TALK
+We split each user's records into training, validation and testing. Training builds the models. Validation helps us choose the settings. Testing checks games kept hidden until the final assessment. We use seed 4524 to keep the split fixed. After choosing settings, we fit again using training plus validation. Test One uses all the known games as the query. Test Two uses only the most-played known game. Both tests use the same final models and hidden test answers. Both remove all known training games from the candidates. Test Two checks less input for existing users. It is not a true new-user test. Top Five and Top Ten are list lengths within each test.
+
+VISUAL CUE
+Explain the purpose of each split. Compare the two query boxes. Keep the hidden answers and exclusions the same.
+
+EXTRA HELP
+There are four models and two query tests. That gives eight comparisons. Reporting both list lengths gives 16 metric rows. No play timestamps are available.
+
+SLIDE 13 - What do Precision and Recall mean?
+------------------------------------------------------------
+Suggested speaker C | Target 1:10
+
+CORE TALK
+This example explains our metrics. The hidden test games are I and J. We recommend five games: I, K, L, M and N. Only I is a hit. Precision asks how much of the recommendation list matches the hidden answers. One hit out of five gives 20 percent. Recall asks how much of the hidden answer set we found. One hit out of two gives 50 percent. We calculate these values for each user, then take the average. Hit Rate counts users with at least one hit. Coverage counts how much of the game catalogue appears across all recommendation lists. These measures describe different parts of the result.
+
+VISUAL CUE
+Highlight I in both sets. Explain why the Precision denominator is five and the Recall denominator is two.
+
+EXTRA HELP
+These use the precision and recall ideas from Lecture Six for a ranked list. They measure matches to recorded plays. They do not measure satisfaction directly.
+
+SLIDE 14 - Test 01: full known history
+------------------------------------------------------------
+Suggested speaker C | Target 0:55
+
+CORE TALK
+These are the full-history test results at Top Five. Model Four has the highest Precision and Recall. Its Precision is 13.64 percent. That is the average share of recommended games that match hidden plays. Its Recall is 36.33 percent. That is the average share of hidden games found. Popularity has Recall of 31.74 percent. Model Four gains 4.60 percentage points. Extra metadata also improves the content model. But Model Three has higher coverage than Model Four. Its lists reach 88.29 percent of the catalogue. So the best model for recovery is not the best for coverage.
+
+VISUAL CUE
+Compare Recall first. Then use the table to explain Precision and Coverage. Keep their meanings separate.
+
+EXTRA HELP
+We use the approved Windows results. The 4.60-point difference is calculated before rounding. One split does not establish statistical significance.
+
+SLIDE 15 - Test 02: only one known game
+------------------------------------------------------------
+Suggested speaker C | Target 0:45
+
+CORE TALK
+Now the query contains only one known game. Model Four's Recall falls to 33.85 percent. It still leads popularity at 31.74 percent. The content models also lose Recall. Popularity stays the same because its global counts do not depend on the query. The known-game exclusions also stay the same. We also test longer lists. At Top Ten, Model Four reaches 49.67 percent Recall with full history. With one query game, it reaches 45.45 percent. A longer list finds more hidden games. But it also has a lower share of matching recommendations. We must compare models using the same list length.
+
+VISUAL CUE
+Compare each pair of bars. Explain why popularity is unchanged. Then explain the Top Ten trade-off.
+
+EXTRA HELP
+The one-game Recall gain over popularity is 2.11 percentage points. This test still uses existing users from the training data.
+
+SLIDE 16 - Why do these recommendations differ?
+------------------------------------------------------------
+Suggested speaker D | Target 1:45
+
+CORE TALK
+Here we load the saved models for one user. This user has eight known games. The page shows four of them. The recorded hours describe activity. These two full-history models use which games were played. Model Two compares the history’s tag profile with game tags. Model Four uses weighted plays from similar users. The two methods therefore produce different lists. The terminal prints all four models. This page shows the top three from two models to explain their different ideas. Known games are excluded. We use this example to show how the system works. We use the hidden-game tests to judge which model performs better.
+
+VISUAL CUE
+Explain input → ranking evidence → outputs → meaning. Allow about 40 seconds for the command shown on the slide.
+
+EXTRA HELP
+The example comes from real saved-model output. CF neighbour ties can change the order on different computers. Keep local output separate from the approved result tables.
+
+SLIDE 17 - What do the results tell us?
+------------------------------------------------------------
+Suggested speaker D | Target 1:05
+
+CORE TALK
+We have three main findings. First, Model Four gives the best recovery for this user group. Its full-history Recall is 36.33 percent, compared with 31.74 percent for popularity. This supports using shared play patterns. Second, extra game details help the content model. Recall rises from 14.23 to 18.02 percent. But it still stays below popularity. More features do not always give the best model. Third, using only one query game lowers Model Four's Recall by 2.49 percentage points. More known history helps this test. We must also consider coverage. Model Three reaches more catalogue games than Model Four. The preferred model depends on our goal.
+
+VISUAL CUE
+For each row, explain the measured result on the left and its meaning on the right.
+
+EXTRA HELP
+A percentage-point gain is the difference between two percentage values. Our conclusion is limited to this dataset and test design.
+
+SLIDE 18 - Recommend Model 04 for this benchmark
+------------------------------------------------------------
+Suggested speaker D | Target 0:50
+
+CORE TALK
+We recommend Model Four for this study. Validation chose 30 neighbours before we checked the final test games. This setting had validation Recall of 34.27 percent. It then led both final query tests. This gives us a clear reason for our choice. The table has six settings from four models. It does not mean we built six different models. Our choice fits existing users with useful play histories. We still need more tests before wider use. For example, new users may have little shared history. A goal such as broad catalogue coverage may also lead to a different choice.
+
+VISUAL CUE
+State the choice. Show the validation winner, the two test checks and the group of users it applies to.
+
+EXTRA HELP
+Validation selection uses Recall at Five, then Precision at Five. We did not measure running speed, so we do not claim a speed winner.
+
+SLIDE 19 - Reflection: lessons and next steps
+------------------------------------------------------------
+Suggested speaker D | Target 1:00
+
+CORE TALK
+We learned to test our ideas against a strong simple baseline. We also learned to choose settings before checking the final test answers. Matching old game titles was a practical problem. We kept 111 reliable matches and skipped 89 unclear or unavailable titles. We handled missing prices and years with training medians and missing-value flags. Some limits remain. The play records have no timestamps. We need dated records and game details from the same period. We used one split, so future work should repeat the tests and show how much the results vary. We should also hold out whole users. That would test a true new-user case.
+
+VISUAL CUE
+Follow lessons → problem and response → future test. Explain one real example from each column.
+
+EXTRA HELP
+Recorded play is only a sign of interest. Future work could also check variety, fresh games and user satisfaction.
+
+SLIDE 20 - Sources & discussion
+------------------------------------------------------------
+Suggested speaker D | Target 0:15
+
+CORE TALK
+This page lists the course material, data sources and software references. It also credits the supplied presentation template. Full source details are in the report and project files. Thank you. We are ready for questions about the data, model design, code and tests.
+
+VISUAL CUE
+Keep the references visible during questions. Do not read every source aloud.
+
+EXTRA HELP
+For a question about 36.33 percent, explain the metric, the list length and the popularity comparison. There is no single good Recall score for every dataset.
+
