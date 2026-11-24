@@ -125,12 +125,17 @@ One hit gives Precision@5 = 1/5 = 20% and Recall@5 = 1/2 = 50%.
 Model 04's cosine/weighted-support illustration is on slide 10.
 These are teaching examples, separate from the measured CSV results.
 The 20-slide presentation uses the supplied Gaming Design Portfolio template.
-It targets 15-20 minutes (scheduled core about 17 minutes, including a short demo).
+It targets 15-20 minutes (scheduled core 18:15, including a short demo).
 Suggested speakers A/B/C/D cover slides 1-5 / 6-10 / 11-15 / 16-20 respectively.
 Open presentation.pptx in Presenter View for narration, visual cues and optional
 explanations; presentation_script.docx contains the matching structured script.
 Prepare the environment before class; use section 4 for the saved-model demo.
-Fill in student IDs on the editable cover. Sources and template credits: slide 20.
+Slide 6 explains Model 01 using distinct positive training-user counts.
+Slide 16 connects a real history, two ranking approaches and their different lists.
+Slides 17-18 explain outcomes, implications and why Model 04 is recommended.
+Slide 19 connects learned lessons, actual obstacles, responses and future tests.
+The cover preserves the group's uploaded revision with member names and IDs.
+Sources and template credits: slide 20.
 
 validation_results.csv: candidate settings and validation metrics; the report's
 section 5.1 compares the existing settings and explains the selected parameters.
